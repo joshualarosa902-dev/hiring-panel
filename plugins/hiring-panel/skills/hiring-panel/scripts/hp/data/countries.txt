@@ -1,0 +1,280 @@
+# Country and territory names for location detection ("City, Country").
+# One name per line, written the way people write them on a resume. Common short forms and
+# former names are their own lines (USA, UK, Czech Republic, Swaziland ...).
+# Based on ISO 3166-1 short names, simplified; a few territories students list are included.
+#
+# Matching guidance (several names are also ordinary words or first names: Chad, Jordan,
+# Turkey, Georgia, Guinea, US):
+#   - only look for a country in a location position, e.g. after "City, " in the contact block;
+#   - compare all-caps short forms (US, USA, UK, UAE, KSA, PRC, DRC) case-sensitively, so the
+#     pronoun "us" never counts;
+#   - check us_states.json first, so "Atlanta, Georgia" is the US state, not the country.
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+The Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia and Herzegovina
+Bosnia
+Botswana
+Brazil
+Brasil
+Brunei
+Bulgaria
+Burkina Faso
+Burundi
+Cabo Verde
+Cape Verde
+Cambodia
+Cameroon
+Canada
+Central African Republic
+Chad
+Chile
+China
+People's Republic of China
+PRC
+Colombia
+Comoros
+Congo
+Republic of the Congo
+Democratic Republic of the Congo
+DR Congo
+DRC
+Costa Rica
+Côte d'Ivoire
+Cote d'Ivoire
+Ivory Coast
+Croatia
+Cuba
+Cyprus
+Czechia
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Eswatini
+Swaziland
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+The Gambia
+Georgia
+Germany
+Deutschland
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hong Kong
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Republic of Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macau
+Macao
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+México
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar
+Burma
+Namibia
+Nauru
+Nepal
+Netherlands
+The Netherlands
+Holland
+New Zealand
+Aotearoa
+Nicaragua
+Niger
+Nigeria
+North Korea
+North Macedonia
+Macedonia
+Norway
+Oman
+Pakistan
+Palau
+Palestine
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+The Philippines
+Poland
+Portugal
+Puerto Rico
+Qatar
+Romania
+Russia
+Russian Federation
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+São Tomé and Príncipe
+Sao Tome and Principe
+Saudi Arabia
+KSA
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Korea
+Korea
+Republic of Korea
+South Sudan
+Spain
+España
+Sri Lanka
+Sudan
+Suriname
+Sweden
+Switzerland
+Schweiz
+Suisse
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Timor-Leste
+East Timor
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Türkiye
+Turkiye
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+UAE
+United Kingdom
+UK
+U.K.
+Great Britain
+Britain
+England
+Scotland
+Wales
+Northern Ireland
+United States
+United States of America
+USA
+U.S.A.
+US
+U.S.
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Holy See
+Venezuela
+Vietnam
+Viet Nam
+Yemen
+Zambia
+Zimbabwe
+Greenland
+Bermuda
+Cayman Islands
+Gibraltar
+Guam
+U.S. Virgin Islands
+British Virgin Islands
+Aruba
+Curaçao
+Curacao
+New Caledonia
+French Polynesia
+Réunion
+Martinique
+Guadeloupe
+Faroe Islands
+Isle of Man
+Guernsey

@@ -1,0 +1,37 @@
+# extraction: docx-xml
+# roughly what parsing software reads; order matters
+
+Riley Castellano
+Business Analytics Student
+Columbus, OH | (555) 010-0147 | riley.castellano@example.com | linkedin.com/in/riley-castellano-example
+EDUCATION
+Lakeshore State University Columbus, OH
+Bachelor of Science, Business Analytics; Minor in Marketing Expected May 2027
+GPA: 3.6/4.0 • Dean's List (3 semesters)
+Relevant coursework: Intro to SQL, Statistics for Business, Marketing Research, Data Visualization
+PROJECTS
+Campus Bike Share Survey | Marketing Research class project, team of 4 Jan 2025 – May 2025
+• Wrote most of the questions for a 12-question survey with 3 classmates and collected 140 responses
+• Built the pivot tables in Excel to analyze the results and presented a pricing recommendation to the class
+EXPERIENCE
+Tallgrass Outfitters Columbus, OH
+Marketing Intern Jun 2025 – Aug 2025
+• Pulled weekly sales numbers into Excel for the Monday team meeting, using VLOOKUP to match product codes
+• Wrote the weekly email newsletter for about 600 subscribers
+• Helped with Instagram posts 3x a week and tracked likes in a spreadsheet; the owner started posting more photos of new arrivals because those got the most likes
+• Wrote the email that announced the summer sale
+Cedar Hollow Market Columbus, OH
+Shift Lead Sep 2023 – Present
+• Trained 4 new cashiers on the register and the opening checklist
+• Handle closing cash counts and customer questions at the service desk while working about 18 hours a week during the semester
+LEADERSHIP & ACTIVITIES
+Lakeshore Analytics Club Columbus, OH
+Member Jan 2024 – Present
+• Helped organize 2 Excel workshops for first-year students
+SKILLS
+Tools: Excel (pivot tables, VLOOKUP), Google Sheets, Canva, Mailchimp
+Data: SQL (class projects), Python (intro course)
+Languages: English, Spanish (conversational)
+
+# header/footer (some systems skip this):
+# (none)

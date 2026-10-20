@@ -1,0 +1,85 @@
+# Buzzwords and filler claims (ATS spec issue CONTENT-008, info level).
+# One lowercase phrase per line; match case-insensitively with word boundaries.
+# A buzzword is only worth flagging when nothing on the resume backs it up, so the check
+# reports "used with no evidence", never "banned word". Some overlap with soft skills in
+# skills.json on purpose: a posting may ask for "detail-oriented", and the resume should show it.
+results-driven
+results-oriented
+results driven
+detail-oriented
+detail oriented
+team player
+go-getter
+go getter
+self-starter
+self starter
+hard-working
+hardworking
+hard worker
+highly motivated
+self-motivated
+motivated individual
+passionate
+passionate about
+dynamic individual
+proactive
+synergy
+synergize
+think outside the box
+outside the box
+out-of-the-box
+best of breed
+best-in-class
+world-class
+cutting-edge
+cutting edge
+state-of-the-art
+game changer
+game-changer
+thought leader
+thought leadership
+rockstar
+rock star
+ninja
+guru
+visionary
+innovative
+innovator
+creative thinker
+strategic thinker
+value add
+value-add
+go-to person
+proven track record
+track record of success
+excellent communication skills
+strong communication skills
+excellent interpersonal skills
+people person
+people-person
+fast learner
+quick learner
+fast-paced environment
+works well under pressure
+works well independently
+works well in a team
+seasoned professional
+extensive experience
+detail-focused
+goal-oriented
+goal oriented
+enthusiastic
+energetic
+ambitious
+perfectionist
+multitasker
+self-motivator
+excellent work ethic
+strong work ethic
+move the needle
+circle back
+low-hanging fruit
+deep dive
+paradigm shift
+results-focused
+customer-obsessed

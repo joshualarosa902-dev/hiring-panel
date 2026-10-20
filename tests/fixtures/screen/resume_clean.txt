@@ -1,0 +1,27 @@
+Avery Quinn
+Austin, TX | avery.quinn@example.com | (555) 010-0142 | linkedin.com/in/avery-quinn-example
+EDUCATION
+University of Texas at Austin, Austin, TX
+Bachelor of Business Administration in Marketing, Minor in Statistics, Expected May 2027
+GPA: 3.7/4.0
+EXPERIENCE
+Marketing Intern | Northwind Foods | Austin, TX | Jun 2025 – Aug 2025
+• Built 4 Tableau dashboards that tracked weekly sales for 12 stores
+• Wrote 30 social media posts that reached 18,000 followers on Instagram
+• Analyzed survey data from 450 customers in Excel using pivot tables
+• Planned 3 product sampling events with 200 attendees each
+Sales Associate | Bluebird Books | Austin, TX | Sep 2023 – May 2025
+• Served 60 customers per shift and processed returns at the register
+• Organized a weekly inventory count across 2 store locations
+• Trained 5 new hires on customer service standards
+PROJECTS
+Campus Coffee Pricing Study | Jan 2025 – Apr 2025
+• Ran A/B testing on menu prices at 2 student cafes and presented results to 15 managers
+• Used SQL and Python to clean 3,000 transaction records for the pricing model
+LEADERSHIP
+Treasurer, Marketing Club | Aug 2024 – Present
+• Managed a $4,500 annual budget and tracked spending for 40 members
+SKILLS
+Tools: Excel, Tableau, SQL, Python, Canva, Google Analytics
+Marketing: search engine optimization, social media marketing, data visualization
+Languages: English (native), Spanish (conversational)

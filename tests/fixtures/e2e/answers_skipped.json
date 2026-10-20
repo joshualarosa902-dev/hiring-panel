@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "mode": "skipped",
+  "answers": [
+    {
+      "id": "Q1",
+      "kind": "reviewer",
+      "question": "Did the posts you tracked change anything the store did?",
+      "answer": null,
+      "status": "skipped",
+      "items": null
+    }
+  ]
+}

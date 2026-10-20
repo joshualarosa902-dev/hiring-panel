@@ -1,0 +1,43 @@
+# Weak bullet openers (ATS spec section 10, issue CONTENT-002).
+# One lowercase phrase per line; match as a PREFIX of the normalized, lowercased bullet text
+# (after the bullet glyph). Longer phrases first is not required; a matcher should try all.
+# These describe duties or proximity to work instead of what the candidate did.
+responsible for
+was responsible for
+were responsible for
+responsibilities included
+responsibilities include
+duties included
+duties include
+job duties
+helped
+helped with
+helped to
+assisted
+assisted with
+assisted in
+worked on
+worked with
+worked in
+participated in
+involved in
+was involved in
+tasked with
+in charge of
+handled
+was part of
+part of a team
+member of a team
+served as part of
+exposure to
+gained experience
+gained exposure
+learned about
+learned how to
+tried to
+attempted to
+had to
+got to
+was given
+was asked to
+was tasked with

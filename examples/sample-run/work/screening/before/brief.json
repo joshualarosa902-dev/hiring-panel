@@ -1,0 +1,239 @@
+{
+  "scores": {
+    "overall": {
+      "value": 90,
+      "band": "Ready to send"
+    },
+    "parse_safety": {
+      "value": 100,
+      "band": "Clean"
+    },
+    "keyword_match": {
+      "value": 80,
+      "band": "Strong match"
+    },
+    "content_signals": {
+      "value": 85,
+      "band": "Polished"
+    }
+  },
+  "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number.",
+  "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes. This check looks for problems known to break resume parsing and for job-description requirements your resume doesn't show. A high score doesn't guarantee an interview, and a low score doesn't mean a robot rejected you. Most automatic rejections come from application questions (work authorization, location, degree, availability), and no resume edit changes those.",
+  "top_issues": [
+    {
+      "id": "KW-001",
+      "severity": "medium",
+      "title": "Required job terms are missing from your resume",
+      "evidence": "Not found: \"communication\"."
+    },
+    {
+      "id": "KW-002",
+      "severity": "medium",
+      "title": "Some job terms are only listed, not shown in your experience",
+      "evidence": "\"SQL\" appears only in a list, not in a bullet about your work; \"VLOOKUP\" appears only in a list, not in a bullet about your work; \"Mailchimp\" appears only in..."
+    },
+    {
+      "id": "CONTENT-002",
+      "severity": "low",
+      "title": "Some bullets start with weak openers",
+      "evidence": "Responsible for the weekly email newsletter to about 600 subscribers; Helped with Instagram posts 3x a week and tracked likes in a spreadsheet; Helped organi..."
+    },
+    {
+      "id": "KW-005",
+      "severity": "info",
+      "title": "Preferred job terms are missing",
+      "evidence": "Not found: \"dashboards\"; Not found: \"A/B testing\"; Not found: \"CRM\"; Not found: \"Tableau or Power BI\"; Not found: \"Google Analytics\"."
+    }
+  ],
+  "keywords": [
+    {
+      "term": "SQL",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "listed",
+      "resume_wording": "SQL"
+    },
+    {
+      "term": "Microsoft Excel",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "demonstrated",
+      "resume_wording": "Excel"
+    },
+    {
+      "term": "Business Analytics, Marketing, Statistics",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "demonstrated",
+      "resume_wording": "Business Analytics"
+    },
+    {
+      "term": "pivot tables",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "demonstrated",
+      "resume_wording": "pivot tables"
+    },
+    {
+      "term": "VLOOKUP",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "listed",
+      "resume_wording": "VLOOKUP"
+    },
+    {
+      "term": "communication",
+      "importance": "required",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "dashboards",
+      "importance": "responsibility",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "sales",
+      "importance": "responsibility",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "demonstrated",
+      "resume_wording": "sales"
+    },
+    {
+      "term": "A/B testing",
+      "importance": "responsibility",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "CRM",
+      "importance": "responsibility",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "marketing",
+      "importance": "responsibility",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "demonstrated",
+      "resume_wording": "Marketing"
+    },
+    {
+      "term": "Tableau or Power BI",
+      "importance": "preferred",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "Google Analytics",
+      "importance": "preferred",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "email marketing",
+      "importance": "preferred",
+      "found": true,
+      "match_type": "inflection",
+      "evidence_level": "demonstrated",
+      "resume_wording": "email newsletter"
+    },
+    {
+      "term": "Mailchimp",
+      "importance": "preferred",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "listed",
+      "resume_wording": "Mailchimp"
+    },
+    {
+      "term": "Marketing Analytics",
+      "importance": "unspecified",
+      "found": false,
+      "match_type": "partial",
+      "evidence_level": "listed",
+      "resume_wording": "Analytics, Minor in Marketing"
+    }
+  ],
+  "coverage": {
+    "required_found": 5,
+    "required_total": 6,
+    "required_listed_only": 2,
+    "preferred_found": 4,
+    "preferred_total": 9,
+    "other_found": 0,
+    "other_total": 1,
+    "basis": "required_preferred",
+    "basis_found": 5,
+    "basis_total": 6,
+    "basis_listed_only": 2,
+    "required_weighted": 0.93,
+    "preferred_weighted": 0.39,
+    "evidence_share": 0.62,
+    "status": "checked",
+    "summary": "Required terms: 5 of 6 found (2 only in your skills list)."
+  },
+  "knockouts": [
+    {
+      "type": "onsite_hybrid",
+      "importance": "unspecified",
+      "jd_quote": "Northwind Foods – Columbus, OH (Hybrid)",
+      "status": "unclear"
+    },
+    {
+      "type": "degree",
+      "importance": "required",
+      "jd_quote": "- Currently pursuing a bachelor's degree in Business Analytics, Marketing, Statistics or a related field",
+      "status": "appears_met"
+    },
+    {
+      "type": "major",
+      "importance": "required",
+      "jd_quote": "- Currently pursuing a bachelor's degree in Business Analytics, Marketing, Statistics or a related field",
+      "status": "appears_met"
+    },
+    {
+      "type": "work_authorization",
+      "importance": "required",
+      "jd_quote": "Applicants must be authorized to work in the United States.",
+      "status": "not_on_resume_by_design"
+    },
+    {
+      "type": "sponsorship",
+      "importance": "unspecified",
+      "jd_quote": "Northwind Foods does not sponsor visas for this role.",
+      "status": "not_on_resume_by_design"
+    }
+  ],
+  "job_title": {
+    "jd_title": "Marketing Analytics Intern",
+    "match": "close",
+    "resume_titles": [
+      "Tallgrass Outfitters, Columbus, OH",
+      "Marketing Intern | June 2025 – August 2025",
+      "Cedar Hollow Market, Columbus, OH"
+    ]
+  },
+  "platform_guess": "unknown",
+  "language": "en"
+}

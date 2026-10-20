@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "skeptic",
+  "decision_question": "Which lines would not survive a five-minute probe in an interview or a reference check, and does anything read as inflated even if it is true?",
+  "verdict": "strong_no",
+  "verdict_rationale": "A summer intern claiming company-wide strategy and 300% revenue (R9) reads as inflated, even if true.",
+  "advance": "no",
+  "one_line_take": "The 300% revenue line will not survive one follow-up question.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "K1_verifiability",
+      "score": 1,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "K2_scope_plausibility",
+      "score": 1,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "K3_attribution",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "K4_internal_consistency",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "K5_inflation_density",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "skeptic-1",
+      "category": "SCOPE_INFLATION",
+      "severity": "critical",
+      "confidence": "high",
+      "title": "Company-wide strategy and 300% revenue in a summer internship",
+      "detail": "Company-wide strategy and 300% revenue in a summer internship.",
+      "evidence": [
+        {
+          "anchor": "R9",
+          "quote": "Spearheaded company-wide analytics strategy, increasing revenue 300%"
+        },
+        {
+          "anchor": "R9",
+          "quote": "Spearheaded company-wide ... revenue 300%"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "What exactly did you build, and how was the revenue change measured?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "skeptic-2",
+      "category": "UNVERIFIABLE_CLAIM",
+      "severity": "moderate",
+      "confidence": "medium",
+      "title": "2,000 responses: whose survey was it?",
+      "detail": "2,000 responses: whose survey was it?.",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "tracking 2,000 student survey responses"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Say who ran the survey.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "skeptic-3",
+      "category": "VAGUE_LANGUAGE",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Team size unclear",
+      "detail": "Team size unclear.",
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "Led a team of 12 analysts"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "skeptic-4",
+      "category": "SKILL_UNSUPPORTED",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Tableau is claimed but never used",
+      "detail": "Tableau is claimed but never used.",
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "Excel, Python, Tableau"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "skeptic-s1",
+      "title": "Barista training is concrete and checkable",
+      "evidence": [
+        {
+          "anchor": "R12",
+          "quote": "Trained 6 new baristas"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "claim_audit": [
+      {
+        "anchor": "R9",
+        "quote": "increasing revenue 300%",
+        "claim_type": "metric",
+        "risk": "high",
+        "probe_question": "How was the 300% measured, and what was the starting point?",
+        "recommended": "add_context"
+      },
+      {
+        "anchor": "R14",
+        "quote": "2,000 student survey responses",
+        "claim_type": "metric",
+        "risk": "medium",
+        "probe_question": "Who collected the 2,000 responses, and what did the dashboard change?",
+        "recommended": "keep_prepare_story"
+      },
+      {
+        "anchor": "R12",
+        "quote": "Trained 6 new baristas",
+        "claim_type": "scope",
+        "risk": "low",
+        "probe_question": "How did you train the 6 new baristas?",
+        "recommended": "keep_prepare_story"
+      }
+    ],
+    "consistency_checks": [
+      {
+        "check": "date overlaps",
+        "result": "pass",
+        "anchors": [
+          "R7",
+          "R11"
+        ]
+      }
+    ]
+  }
+}

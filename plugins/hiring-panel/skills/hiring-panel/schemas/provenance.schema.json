@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hiring-panel:schema:provenance:1.0",
+  "title": "Hiring Panel provenance audit (the Skeptic's second mode)",
+  "description": "work/rewrite/provenance.json. One item per audited bullet of work/rewrite/resume.json. Every bullet with a NEW_WORDING warning in truth.json must appear. See references/provenance-audit.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "auditor", "mode", "items"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "auditor": {"const": "skeptic-provenance"},
+    "mode": {"enum": ["subagent", "self"], "description": "subagent = a fresh Skeptic subagent (Claude Code); self = the main conversation audited its own rewrite (disclosed in the report)"},
+    "items": {"type": "array", "maxItems": 200, "items": {"$ref": "#/$defs/item"}}
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bullet_id", "audited_text", "verdict", "problem", "suggested_text"],
+      "properties": {
+        "bullet_id": {"type": "string", "minLength": 1, "maxLength": 80, "pattern": "^[A-Za-z0-9_.:-]+$", "description": "the bullet's id in resume.json, or 'basics.headline' for the headline"},
+        "audited_text": {"type": "string", "minLength": 1, "maxLength": 600, "description": "the bullet text exactly as it was in resume.json when audited"},
+        "verdict": {"enum": ["ok", "soften", "remove"]},
+        "problem": {"type": ["string", "null"], "maxLength": 300, "description": "one neutral sentence: which words go beyond which sources; null when ok"},
+        "suggested_text": {"type": ["string", "null"], "maxLength": 300, "description": "soften only: a version built only from the cited sources; null otherwise"}
+      },
+      "allOf": [
+        {"if": {"properties": {"verdict": {"const": "ok"}}, "required": ["verdict"]},
+         "then": {"properties": {"problem": {"type": "null"}, "suggested_text": {"type": "null"}}}},
+        {"if": {"properties": {"verdict": {"const": "soften"}}, "required": ["verdict"]},
+         "then": {"properties": {"problem": {"type": "string", "minLength": 1}, "suggested_text": {"type": "string", "minLength": 1}}}},
+        {"if": {"properties": {"verdict": {"const": "remove"}}, "required": ["verdict"]},
+         "then": {"properties": {"problem": {"type": "string", "minLength": 1}, "suggested_text": {"type": "null"}}}}
+      ]
+    }
+  }
+}

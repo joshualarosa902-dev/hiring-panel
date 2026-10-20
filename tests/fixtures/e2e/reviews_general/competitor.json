@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "competitor",
+  "decision_question": "If this resume sat next to a typical strong applicant's for this job, would it win the interview slot?",
+  "verdict": "borderline",
+  "verdict_rationale": "The survey project (R23) is a real edge, but strong applicants show SQL in a project and lead with numbers. Here SQL is listed only (R31) and the best work sits low.",
+  "advance": "unsure",
+  "one_line_take": "Your survey project is a real edge, but it is buried and SQL is only listed.",
+  "confidence": "medium",
+  "dimension_scores": [
+    {
+      "dimension_id": "P1_table_stakes",
+      "score": 2,
+      "evidence_anchors": [
+        "R31"
+      ],
+      "note": "SQL listed, not shown."
+    },
+    {
+      "dimension_id": "P2_differentiation",
+      "score": 3,
+      "evidence_anchors": [
+        "R23"
+      ],
+      "note": "A 140-response survey stands out for an intern."
+    },
+    {
+      "dimension_id": "P3_specificity",
+      "score": 2,
+      "evidence_anchors": [
+        "R11",
+        "R12"
+      ],
+      "note": "Some generic duty lines."
+    },
+    {
+      "dimension_id": "P4_proof_density",
+      "score": 3,
+      "evidence_anchors": [
+        "R23",
+        "R17"
+      ],
+      "note": "Some numbers, no links."
+    },
+    {
+      "dimension_id": "P5_positioning",
+      "score": 2,
+      "evidence_anchors": [
+        "R23"
+      ],
+      "note": "Best work comes late."
+    }
+  ],
+  "findings": [
+    {
+      "id": "competitor-1",
+      "category": "ORDER_PRIORITY",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Your strongest edge is buried",
+      "detail": "Next to a typical strong applicant, the survey project is what wins, and it is the fourth thing a reader reaches.",
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "collected 140 responses"
+        }
+      ],
+      "fix": {
+        "fix_type": "reorder",
+        "suggestion": "Put the survey project right after Education.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "competitor-2",
+      "category": "VAGUE_LANGUAGE",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Generic phrases any applicant could write",
+      "detail": "'Helped with Instagram posts' could be on any resume.",
+      "evidence": [
+        {
+          "anchor": "R12",
+          "quote": "Helped with Instagram posts 3x a week"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Say what you made or tracked, using your real level of involvement.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "competitor-s1",
+      "title": "A real survey with 140 responses and a recommendation",
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "collected 140 responses"
+        }
+      ],
+      "underused": true
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "benchmark_profile": {
+      "level": "intern",
+      "basis": "role_title",
+      "typical_signals": [
+        "SQL used in a class or personal project",
+        "One analysis project with a result",
+        "Excel beyond basic formulas"
+      ],
+      "basis_jd_anchors": [],
+      "disclaimer": "Assumed from the role title (no posting provided), not data about real applicants."
+    },
+    "head_to_head": [
+      {
+        "axis": "P1_table_stakes",
+        "this_resume": "Excel shown, SQL listed",
+        "typical_competitor": "Excel and SQL shown",
+        "edge": "competitor"
+      },
+      {
+        "axis": "P2_differentiation",
+        "this_resume": "140-response survey project",
+        "typical_competitor": "A class project",
+        "edge": "candidate"
+      },
+      {
+        "axis": "P3_specificity",
+        "this_resume": "Some duty lines",
+        "typical_competitor": "Specific lines",
+        "edge": "competitor"
+      },
+      {
+        "axis": "P4_proof_density",
+        "this_resume": "A few numbers",
+        "typical_competitor": "A few numbers",
+        "edge": "even"
+      },
+      {
+        "axis": "P5_positioning",
+        "this_resume": "Best work low on the page",
+        "typical_competitor": "Best work first",
+        "edge": "competitor"
+      }
+    ],
+    "unfair_advantages": [
+      {
+        "anchor": "R23",
+        "why_it_stands_out": "A real survey with real responses",
+        "currently_buried": true
+      }
+    ],
+    "generic_phrases": [
+      {
+        "anchor": "R12",
+        "quote": "Helped with Instagram posts"
+      }
+    ]
+  }
+}

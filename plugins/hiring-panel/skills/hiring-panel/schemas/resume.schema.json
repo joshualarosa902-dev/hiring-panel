@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/joshualarosa902-dev/hiring-panel/schemas/resume.schema.json",
+  "title": "Hiring Panel resume (the source of truth for .docx, .pdf and .md)",
+  "description": "One JSON drives every output format. Evidence, ops, meta.addressed and meta.cuts are never rendered; they exist so every line can be traced back to the candidate's own words (R# resume lines in work/inputs/ledger.json, Q# answers in work/answers.json). The job posting (J#) is never evidence. hp.rewrite.truth checks the claims; hp.render renders the file.",
+  "type": "object",
+  "required": ["schemaVersion", "basics", "sections"],
+  "additionalProperties": false,
+  "definitions": {
+    "ref": {
+      "type": "string",
+      "pattern": "^(R[0-9]+(-R[0-9]+)?|Q[0-9]+)$",
+      "description": "R12 (one resume line), R12-R14 (a range of lines) or Q2 (an answer). Never J# (the posting is never evidence)."
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["src", "ref"],
+      "additionalProperties": false,
+      "properties": {
+        "src": { "enum": ["orig", "user"], "description": "orig = a line of the uploaded resume (R#); user = an answer the candidate gave (Q#)." },
+        "ref": { "$ref": "#/definitions/ref" },
+        "quote": { "type": "string", "maxLength": 300, "description": "Verbatim snippet of the cited line or answer (case and whitespace insensitive). For keyword answers, quote a yes/some item's term or detail, or other words of the reply; never a term answered 'no'." }
+      }
+    },
+    "op": {
+      "enum": ["REORDER", "REPHRASE", "TIGHTEN", "SURFACE", "MERGE", "SPLIT", "MIRROR", "QUANTIFY_FROM_SOURCE",
+               "QUANTIFY_FROM_USER", "STANDARDIZE", "RELABEL_SECTION", "CUT", "KEEP"]
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^((19|20)[0-9]{2}(-(0[1-9]|1[0-2]))?|present)$",
+      "description": "YYYY, YYYY-MM or 'present'. Only the precision the source had; otherwise use dateText."
+    },
+    "bullet": {
+      "type": "object",
+      "required": ["id", "text", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1, "maxLength": 260, "description": "Final wording. May contain {{placeholderId}} tokens and **bold**. Sentence case. No emoji or symbols." },
+        "textIfUnknown": { "type": "string", "maxLength": 260, "description": "The honest version without the missing fact. Required whenever text has a {{placeholder}}." },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/evidence" } },
+        "ops": { "type": "array", "items": { "$ref": "#/definitions/op" } },
+        "jdTerms": { "type": "array", "items": { "type": "string" }, "description": "Posting terms this bullet now uses (only where the evidence shows the same thing)." },
+        "originalText": { "type": "string", "description": "The source wording, for the before/after view." }
+      },
+      "if": { "properties": { "text": { "pattern": "\\{\\{" } } },
+      "then": { "required": ["textIfUnknown"] }
+    },
+    "entry": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "org": { "type": "string" },
+        "role": { "type": "string", "description": "The title as the source has it, or an honest label the cited lines show: Family Caregiver, Volunteer, Student, Freelancer, Self-employed, Personal Project." },
+        "school": { "type": "string" },
+        "degree": { "type": "string" },
+        "field": { "type": "string" },
+        "minor": { "type": "string" },
+        "name": { "type": "string", "description": "Project, certification, award or activity name. Shown in bold, followed by context and org ('BLS Provider | American Heart Association')." },
+        "context": { "type": "string", "description": "Project context, e.g. 'Marketing Analytics class project'." },
+        "location": { "type": "string" },
+        "start": { "$ref": "#/definitions/date" },
+        "end": { "$ref": "#/definitions/date" },
+        "endLabel": { "type": "string", "description": "e.g. 'Expected' (shown before the end date)." },
+        "dateText": { "type": "string", "description": "Verbatim date when the source was imprecise ('Summer 2025'). Wins over start/end." },
+        "gpa": { "type": "string" },
+        "honors": { "type": "array", "items": { "type": "string" } },
+        "coursework": { "type": "array", "items": { "type": "string" } },
+        "bullets": { "type": "array", "items": { "$ref": "#/definitions/bullet" } },
+        "evidence": { "type": "array", "items": { "$ref": "#/definitions/evidence" } }
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": ["items"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string" },
+        "items": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "evidence": { "type": "array", "items": { "$ref": "#/definitions/evidence" } }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "variant": { "enum": ["original", "improved"] },
+        "locale": { "type": "string", "pattern": "^[A-Za-z]{2,3}([-_][A-Za-z]{2}|[-_][0-9]{3})?$", "description": "BCP-47, e.g. en-US. en-US and en-CA render on Letter, everything else on A4 (hp/data/locale_norms.json when present)." },
+        "pageSize": { "enum": ["letter", "a4", null], "description": "Overrides the locale's paper size." },
+        "targetPages": { "type": ["integer", "null"], "minimum": 1, "maximum": 5, "description": "null turns the page target off (academic or federal CVs)." },
+        "stage": { "enum": ["student", "early_career", "experienced"], "description": "Picks the locale's default page target when targetPages is absent." },
+        "layout": { "enum": ["classic", "inline"], "description": "classic = dates right-aligned on a tab stop (a space precedes every tab); inline = dates after ' | '." },
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": { "role": { "type": "string", "description": "The title as the source has it, or an honest label the cited lines show: Family Caregiver, Volunteer, Student, Freelancer, Self-employed, Personal Project." }, "company": { "type": ["string", "null"] } }
+        },
+        "fileStem": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,80}$", "description": "Optional; default First_Last_Resume from basics.name." },
+        "labels": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Renderer words for non-English resumes (write them in the resume's language).",
+          "properties": {
+            "present": { "type": "string" },
+            "coursework": { "type": "string" },
+            "gpa": { "type": "string" },
+            "minor": { "type": "string" },
+            "months": { "type": "array", "minItems": 12, "maxItems": 12, "items": { "type": "string" } }
+          }
+        },
+        "addressed": {
+          "type": "array",
+          "description": "What the rewrite did about each ranked issue (synthesis issue ids). The report's status column reads this.",
+          "items": {
+            "type": "object",
+            "required": ["issue_id", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "issue_id": { "type": "string", "pattern": "^I[0-9]+$" },
+              "status": { "enum": ["fixed", "needs_you", "gap"] },
+              "note": { "type": "string", "maxLength": 140 }
+            }
+          }
+        },
+        "cuts": {
+          "type": "array",
+          "description": "Every source line dropped from the new resume, with a reason. Never drop real experience silently.",
+          "items": {
+            "type": "object",
+            "required": ["ref", "reason"],
+            "additionalProperties": false,
+            "properties": {
+              "ref": { "type": "string", "pattern": "^R[0-9]+(-R[0-9]+)?$" },
+              "reason": { "type": "string", "minLength": 1, "maxLength": 200 }
+            }
+          }
+        }
+      }
+    },
+    "basics": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "headline": { "type": "string", "maxLength": 80, "description": "Optional one-liner built only from evidenced facts." },
+        "location": { "type": "string", "description": "City, region. Never a full street address." },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "links": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["url"],
+            "additionalProperties": false,
+            "properties": { "label": { "type": "string" }, "url": { "type": "string", "minLength": 1 } }
+          }
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Rendered in this order (REORDER happens here).",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "title"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["summary", "education", "experience", "projects", "skills", "custom"] },
+          "title": { "type": "string", "minLength": 1, "description": "A standard heading in the resume's language: Education, Experience, Projects, Leadership & Activities, Volunteer Experience, Skills, Certifications, Awards, Summary. Any other word must come from the lines the section cites (the truth check raises HEADING_CLAIM for 'Clinical Experience' over non-clinical work); honest labels such as 'Family Caregiving' pass when a cited answer shows them." },
+          "text": { "type": "string", "maxLength": 400 },
+          "textIfUnknown": { "type": "string", "maxLength": 400 },
+          "evidence": { "type": "array", "items": { "$ref": "#/definitions/evidence" } },
+          "items": { "type": "array", "items": { "$ref": "#/definitions/entry" } },
+          "groups": { "type": "array", "items": { "$ref": "#/definitions/group" } }
+        }
+      }
+    },
+    "placeholders": {
+      "type": "object",
+      "description": "Missing facts the panel wants, keyed by the id used as {{id}} in a bullet or summary.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["bullet", "ask", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "bullet": { "type": "string" },
+          "ask": { "type": "string", "description": "The plain-language question asked in the batch." },
+          "kind": { "enum": ["number", "percent", "money", "count", "duration", "text"] },
+          "label": { "type": "string", "description": "Short hint shown in draft mode: [ADD: label]." },
+          "status": { "enum": ["open", "answered", "declined"] },
+          "value": { "type": ["string", "null"], "description": "The candidate's answer with their hedging kept ('about 600', '50-100')." },
+          "question": { "type": "string", "pattern": "^Q[0-9]+$", "description": "The answers.json id that holds the value." }
+        }
+      }
+    }
+  }
+}

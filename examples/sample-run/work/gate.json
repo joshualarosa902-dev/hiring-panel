@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "passed": true,
+  "layout": "classic",
+  "retried_inline": false,
+  "thresholds": {
+    "parse_safety": 90,
+    "word_recovery": 0.98,
+    "order_match": 0.9
+  },
+  "attempts": [
+    {
+      "layout": "classic",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "checks": {
+    "docx": {
+      "checked": true,
+      "file": "Riley_Castellano_Resume.docx",
+      "extraction": "docx-xml",
+      "overall": 90,
+      "parse_safety": 100,
+      "parse_band": "Clean",
+      "keyword_match": 80,
+      "blocking_parse_issues": [],
+      "tab_merged_tokens": 0,
+      "merged_tokens": [],
+      "word_recovery": 1.0,
+      "order_match": 1.0,
+      "content_checked": 25,
+      "missing_content": [],
+      "passed": true,
+      "failures": []
+    },
+    "pdf": {
+      "checked": true,
+      "file": "Riley_Castellano_Resume.pdf",
+      "extraction": "pdfkit",
+      "overall": 90,
+      "parse_safety": 100,
+      "parse_band": "Clean",
+      "keyword_match": 80,
+      "blocking_parse_issues": [],
+      "tab_merged_tokens": 0,
+      "merged_tokens": [],
+      "word_recovery": 1.0,
+      "order_match": 1.0,
+      "content_checked": 25,
+      "missing_content": [],
+      "passed": true,
+      "failures": []
+    },
+    "md": {
+      "checked": true,
+      "file": "Riley_Castellano_Resume.md",
+      "content_checked": 25,
+      "missing_content": [],
+      "passed": true,
+      "failures": []
+    }
+  },
+  "failures": [],
+  "keyword_match": {
+    "before": 80,
+    "after": 80,
+    "note": "keyword match held or improved"
+  },
+  "files": {
+    "docx": "Riley_Castellano_Resume.docx",
+    "md": "Riley_Castellano_Resume.md",
+    "pdf": "Riley_Castellano_Resume.pdf"
+  },
+  "pdf_engine": "chrome",
+  "pdf_skipped": false
+}

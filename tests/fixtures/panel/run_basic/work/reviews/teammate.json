@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "teammate",
+  "decision_question": "Would I want this person on my team for next week's work, and could they contribute without a lot of hand-holding?",
+  "verdict": "lean_yes",
+  "verdict_rationale": "The dashboard (R14) is our day-one work; the group project (R15) hides your contribution.",
+  "advance": "yes",
+  "one_line_take": "I could hand you a dashboard ticket next sprint; show me your part in team work.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "T1_day_one_toolkit",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "T2_collaboration",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "T3_dependability",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "T4_individual_contribution",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "T5_ramp_up",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "teammate-1",
+      "category": "ATTRIBUTION_UNCLEAR",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Unclear what you did in the group project",
+      "detail": "Unclear what you did in the group project.",
+      "evidence": [
+        {
+          "anchor": "R15",
+          "quote": "Worked on a group project"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "What was your part of the group project?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "teammate-2",
+      "category": "COLLABORATION_EVIDENCE",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Teamwork is only listed as a skill",
+      "detail": "Teamwork is only listed as a skill.",
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "teamwork, communication"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "teammate-3",
+      "category": "SKILL_UNSUPPORTED",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Tableau is listed but never used in a bullet",
+      "detail": "Tableau is listed but never used in a bullet.",
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "Excel, Python, Tableau"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "Where did you use Tableau?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "teammate-4",
+      "category": "KEYWORD_GAP",
+      "severity": "major",
+      "confidence": "high",
+      "title": "No data visualization experience",
+      "detail": "No data visualization experience.",
+      "evidence": [
+        {
+          "anchor": "J7",
+          "quote": "Present data visualization to clinic managers"
+        }
+      ],
+      "fix": {
+        "fix_type": "real_gap",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": true,
+      "searched_terms": [
+        "data visualization",
+        "data viz"
+      ]
+    }
+  ],
+  "strengths": [
+    {
+      "id": "teammate-s1",
+      "title": "Training new baristas shows you can teach",
+      "evidence": [
+        {
+          "anchor": "R12",
+          "quote": "Trained 6 new baristas"
+        }
+      ],
+      "underused": true
+    },
+    {
+      "id": "teammate-s2",
+      "title": "The dashboard is our exact day-one work",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Built a Python dashboard"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "day_one_readiness": "some_ramp",
+    "toolkit_overlap": [
+      {
+        "tool_or_method": "Python",
+        "jd_anchor": "J10",
+        "status": "demonstrated",
+        "resume_anchors": [
+          "R14"
+        ]
+      },
+      {
+        "tool_or_method": "Tableau",
+        "jd_anchor": "J11",
+        "status": "listed_only",
+        "resume_anchors": [
+          "R17"
+        ]
+      },
+      {
+        "tool_or_method": "SQL",
+        "jd_anchor": "J9",
+        "status": "absent",
+        "resume_anchors": []
+      }
+    ],
+    "peer_interview_questions": [
+      "How did you clean the survey data?"
+    ]
+  }
+}

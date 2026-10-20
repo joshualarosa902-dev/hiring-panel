@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "screening",
+  "decision_question": "Would this file parse cleanly, and would it come up when a recruiter searches or filters the applicant pool for this job?",
+  "verdict": "borderline",
+  "verdict_rationale": "Script bands: Needs work overall, Minor risks for readability, Partial match on keywords. SQL is a required term the resume never shows (A:KW-001).",
+  "advance": "unsure",
+  "one_line_take": "The file mostly parses, but SQL is missing and your email hides in the header.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "S1_parse_safety",
+      "score": 3,
+      "evidence_anchors": [
+        "A:PARSE-006"
+      ],
+      "note": ""
+    },
+    {
+      "dimension_id": "S2_required_coverage",
+      "score": 2,
+      "evidence_anchors": [
+        "A:KW-001"
+      ],
+      "note": ""
+    },
+    {
+      "dimension_id": "S3_title_alignment",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "S4_knockout_exposure",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "S5_keyword_context",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "screening-1",
+      "category": "KEYWORD_GAP",
+      "severity": "critical",
+      "confidence": "high",
+      "title": "SQL, a required skill, never appears",
+      "detail": "SQL, a required skill, never appears.",
+      "evidence": [
+        {
+          "anchor": "J9",
+          "quote": "Proficiency in SQL"
+        },
+        {
+          "anchor": "A:KW-001"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "Have you used SQL in a class, a project or a job?"
+      },
+      "out_of_lens": false,
+      "searched_terms": [
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "structured query language"
+      ]
+    },
+    {
+      "id": "screening-2",
+      "category": "KEYWORD_GAP",
+      "severity": "major",
+      "confidence": "high",
+      "title": "Python is missing",
+      "detail": "Python is missing.",
+      "evidence": [
+        {
+          "anchor": "J10",
+          "quote": "Experience with Python or R"
+        }
+      ],
+      "fix": {
+        "fix_type": "add_keyword_truthfully",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false,
+      "searched_terms": [
+        "Python"
+      ]
+    },
+    {
+      "id": "screening-3",
+      "category": "TITLE_MISMATCH",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "No data analyst title or headline near the top",
+      "detail": "No data analyst title or headline near the top.",
+      "evidence": [
+        {
+          "anchor": "R7",
+          "quote": "Marketing Intern, BrightPath Co."
+        },
+        {
+          "anchor": "A:KW-004"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Add a truthful headline such as Business Analytics student.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "screening-4",
+      "category": "CONTACT_HEADER",
+      "severity": "major",
+      "confidence": "high",
+      "title": "Email and phone sit only in the page header",
+      "detail": "Email and phone sit only in the page header.",
+      "evidence": [
+        {
+          "anchor": "A:PARSE-006"
+        },
+        {
+          "anchor": "R1",
+          "quote": "jordan.rivera@example.com"
+        }
+      ],
+      "fix": {
+        "fix_type": "reformat",
+        "suggestion": "Move the email and phone into the body under your name.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "screening-5",
+      "category": "PARSE_FORMAT",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Odd characters may confuse parsers",
+      "detail": "Odd characters may confuse parsers.",
+      "evidence": [
+        {
+          "anchor": "A:PARSE-099"
+        }
+      ],
+      "fix": {
+        "fix_type": "reformat",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "script_bands": {
+      "overall": "Needs work",
+      "parse_safety": "Minor risks",
+      "keyword_match": "Partial match",
+      "content_signals": "Solid"
+    },
+    "keyword_table": [
+      {
+        "term": "SQL",
+        "importance": "required",
+        "found": false,
+        "match_type": "none",
+        "evidence_level": "none",
+        "resume_wording": null,
+        "jd_anchor": "J9",
+        "resume_anchors": [],
+        "truthful_fix": "ask_candidate"
+      },
+      {
+        "term": "Python",
+        "importance": "required",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "demonstrated",
+        "resume_wording": "Python",
+        "jd_anchor": "J10",
+        "resume_anchors": [
+          "R14",
+          "R17"
+        ],
+        "truthful_fix": "none_needed"
+      },
+      {
+        "term": "Tableau",
+        "importance": "required",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "listed",
+        "resume_wording": "Tableau",
+        "jd_anchor": "J11",
+        "resume_anchors": [
+          "R17"
+        ],
+        "truthful_fix": "ask_candidate"
+      }
+    ],
+    "parse_risks": [
+      {
+        "issue_id": "PARSE-006",
+        "script_severity": "high",
+        "note": "Contact only in the header."
+      }
+    ],
+    "knockouts": [
+      {
+        "type": "onsite_hybrid",
+        "jd_anchor": "J14",
+        "status": "not_on_resume_by_design",
+        "note": "Answer the application question truthfully."
+      }
+    ]
+  }
+}

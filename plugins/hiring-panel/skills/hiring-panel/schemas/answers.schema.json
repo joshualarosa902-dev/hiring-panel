@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/joshualarosa902-dev/hiring-panel/schemas/answers.schema.json",
+  "title": "Hiring Panel answers (work/answers.json)",
+  "description": "The ONE question batch (at most 7 questions; the builder interview for thin resumes allows 8) and the candidate's replies, verbatim. Order: integrity confirmations, then one combined keywords question (yes/some/no per term), then number placeholders, then reviewer questions. Rewrite evidence cites these as Q1, Q2... Only status 'answered' counts as evidence; for kind 'keywords' items answered 'yes' or 'some' count (term + detail), and the rest of the reply can back other facts, but a term answered 'no' never counts. See references/questions.md.",
+  "type": "object",
+  "required": ["schema_version", "mode", "answers"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "mode": { "enum": ["interactive", "skipped"], "description": "skipped = the candidate replied 'skip' (every answer then has status 'skipped')." },
+    "answers": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "question", "answer", "status", "items"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^Q[0-9]+$" },
+          "kind": { "enum": ["integrity", "keywords", "number", "reviewer", "builder"] },
+          "question": { "type": "string", "minLength": 1, "maxLength": 400 },
+          "answer": { "type": ["string", "null"], "maxLength": 2000, "description": "The candidate's words, verbatim (keep 'about', ranges and typos). null when skipped." },
+          "status": { "enum": ["answered", "declined", "skipped"] },
+          "items": {
+            "type": ["array", "null"],
+            "description": "Only for kind 'keywords': one entry per term in the combined list.",
+            "items": {
+              "type": "object",
+              "required": ["term", "answer", "detail"],
+              "additionalProperties": false,
+              "properties": {
+                "term": { "type": "string", "minLength": 1 },
+                "answer": { "enum": ["yes", "some", "no"] },
+                "detail": { "type": "string", "maxLength": 400, "description": "Where and how they used it, in their words. For a 'no', any other words they volunteered ('no, but I did the CITI human subjects training'), or ''. Those words can back OTHER facts; the term answered 'no' itself is never evidence." }
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "kind": { "const": "keywords" } } },
+            "then": { "properties": { "items": { "type": "array" } } },
+            "else": { "properties": { "items": { "type": "null" } } }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "teammate",
+  "decision_question": "Would I want this person on my team next sprint, and could they contribute without a lot of hand-holding?",
+  "verdict": "lean_yes",
+  "verdict_rationale": "Excel and pivot tables are shown in real work (R13, R24) and training new cashiers (R17) says you can explain things. I would need to teach SQL and dashboards.",
+  "advance": "yes",
+  "one_line_take": "I could hand you an Excel task next sprint; SQL and dashboards would need some ramp-up.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "T1_day_one_toolkit",
+      "score": 3,
+      "evidence_anchors": [
+        "R13",
+        "R24"
+      ],
+      "note": "Excel and pivot tables shown."
+    },
+    {
+      "dimension_id": "T2_collaboration",
+      "score": 3,
+      "evidence_anchors": [
+        "R23"
+      ],
+      "note": "Worked with 3 classmates."
+    },
+    {
+      "dimension_id": "T3_dependability",
+      "score": 4,
+      "evidence_anchors": [
+        "R16",
+        "R19"
+      ],
+      "note": "Shift lead during the semester."
+    },
+    {
+      "dimension_id": "T4_individual_contribution",
+      "score": 2,
+      "evidence_anchors": [
+        "R23"
+      ],
+      "note": "Own part in the team survey unclear."
+    },
+    {
+      "dimension_id": "T5_ramp_up",
+      "score": 3,
+      "evidence_anchors": [
+        "R31"
+      ],
+      "note": "SQL from classes only."
+    }
+  ],
+  "findings": [
+    {
+      "id": "teammate-1",
+      "category": "ATTRIBUTION_UNCLEAR",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Your own part in the team survey is unclear",
+      "detail": "The survey is your strongest proof for this job, and it was a team of 4. Which part was yours?",
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "Designed a 12 question survey with 3 classmates"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "Name the part you did yourself.",
+        "candidate_question": "Which part of the bike share survey did you do yourself?"
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "teammate-s1",
+      "title": "Trained new coworkers, which means you can explain your work",
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "Trained 4 new cashiers"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "question": "Which part of the bike share survey did you do yourself?",
+      "why": "Your own part is unclear.",
+      "related_anchors": [
+        "R23"
+      ]
+    }
+  ],
+  "lens_data": {
+    "day_one_readiness": "some_ramp",
+    "toolkit_overlap": [
+      {
+        "tool_or_method": "Excel",
+        "jd_anchor": "J12",
+        "status": "demonstrated",
+        "resume_anchors": [
+          "R13",
+          "R24"
+        ]
+      },
+      {
+        "tool_or_method": "SQL",
+        "jd_anchor": "J12",
+        "status": "listed_only",
+        "resume_anchors": [
+          "R31"
+        ]
+      },
+      {
+        "tool_or_method": "Tableau",
+        "jd_anchor": "J16",
+        "status": "absent",
+        "resume_anchors": []
+      }
+    ],
+    "peer_interview_questions": [
+      "How did you set up the pivot tables for the survey results?"
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0",
+  "meta": {
+    "variant": "improved",
+    "locale": "en-US",
+    "pageSize": null,
+    "targetPages": 1,
+    "layout": "classic",
+    "stage": "student",
+    "target": {"role": "Marketing Analyst Intern", "company": "Northwind Foods"},
+    "addressed": [
+      {"issue_id": "I1", "status": "fixed", "note": "Each bullet now starts with what you did; the follower growth you gave us is in."},
+      {"issue_id": "I2", "status": "gap", "note": "SQL is listed honestly as coursework. A project of your own would close this."},
+      {"issue_id": "I3", "status": "fixed", "note": "The tracking spreadsheet and the pricing survey now sit near the top of their entries."},
+      {"issue_id": "I4", "status": "gap", "note": "Tableau and Google Analytics stay off the resume because you have not used them."},
+      {"issue_id": "I5", "status": "needs_you", "note": "Add the survey response count if you can find it."},
+      {"issue_id": "I6", "status": "fixed", "note": "All dates now use one format."}
+    ],
+    "cuts": [
+      {"ref": "R19", "reason": "Least related to a marketing analyst role, and it needed space on one page."}
+    ]
+  },
+  "basics": {
+    "name": "Maya Rivera",
+    "headline": "Marketing and Statistics Student",
+    "location": "Austin, TX",
+    "email": "maya.rivera@example.com",
+    "phone": "(512) 555-0142",
+    "links": [{"label": "LinkedIn", "url": "https://linkedin.com/in/maya-rivera-example"}]
+  },
+  "sections": [
+    {
+      "id": "education", "type": "education", "title": "Education",
+      "items": [
+        {
+          "id": "edu1",
+          "school": "Hill Country University",
+          "location": "Austin, TX",
+          "degree": "Bachelor of Business Administration",
+          "field": "Marketing",
+          "minor": "Statistics",
+          "end": "2027-05",
+          "endLabel": "Expected",
+          "gpa": "3.7/4.0",
+          "honors": ["Dean's List (4 semesters)"],
+          "coursework": ["Marketing Analytics", "Consumer Behavior", "Statistics for Business", "Intro to SQL"],
+          "evidence": [{"src": "orig", "ref": "R4-R7"}]
+        }
+      ]
+    },
+    {
+      "id": "experience", "type": "experience", "title": "Experience",
+      "items": [
+        {
+          "id": "exp1",
+          "org": "Bluebonnet Coffee Co.",
+          "role": "Social Media Marketing Intern",
+          "location": "Austin, TX",
+          "dateText": "Summer 2025",
+          "evidence": [{"src": "orig", "ref": "R9-R10"}],
+          "bullets": [
+            {
+              "id": "exp1.b1",
+              "text": "Created and posted Instagram content 4x a week for both store locations over 10 weeks, growing the account by {{p1}} followers",
+              "textIfUnknown": "Created and posted Instagram content 4x a week for both store locations over 10 weeks",
+              "evidence": [
+                {"src": "orig", "ref": "R11", "quote": "made instagram posts 4x a week for both stores for 10 weeks"},
+                {"src": "user", "ref": "Q2", "quote": "about 600"}
+              ],
+              "ops": ["REPHRASE", "QUANTIFY_FROM_USER"],
+              "originalText": "made instagram posts 4x a week for both stores for 10 weeks"
+            },
+            {
+              "id": "exp1.b2",
+              "text": "Tracked likes and comments in a spreadsheet and showed the owner which posts did best before the fall menu launch",
+              "evidence": [
+                {"src": "orig", "ref": "R12", "quote": "kept a spreadsheet of likes and comments"},
+                {"src": "orig", "ref": "R13", "quote": "showed the owner which posts did best before the fall menu launch"}
+              ],
+              "ops": ["MERGE", "REPHRASE"]
+            },
+            {
+              "id": "exp1.b3",
+              "text": "Took photos and designed 40+ graphics in Canva, some used for in-store signs",
+              "evidence": [
+                {"src": "orig", "ref": "R14", "quote": "took photos and made 40+ graphics in Canva, some used for in-store signs"}
+              ],
+              "ops": ["TIGHTEN"]
+            }
+          ]
+        },
+        {
+          "id": "exp2",
+          "org": "Pecan Street Market",
+          "role": "Customer Service Associate",
+          "location": "Austin, TX",
+          "start": "2023-09",
+          "end": "present",
+          "evidence": [{"src": "orig", "ref": "R15-R16"}],
+          "bullets": [
+            {
+              "id": "exp2.b1",
+              "text": "Help customers with returns and questions at the service desk while working about 20 hours a week during school",
+              "evidence": [
+                {"src": "orig", "ref": "R17", "quote": "help customers at the service desk, returns, questions"},
+                {"src": "user", "ref": "Q4", "quote": "about 20 hours a week during school"}
+              ],
+              "ops": ["REPHRASE", "SURFACE"]
+            },
+            {
+              "id": "exp2.b2",
+              "text": "Trained 3 new hires",
+              "evidence": [{"src": "orig", "ref": "R18", "quote": "trained 3 new hires"}],
+              "ops": ["STANDARDIZE"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "projects", "type": "projects", "title": "Projects",
+      "items": [
+        {
+          "id": "proj1",
+          "name": "Campus Coffee Pricing Survey",
+          "context": "Marketing Analytics class project",
+          "dateText": "Spring 2025",
+          "evidence": [{"src": "orig", "ref": "R21"}],
+          "bullets": [
+            {
+              "id": "proj1.b1",
+              "text": "Designed a 15-question survey, collected {{p2}} student responses and analyzed them with pivot tables",
+              "textIfUnknown": "Designed a 15-question survey and analyzed the responses with pivot tables",
+              "evidence": [{"src": "orig", "ref": "R22", "quote": "made a 15 question survey and used pivot tables"}],
+              "ops": ["REPHRASE"]
+            },
+            {
+              "id": "proj1.b2",
+              "text": "Presented our 4-person team's price recommendation; the project earned an A",
+              "evidence": [
+                {"src": "orig", "ref": "R23", "quote": "presented our price recommendation, got an A"},
+                {"src": "user", "ref": "Q5", "quote": "4 of us"}
+              ],
+              "ops": ["REPHRASE", "QUANTIFY_FROM_USER"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activities", "type": "experience", "title": "Leadership & Activities",
+      "items": [
+        {
+          "id": "act1",
+          "org": "Hill Country Marketing Club",
+          "role": "Events Committee Member",
+          "location": "Austin, TX",
+          "start": "2024-01",
+          "end": "present",
+          "evidence": [{"src": "orig", "ref": "R25-R26"}],
+          "bullets": [
+            {
+              "id": "act1.b1",
+              "text": "Helped plan 2 speaker events by sending emails and running check-in",
+              "evidence": [{"src": "orig", "ref": "R27", "quote": "helped plan 2 speaker events, sent emails, ran check in"}],
+              "ops": ["REPHRASE"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills", "type": "skills", "title": "Skills",
+      "groups": [
+        {"label": "Analytics", "items": ["Excel (pivot tables, charts)", "SQL (coursework)", "Survey design"],
+         "evidence": [{"src": "orig", "ref": "R29"}, {"src": "user", "ref": "Q1", "quote": "Intro to SQL class"}]},
+        {"label": "Marketing", "items": ["Instagram", "Canva", "Content calendars"],
+         "evidence": [{"src": "orig", "ref": "R30"}]},
+        {"label": "Languages", "items": ["English", "Spanish (fluent)"],
+         "evidence": [{"src": "orig", "ref": "R31"}]}
+      ]
+    }
+  ],
+  "placeholders": {
+    "p1": {"bullet": "exp1.b1", "ask": "Roughly how many followers did the Bluebonnet Instagram gain during your 10 weeks?",
+           "kind": "count", "label": "followers gained", "status": "answered", "value": "about 600", "question": "Q2"},
+    "p2": {"bullet": "proj1.b1", "ask": "About how many students answered your pricing survey?",
+           "kind": "count", "label": "number of responses", "status": "declined", "value": null, "question": "Q3"}
+  }
+}

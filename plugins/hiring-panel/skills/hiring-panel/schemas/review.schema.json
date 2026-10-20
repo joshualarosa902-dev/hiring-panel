@@ -1,0 +1,1384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hiring-panel:schema:review:1.0",
+  "title": "Hiring Panel reviewer output",
+  "description": "One reviewer's JSON (work/reviews/<reviewer_id>.json). Validator-facing; reviewers read references/reviewers/_output-format.md instead.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "reviewer_id",
+    "decision_question",
+    "verdict",
+    "verdict_rationale",
+    "advance",
+    "one_line_take",
+    "confidence",
+    "dimension_scores",
+    "findings",
+    "strengths",
+    "questions_for_candidate",
+    "lens_data"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "reviewer_id": {
+      "enum": [
+        "screening",
+        "hiring_manager",
+        "recruiter",
+        "competitor",
+        "ceo",
+        "teammate",
+        "skeptic"
+      ]
+    },
+    "decision_question": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "verdict": {
+      "$ref": "#/$defs/verdict"
+    },
+    "verdict_rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400,
+      "description": "<= 60 words, names the decisive lines in a few quoted words"
+    },
+    "advance": {
+      "enum": [
+        "yes",
+        "no",
+        "unsure"
+      ],
+      "description": "From your seat, should this resume move to the next step for this job?"
+    },
+    "one_line_take": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "<= 20 words, plain language; student-facing, so no R#/J#/A: ids"
+    },
+    "confidence": {
+      "$ref": "#/$defs/confidence"
+    },
+    "dimension_scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dimension_id",
+          "score",
+          "evidence_anchors",
+          "note"
+        ],
+        "properties": {
+          "dimension_id": {
+            "type": "string",
+            "pattern": "^[A-Z][0-9]_[a-z_]+$"
+          },
+          "score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "evidence_anchors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/anchor"
+            },
+            "maxItems": 6
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 160
+          }
+        }
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      },
+      "minItems": 0,
+      "maxItems": 7
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/strength"
+      },
+      "minItems": 0,
+      "maxItems": 4
+    },
+    "questions_for_candidate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question",
+          "why",
+          "related_anchors"
+        ],
+        "properties": {
+          "question": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "why": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "related_anchors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/anchor"
+            },
+            "maxItems": 6
+          }
+        }
+      },
+      "maxItems": 5
+    },
+    "lens_data": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "screening"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_screening"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_screening"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "hiring_manager"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_hiring_manager"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_hiring_manager"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "recruiter"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_recruiter"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_recruiter"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "competitor"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_competitor"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_competitor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "ceo"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_ceo"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_ceo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "teammate"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_teammate"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_teammate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer_id": {
+            "const": "skeptic"
+          }
+        },
+        "required": [
+          "reviewer_id"
+        ]
+      },
+      "then": {
+        "properties": {
+          "lens_data": {
+            "$ref": "#/$defs/lens_skeptic"
+          },
+          "dimension_scores": {
+            "items": {
+              "properties": {
+                "dimension_id": {
+                  "$ref": "#/$defs/dims_skeptic"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "verdict": {
+      "enum": [
+        "strong_yes",
+        "lean_yes",
+        "borderline",
+        "lean_no",
+        "strong_no"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "critical",
+        "major",
+        "moderate",
+        "minor"
+      ]
+    },
+    "anchor": {
+      "type": "string",
+      "pattern": "^([RJ][0-9]+|A:[A-Z]+-[0-9]{3}b?)$",
+      "description": "R# resume line, J# job-posting line, A:<ISSUE-ID> screening issue. Q# anchors exist only in the provenance audit."
+    },
+    "resume_anchor": {
+      "type": "string",
+      "pattern": "^R[0-9]+$"
+    },
+    "jd_anchor": {
+      "type": "string",
+      "pattern": "^J[0-9]+$"
+    },
+    "category": {
+      "enum": [
+        "PARSE_FORMAT",
+        "CONTACT_HEADER",
+        "KEYWORD_GAP",
+        "KNOCKOUT_RISK",
+        "REQUIREMENT_UNPROVEN",
+        "TITLE_MISMATCH",
+        "LAYOUT_SKIM",
+        "LENGTH_DENSITY",
+        "TYPO_GRAMMAR",
+        "EDUCATION_PRESENTATION",
+        "TRAJECTORY_GAP",
+        "ORDER_PRIORITY",
+        "RELEVANCE_NOISE",
+        "SKILL_UNSUPPORTED",
+        "IMPACT_MISSING",
+        "METRIC_MISSING",
+        "VAGUE_LANGUAGE",
+        "GENERIC_DIFFERENTIATION",
+        "PROOF_LINKS",
+        "MISSION_ALIGNMENT",
+        "OWNERSHIP_EVIDENCE",
+        "ATTRIBUTION_UNCLEAR",
+        "COLLABORATION_EVIDENCE",
+        "SCOPE_INFLATION",
+        "UNVERIFIABLE_CLAIM",
+        "INCONSISTENCY"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor"
+      ],
+      "properties": {
+        "anchor": {
+          "$ref": "#/$defs/anchor"
+        },
+        "quote": {
+          "type": "string",
+          "maxLength": 220,
+          "description": "verbatim from the anchored line, <= 25 words; optional for A: anchors"
+        }
+      },
+      "if": {
+        "properties": {
+          "anchor": {
+            "pattern": "^[RJ]"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "quote"
+        ],
+        "properties": {
+          "quote": {
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "fix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fix_type",
+        "suggestion",
+        "candidate_question"
+      ],
+      "properties": {
+        "fix_type": {
+          "enum": [
+            "rewrite",
+            "reorder",
+            "reformat",
+            "add_keyword_truthfully",
+            "remove",
+            "needs_candidate_input",
+            "real_gap"
+          ]
+        },
+        "suggestion": {
+          "type": "string",
+          "maxLength": 280,
+          "description": "<= 40 words; only facts already in the cited lines; student-facing, so quote words instead of R#/J#/A: ids"
+        },
+        "candidate_question": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "severity",
+        "confidence",
+        "title",
+        "detail",
+        "evidence",
+        "fix",
+        "out_of_lens"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z_]+-[0-9]+$"
+        },
+        "category": {
+          "$ref": "#/$defs/category"
+        },
+        "severity": {
+          "$ref": "#/$defs/severity"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90,
+          "description": "<= 12 words, plain language; student-facing, so no R#/J#/A: ids"
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 420,
+          "description": "<= 60 words, in the persona's voice; student-facing, so no R#/J#/A: ids"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "searched_terms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "maxItems": 12
+        },
+        "fix": {
+          "$ref": "#/$defs/fix"
+        },
+        "out_of_lens": {
+          "type": "boolean"
+        }
+      },
+      "if": {
+        "properties": {
+          "category": {
+            "const": "KEYWORD_GAP"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "searched_terms"
+        ],
+        "properties": {
+          "searched_terms": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "strength": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "evidence",
+        "underused"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z_]+-s[0-9]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "underused": {
+          "type": "boolean",
+          "description": "true if the strength is buried or undersold"
+        }
+      }
+    },
+    "lens_screening": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "script_bands",
+        "keyword_table",
+        "parse_risks",
+        "knockouts"
+      ],
+      "properties": {
+        "script_bands": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "overall",
+            "parse_safety",
+            "keyword_match",
+            "content_signals"
+          ],
+          "properties": {
+            "overall": {
+              "type": "string",
+              "maxLength": 80
+            },
+            "parse_safety": {
+              "type": "string",
+              "maxLength": 80
+            },
+            "keyword_match": {
+              "type": "string",
+              "maxLength": 80
+            },
+            "content_signals": {
+              "type": "string",
+              "maxLength": 80
+            }
+          }
+        },
+        "keyword_table": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "term",
+              "importance",
+              "found",
+              "match_type",
+              "evidence_level",
+              "resume_wording",
+              "jd_anchor",
+              "resume_anchors",
+              "truthful_fix"
+            ],
+            "properties": {
+              "term": {
+                "type": "string",
+                "maxLength": 80,
+                "minLength": 1
+              },
+              "importance": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "found": {
+                "type": "boolean"
+              },
+              "match_type": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "evidence_level": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "resume_wording": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 120
+              },
+              "jd_anchor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^J[0-9]+$"
+              },
+              "resume_anchors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/resume_anchor"
+                },
+                "maxItems": 6
+              },
+              "truthful_fix": {
+                "enum": [
+                  "none_needed",
+                  "already_supported_elsewhere",
+                  "ask_candidate",
+                  "do_not_add"
+                ]
+              }
+            }
+          },
+          "maxItems": 30
+        },
+        "parse_risks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "issue_id",
+              "script_severity",
+              "note"
+            ],
+            "properties": {
+              "issue_id": {
+                "type": "string",
+                "pattern": "^[A-Z]+-[0-9]{3}b?$"
+              },
+              "script_severity": {
+                "enum": [
+                  "critical",
+                  "high",
+                  "medium",
+                  "low",
+                  "info"
+                ]
+              },
+              "note": {
+                "type": "string",
+                "maxLength": 160
+              }
+            }
+          },
+          "maxItems": 12
+        },
+        "knockouts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "jd_anchor",
+              "status",
+              "note"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "maxLength": 40,
+                "minLength": 1
+              },
+              "jd_anchor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^J[0-9]+$"
+              },
+              "status": {
+                "enum": [
+                  "appears_met",
+                  "unclear",
+                  "appears_unmet",
+                  "not_on_resume_by_design"
+                ]
+              },
+              "note": {
+                "type": "string",
+                "maxLength": 160
+              }
+            }
+          },
+          "maxItems": 8
+        }
+      }
+    },
+    "lens_hiring_manager": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "basis",
+        "requirement_map",
+        "case_for_candidate",
+        "biggest_doubt",
+        "interview_questions"
+      ],
+      "properties": {
+        "basis": {
+          "enum": [
+            "posting",
+            "role_title"
+          ]
+        },
+        "requirement_map": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "jd_anchor",
+              "requirement",
+              "status",
+              "resume_anchors",
+              "note"
+            ],
+            "properties": {
+              "jd_anchor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^J[0-9]+$"
+              },
+              "requirement": {
+                "type": "string",
+                "maxLength": 160,
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "demonstrated",
+                  "claimed_only",
+                  "transferable",
+                  "absent"
+                ]
+              },
+              "resume_anchors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/resume_anchor"
+                },
+                "maxItems": 6
+              },
+              "note": {
+                "type": "string",
+                "maxLength": 160
+              }
+            }
+          },
+          "maxItems": 12
+        },
+        "case_for_candidate": {
+          "type": "string",
+          "maxLength": 360,
+          "minLength": 1
+        },
+        "biggest_doubt": {
+          "type": "string",
+          "maxLength": 220,
+          "minLength": 1
+        },
+        "interview_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      }
+    },
+    "lens_recruiter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seven_second_takeaway",
+        "six_data_points",
+        "page_count_estimate",
+        "gpa_note",
+        "locale_applied"
+      ],
+      "properties": {
+        "seven_second_takeaway": {
+          "type": "string",
+          "maxLength": 180,
+          "minLength": 1
+        },
+        "six_data_points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "item",
+              "found",
+              "anchor",
+              "findable_in_seconds"
+            ],
+            "properties": {
+              "item": {
+                "enum": [
+                  "name",
+                  "current_title_org",
+                  "previous_title_org",
+                  "current_dates",
+                  "previous_dates",
+                  "education"
+                ]
+              },
+              "found": {
+                "type": "boolean"
+              },
+              "anchor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^R[0-9]+$"
+              },
+              "findable_in_seconds": {
+                "type": "boolean"
+              }
+            }
+          },
+          "maxItems": 6
+        },
+        "page_count_estimate": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "gpa_note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "locale_applied": {
+          "type": "string",
+          "pattern": "^([a-z]{2}-[A-Z]{2}|default)$"
+        }
+      }
+    },
+    "lens_competitor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "benchmark_profile",
+        "head_to_head",
+        "unfair_advantages",
+        "generic_phrases"
+      ],
+      "properties": {
+        "benchmark_profile": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "level",
+            "basis",
+            "typical_signals",
+            "basis_jd_anchors",
+            "disclaimer"
+          ],
+          "properties": {
+            "level": {
+              "enum": [
+                "intern",
+                "entry",
+                "mid",
+                "senior",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "enum": [
+                "posting",
+                "role_title"
+              ]
+            },
+            "typical_signals": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 1
+              },
+              "maxItems": 6
+            },
+            "basis_jd_anchors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/jd_anchor"
+              },
+              "maxItems": 8
+            },
+            "disclaimer": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 200
+            }
+          }
+        },
+        "head_to_head": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "axis",
+              "this_resume",
+              "typical_competitor",
+              "edge"
+            ],
+            "properties": {
+              "axis": {
+                "enum": [
+                  "P1_table_stakes",
+                  "P2_differentiation",
+                  "P3_specificity",
+                  "P4_proof_density",
+                  "P5_positioning"
+                ]
+              },
+              "this_resume": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "typical_competitor": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "edge": {
+                "enum": [
+                  "candidate",
+                  "competitor",
+                  "even"
+                ]
+              }
+            }
+          },
+          "minItems": 5,
+          "maxItems": 5
+        },
+        "unfair_advantages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "anchor",
+              "why_it_stands_out",
+              "currently_buried"
+            ],
+            "properties": {
+              "anchor": {
+                "$ref": "#/$defs/resume_anchor"
+              },
+              "why_it_stands_out": {
+                "type": "string",
+                "maxLength": 160,
+                "minLength": 1
+              },
+              "currently_buried": {
+                "type": "boolean"
+              }
+            }
+          },
+          "maxItems": 4
+        },
+        "generic_phrases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "anchor",
+              "quote"
+            ],
+            "properties": {
+              "anchor": {
+                "$ref": "#/$defs/resume_anchor"
+              },
+              "quote": {
+                "type": "string",
+                "maxLength": 220,
+                "minLength": 1
+              }
+            }
+          },
+          "maxItems": 8
+        }
+      }
+    },
+    "lens_ceo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "one_sentence_case",
+        "so_what_bullets",
+        "keeper_test"
+      ],
+      "properties": {
+        "one_sentence_case": {
+          "type": "string",
+          "maxLength": 220,
+          "minLength": 1
+        },
+        "so_what_bullets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "anchor",
+              "quote",
+              "missing"
+            ],
+            "properties": {
+              "anchor": {
+                "$ref": "#/$defs/resume_anchor"
+              },
+              "quote": {
+                "type": "string",
+                "maxLength": 220,
+                "minLength": 1
+              },
+              "missing": {
+                "enum": [
+                  "outcome",
+                  "beneficiary",
+                  "scale"
+                ]
+              }
+            }
+          },
+          "maxItems": 8
+        },
+        "keeper_test": {
+          "type": "string",
+          "maxLength": 220,
+          "minLength": 1
+        }
+      }
+    },
+    "lens_teammate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "day_one_readiness",
+        "toolkit_overlap",
+        "peer_interview_questions"
+      ],
+      "properties": {
+        "day_one_readiness": {
+          "enum": [
+            "ready",
+            "some_ramp",
+            "significant_ramp"
+          ]
+        },
+        "toolkit_overlap": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "tool_or_method",
+              "jd_anchor",
+              "status",
+              "resume_anchors"
+            ],
+            "properties": {
+              "tool_or_method": {
+                "type": "string",
+                "maxLength": 80,
+                "minLength": 1
+              },
+              "jd_anchor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^J[0-9]+$"
+              },
+              "status": {
+                "enum": [
+                  "demonstrated",
+                  "listed_only",
+                  "absent"
+                ]
+              },
+              "resume_anchors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/resume_anchor"
+                },
+                "maxItems": 6
+              }
+            }
+          },
+          "maxItems": 12
+        },
+        "peer_interview_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      }
+    },
+    "lens_skeptic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_audit",
+        "consistency_checks"
+      ],
+      "properties": {
+        "claim_audit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "anchor",
+              "quote",
+              "claim_type",
+              "risk",
+              "probe_question",
+              "recommended"
+            ],
+            "properties": {
+              "anchor": {
+                "$ref": "#/$defs/resume_anchor"
+              },
+              "quote": {
+                "type": "string",
+                "maxLength": 220,
+                "minLength": 1
+              },
+              "claim_type": {
+                "enum": [
+                  "metric",
+                  "scope",
+                  "proficiency",
+                  "credential",
+                  "date",
+                  "title",
+                  "superlative"
+                ]
+              },
+              "risk": {
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "probe_question": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              "recommended": {
+                "enum": [
+                  "keep_prepare_story",
+                  "add_context",
+                  "soften",
+                  "remove",
+                  "verify_with_candidate"
+                ]
+              }
+            }
+          },
+          "maxItems": 15
+        },
+        "consistency_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "check",
+              "result",
+              "anchors"
+            ],
+            "properties": {
+              "check": {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 1
+              },
+              "result": {
+                "enum": [
+                  "pass",
+                  "fail",
+                  "unclear"
+                ]
+              },
+              "anchors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/anchor"
+                },
+                "maxItems": 6
+              }
+            }
+          },
+          "maxItems": 8
+        }
+      }
+    },
+    "dims_screening": {
+      "enum": [
+        "S1_parse_safety",
+        "S2_required_coverage",
+        "S3_title_alignment",
+        "S4_knockout_exposure",
+        "S5_keyword_context"
+      ]
+    },
+    "dims_hiring_manager": {
+      "enum": [
+        "H1_requirement_match",
+        "H2_proof_of_work",
+        "H3_results",
+        "H4_problem_solving",
+        "H5_trajectory"
+      ]
+    },
+    "dims_recruiter": {
+      "enum": [
+        "C1_top_third",
+        "C2_skimmability",
+        "C3_basic_qualifiers",
+        "C4_red_flags",
+        "C5_instant_fit"
+      ]
+    },
+    "dims_competitor": {
+      "enum": [
+        "P1_table_stakes",
+        "P2_differentiation",
+        "P3_specificity",
+        "P4_proof_density",
+        "P5_positioning"
+      ]
+    },
+    "dims_ceo": {
+      "enum": [
+        "E1_business_outcomes",
+        "E2_ownership",
+        "E3_judgment",
+        "E4_alignment",
+        "E5_ceiling"
+      ]
+    },
+    "dims_teammate": {
+      "enum": [
+        "T1_day_one_toolkit",
+        "T2_collaboration",
+        "T3_dependability",
+        "T4_individual_contribution",
+        "T5_ramp_up"
+      ]
+    },
+    "dims_skeptic": {
+      "enum": [
+        "K1_verifiability",
+        "K2_scope_plausibility",
+        "K3_attribution",
+        "K4_internal_consistency",
+        "K5_inflation_density"
+      ]
+    }
+  }
+}

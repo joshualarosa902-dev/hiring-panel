@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "ceo",
+  "decision_question": "Would this person move something the business cares about, and in a year would I fight to keep them?",
+  "verdict": "borderline",
+  "verdict_rationale": "The sales numbers work (R13) feeds a real business meeting, but the newsletter and posts (R11, R12) have no outcome, and the 300% line (R14) is a result I cannot connect to your work.",
+  "advance": "unsure",
+  "one_line_take": "I see useful work, but not yet what changed for the business because of you.",
+  "confidence": "medium",
+  "dimension_scores": [
+    {
+      "dimension_id": "E1_business_outcomes",
+      "score": 2,
+      "evidence_anchors": [
+        "R11",
+        "R14"
+      ],
+      "note": "Outcomes are missing or unclear."
+    },
+    {
+      "dimension_id": "E2_ownership",
+      "score": 2,
+      "evidence_anchors": [
+        "R12"
+      ],
+      "note": "Mostly helping roles."
+    },
+    {
+      "dimension_id": "E3_judgment",
+      "score": 3,
+      "evidence_anchors": [
+        "R24"
+      ],
+      "note": "Made a pricing recommendation."
+    },
+    {
+      "dimension_id": "E4_alignment",
+      "score": 3,
+      "evidence_anchors": [
+        "R13"
+      ],
+      "note": "Sales numbers work fits a grocery brand."
+    },
+    {
+      "dimension_id": "E5_ceiling",
+      "score": 3,
+      "evidence_anchors": [
+        "R16"
+      ],
+      "note": "Promoted to shift lead while studying."
+    }
+  ],
+  "findings": [
+    {
+      "id": "ceo-1",
+      "category": "IMPACT_MISSING",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "No outcome for the newsletter or the posts",
+      "detail": "Six hundred subscribers is scale, but I cannot tell what the newsletter did for the store.",
+      "evidence": [
+        {
+          "anchor": "R11",
+          "quote": "weekly email newsletter to about 600 subscribers"
+        },
+        {
+          "anchor": "R12",
+          "quote": "tracked likes in a spreadsheet"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "Add what happened because of the newsletter, if you know it.",
+        "candidate_question": "Did the newsletter or the tracked posts change anything the store did?"
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "ceo-s1",
+      "title": "Numbers work that fed a weekly team meeting",
+      "evidence": [
+        {
+          "anchor": "R13",
+          "quote": "Pulled weekly sales numbers into Excel"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "question": "Did the newsletter or the tracked posts change anything the store did?",
+      "why": "An outcome would show business value.",
+      "related_anchors": [
+        "R11",
+        "R12"
+      ]
+    }
+  ],
+  "lens_data": {
+    "one_sentence_case": "Already turns weekly sales numbers into Excel for a team meeting and led a survey toward a pricing recommendation.",
+    "so_what_bullets": [
+      {
+        "anchor": "R11",
+        "quote": "Responsible for the weekly email newsletter to about 600 subscribers",
+        "missing": "outcome"
+      },
+      {
+        "anchor": "R12",
+        "quote": "Helped with Instagram posts 3x a week",
+        "missing": "outcome"
+      }
+    ],
+    "keeper_test": "Promising if the analytics work grows; too early to tell from this page."
+  }
+}

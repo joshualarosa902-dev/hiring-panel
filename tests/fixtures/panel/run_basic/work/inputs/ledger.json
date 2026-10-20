@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "resume_lines": [
+    {
+      "id": "R1",
+      "section": "header_footer",
+      "text": "[header] Jordan Rivera | jordan.rivera@example.com | (512) 555-0198"
+    },
+    {
+      "id": "R2",
+      "section": "contact",
+      "text": "Jordan Rivera"
+    },
+    {
+      "id": "R3",
+      "section": "contact",
+      "text": "Austin, TX | linkedin.com/in/jordan-rivera-example"
+    },
+    {
+      "id": "R4",
+      "section": "education",
+      "text": "EDUCATION"
+    },
+    {
+      "id": "R5",
+      "section": "education",
+      "text": "B.S. Business Analytics, Lakeshore State University, Expected May 2027"
+    },
+    {
+      "id": "R6",
+      "section": "experience",
+      "text": "EXPERIENCE"
+    },
+    {
+      "id": "R7",
+      "section": "experience",
+      "text": "Marketing Intern, BrightPath Co., Jun 2025 – Aug 2025"
+    },
+    {
+      "id": "R8",
+      "section": "experience",
+      "text": "• Responsible for social media posts and various tasks"
+    },
+    {
+      "id": "R9",
+      "section": "experience",
+      "text": "• Spearheaded company-wide analytics strategy, increasing revenue 300%"
+    },
+    {
+      "id": "R10",
+      "section": "experience",
+      "text": "• Helped the team with weekly reports in Excel"
+    },
+    {
+      "id": "R11",
+      "section": "experience",
+      "text": "Barista, Bean Scene Cafe, Sep 2023 – Present"
+    },
+    {
+      "id": "R12",
+      "section": "experience",
+      "text": "• Trained 6 new baristas and handled opening shifts"
+    },
+    {
+      "id": "R13",
+      "section": "projects",
+      "text": "PROJECTS"
+    },
+    {
+      "id": "R14",
+      "section": "projects",
+      "text": "• Built a Python dashboard tracking 2,000 student survey responses for the campus food bank"
+    },
+    {
+      "id": "R15",
+      "section": "projects",
+      "text": "• Worked on a group project analyzing music streaming data"
+    },
+    {
+      "id": "R16",
+      "section": "skills",
+      "text": "SKILLS"
+    },
+    {
+      "id": "R17",
+      "section": "skills",
+      "text": "Excel, Python, Tableau, teamwork, communication"
+    }
+  ],
+  "jd_items": [
+    {
+      "id": "J1",
+      "kind": "other",
+      "block": 0,
+      "text": "Data Analyst Intern - Northwind Health"
+    },
+    {
+      "id": "J2",
+      "kind": "company",
+      "block": 1,
+      "text": "About us:"
+    },
+    {
+      "id": "J3",
+      "kind": "company",
+      "block": 1,
+      "text": "Northwind Health helps rural clinics reduce patient wait times."
+    },
+    {
+      "id": "J4",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "Responsibilities:"
+    },
+    {
+      "id": "J5",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "- Build dashboards that track clinic performance"
+    },
+    {
+      "id": "J6",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "- Clean and analyze operational data"
+    },
+    {
+      "id": "J7",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "- Present data visualization to clinic managers"
+    },
+    {
+      "id": "J8",
+      "kind": "must",
+      "block": 3,
+      "text": "Requirements:"
+    },
+    {
+      "id": "J9",
+      "kind": "must",
+      "block": 3,
+      "text": "- Proficiency in SQL"
+    },
+    {
+      "id": "J10",
+      "kind": "must",
+      "block": 3,
+      "text": "- Experience with Python or R"
+    },
+    {
+      "id": "J11",
+      "kind": "must",
+      "block": 3,
+      "text": "- Experience with Tableau or Power BI"
+    },
+    {
+      "id": "J12",
+      "kind": "nice",
+      "block": 4,
+      "text": "Preferred:"
+    },
+    {
+      "id": "J13",
+      "kind": "nice",
+      "block": 4,
+      "text": "- Experience with healthcare data"
+    },
+    {
+      "id": "J14",
+      "kind": "logistics",
+      "block": 5,
+      "text": "Location: Austin, TX (hybrid, 3 days a week in the office)"
+    },
+    {
+      "id": "J15",
+      "kind": "company",
+      "block": 5,
+      "text": "Northwind Health is an equal opportunity employer."
+    }
+  ],
+  "target": {
+    "role_title": "Data Analyst Intern",
+    "role_level": "intern",
+    "company": "Northwind Health",
+    "locale": "en-US",
+    "general_review": false
+  }
+}

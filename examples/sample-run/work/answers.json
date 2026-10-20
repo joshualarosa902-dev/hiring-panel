@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "mode": "interactive",
+  "answers": [
+    {
+      "id": "Q1",
+      "kind": "integrity",
+      "question": "Your resume says \"Increased online sales by 300% during the summer sale\". What was the 300% measured against, and what did you do for the sale?",
+      "answer": "It was the online sales on the sale weekend compared to a normal weekend. I didn't measure it myself, the owner told us. I wrote the email that announced the sale.",
+      "status": "answered",
+      "items": null
+    },
+    {
+      "id": "Q2",
+      "kind": "keywords",
+      "question": "The posting asks for these and your resume doesn't show them yet. For each, reply yes, some or no, and where you used it: SQL, VLOOKUP, written and verbal communication, Tableau.",
+      "answer": "SQL some, VLOOKUP yes, communication yes, Tableau no",
+      "status": "answered",
+      "items": [
+        {"term": "SQL", "answer": "some", "detail": "Intro to SQL class, wrote SELECT queries on a sample sales database for 2 assignments"},
+        {"term": "VLOOKUP", "answer": "yes", "detail": "used VLOOKUP at Tallgrass to match product codes to the weekly sales numbers"},
+        {"term": "written and verbal communication", "answer": "yes", "detail": "wrote the weekly newsletter myself and presented our survey results to the class"},
+        {"term": "Tableau", "answer": "no", "detail": ""}
+      ]
+    },
+    {
+      "id": "Q3",
+      "kind": "number",
+      "question": "Roughly what share of subscribers opened the weekly newsletter? A range or 'not sure' is fine.",
+      "answer": "not sure",
+      "status": "declined",
+      "items": null
+    },
+    {
+      "id": "Q4",
+      "kind": "reviewer",
+      "question": "Which part of the bike share survey did you do yourself?",
+      "answer": "I wrote most of the questions and built the pivot tables",
+      "status": "answered",
+      "items": null
+    },
+    {
+      "id": "Q5",
+      "kind": "reviewer",
+      "question": "Did the posts you tracked change anything the store did?",
+      "answer": "the owner started posting more photos of new arrivals because those got the most likes",
+      "status": "answered",
+      "items": null
+    }
+  ]
+}

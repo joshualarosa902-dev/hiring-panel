@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "hiring_manager",
+  "decision_question": "Based on this resume alone, would I spend 45 minutes interviewing this person for this role?",
+  "verdict": "lean_yes",
+  "verdict_rationale": "Python and dashboards are demonstrated (R14); SQL (J9) is absent; most experience bullets list duties without results (R8, R10).",
+  "advance": "yes",
+  "one_line_take": "The food bank dashboard earns an interview; SQL is the open question.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "H1_requirement_match",
+      "score": 2,
+      "evidence_anchors": [
+        "J9",
+        "R14"
+      ],
+      "note": ""
+    },
+    {
+      "dimension_id": "H2_proof_of_work",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "H3_results",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "H4_problem_solving",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "H5_trajectory",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "hiring_manager-1",
+      "category": "REQUIREMENT_UNPROVEN",
+      "severity": "major",
+      "confidence": "high",
+      "title": "SQL requirement is not shown anywhere",
+      "detail": "SQL requirement is not shown anywhere.",
+      "evidence": [
+        {
+          "anchor": "J9",
+          "quote": "Proficiency in SQL"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "Where have you written SQL queries, even in coursework?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "hiring_manager-2",
+      "category": "IMPACT_MISSING",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Duties instead of results",
+      "detail": "Duties instead of results.",
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "Responsible for social media posts and various tasks"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "What changed because of your posts?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "hiring_manager-3",
+      "category": "METRIC_MISSING",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Weekly reports have no outcome or scale",
+      "detail": "Weekly reports have no outcome or scale.",
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "weekly reports in Excel"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Say who used the reports and for what.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "hiring_manager-4",
+      "category": "IMPACT_MISSING",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Group project has no result",
+      "detail": "Group project has no result.",
+      "evidence": [
+        {
+          "anchor": "R15",
+          "quote": "group project analyzing music streaming data"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "hiring_manager-s1",
+      "title": "A real dashboard with real users",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Built a Python dashboard tracking 2,000 student survey responses"
+        }
+      ],
+      "underused": true
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "question": "Have you used SQL anywhere, even in coursework?",
+      "why": "It is a must-have.",
+      "related_anchors": [
+        "J9"
+      ]
+    }
+  ],
+  "lens_data": {
+    "basis": "posting",
+    "requirement_map": [
+      {
+        "jd_anchor": "J9",
+        "requirement": "Proficiency in SQL",
+        "status": "absent",
+        "resume_anchors": [],
+        "note": "Not mentioned anywhere."
+      },
+      {
+        "jd_anchor": "J10",
+        "requirement": "Python or R",
+        "status": "demonstrated",
+        "resume_anchors": [
+          "R14"
+        ],
+        "note": "Python dashboard project."
+      },
+      {
+        "jd_anchor": "J11",
+        "requirement": "Tableau or Power BI",
+        "status": "claimed_only",
+        "resume_anchors": [
+          "R17"
+        ],
+        "note": "Listed in skills only."
+      }
+    ],
+    "case_for_candidate": "Built a working Python dashboard over 2,000 survey responses for a real campus group.",
+    "biggest_doubt": "No sign of SQL, and the internship bullets show duties rather than results.",
+    "interview_questions": [
+      "Walk me through how you built the food bank dashboard.",
+      "How did you clean the 2,000 survey responses before analyzing them?",
+      "What did the weekly Excel reports show, and who used them?"
+    ]
+  }
+}

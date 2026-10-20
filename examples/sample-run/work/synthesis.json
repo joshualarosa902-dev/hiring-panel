@@ -1,0 +1,734 @@
+{
+  "schema_version": "1.0",
+  "mode": "parallel",
+  "panel_size": 7,
+  "missing_reviewers": [],
+  "reviewers": [
+    {
+      "id": "screening",
+      "name": "Automated Screening Check",
+      "verdict": "strong_yes",
+      "advance": "yes",
+      "confidence": "high",
+      "one_line_take": "The file parses cleanly and most required terms are there; communication is the missing one.",
+      "decision_question": "Would this file parse cleanly, and would it come up when a recruiter searches or filters the applicant pool for this job?"
+    },
+    {
+      "id": "hiring_manager",
+      "name": "Hiring Manager",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "confidence": "high",
+      "one_line_take": "The survey project and the Excel work earn a call; SQL beyond a class is the open question.",
+      "decision_question": "Based on this resume alone, would I spend 45 minutes interviewing this person for this role?"
+    },
+    {
+      "id": "recruiter",
+      "name": "Recruiter",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "confidence": "high",
+      "one_line_take": "Clean and easy to skim; the top third says marketing more than analytics.",
+      "decision_question": "In my first fast pass, does this resume go in the 'send to the hiring manager' pile?"
+    },
+    {
+      "id": "competitor",
+      "name": "Competing Applicant",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "confidence": "medium",
+      "one_line_take": "Your survey project is a real edge, but it is buried and SQL is only listed.",
+      "decision_question": "If this resume sat next to a typical strong applicant's for this job, would it win the interview slot?"
+    },
+    {
+      "id": "ceo",
+      "name": "CEO",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "confidence": "medium",
+      "one_line_take": "I see useful work, but not yet what changed for the business because of you.",
+      "decision_question": "Would this person move something the business cares about, and in a year would I fight to keep them?"
+    },
+    {
+      "id": "teammate",
+      "name": "Future Teammate",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "confidence": "high",
+      "one_line_take": "I could hand you an Excel task next sprint; SQL and dashboards would need some ramp-up.",
+      "decision_question": "Would I want this person on my team for next week's work, and could they contribute without a lot of hand-holding?"
+    },
+    {
+      "id": "skeptic",
+      "name": "Skeptic",
+      "verdict": "lean_no",
+      "advance": "no",
+      "confidence": "high",
+      "one_line_take": "The 300% sales line will not survive one follow-up question; the rest holds up.",
+      "decision_question": "Which lines would not survive a five-minute probe in an interview or a reference check, and does anything read as inflated even if it is true?"
+    }
+  ],
+  "panel_vote": {
+    "advance": 4,
+    "unsure": 2,
+    "no": 1,
+    "total": 7
+  },
+  "verdict_split": {
+    "spread": 3,
+    "is_split": true,
+    "median": "lean_yes",
+    "outliers": [
+      "skeptic"
+    ],
+    "advance_split": true
+  },
+  "closest_to_reject": {
+    "reviewer": "skeptic",
+    "verdict": "lean_no",
+    "issue_id": "I5",
+    "reason": "A 300% sales claim with no baseline or method"
+  },
+  "issues": [
+    {
+      "id": "I1",
+      "rank": 1,
+      "title": "SQL is required but only shows up as a class",
+      "family": "REQUIREMENT",
+      "categories": [
+        "REQUIREMENT_UNPROVEN"
+      ],
+      "severity": "major",
+      "priority": 6.25,
+      "reviewers": [
+        "hiring_manager"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "hm_review",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R31",
+          "quote": "SQL (class projects)",
+          "reviewer": "hiring_manager"
+        },
+        {
+          "anchor": "J12",
+          "quote": "Experience with SQL and Microsoft Excel",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "detail": "The posting asks for SQL experience. I see it in your coursework and skills list, but no line shows you using it, so I cannot tell how far you got.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "If a class project used SQL, describe it in one line with what you queried.",
+          "candidate_question": "What did you do with SQL in your class projects?",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "jd_anchors": [
+        "J12"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I2",
+      "rank": 2,
+      "title": "Internship bullets describe duties, not results",
+      "family": "IMPACT",
+      "categories": [
+        "IMPACT_MISSING",
+        "VAGUE_LANGUAGE"
+      ],
+      "severity": "moderate",
+      "priority": 5.0,
+      "reviewers": [
+        "hiring_manager",
+        "competitor",
+        "ceo"
+      ],
+      "reviewer_count": 3,
+      "from_script": false,
+      "stage": "hm_review",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R11",
+          "quote": "Responsible for the weekly email newsletter to about 600 subscribers",
+          "reviewer": "hiring_manager"
+        },
+        {
+          "anchor": "R12",
+          "quote": "Helped with Instagram posts 3x a week",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "detail": "I can see what you were responsible for, not what changed because you did it.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Say what you wrote or tracked and what happened next.",
+          "candidate_question": "What happened because of the newsletter or the posts you tracked?",
+          "reviewer": "hiring_manager"
+        },
+        {
+          "fix_type": "rewrite",
+          "suggestion": "Say what you made or tracked, using your real level of involvement.",
+          "candidate_question": null,
+          "reviewer": "competitor"
+        },
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Add what happened because of the newsletter, if you know it.",
+          "candidate_question": "Did the newsletter or the tracked posts change anything the store did?",
+          "reviewer": "ceo"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I3",
+      "rank": 3,
+      "title": "The top third reads marketing, not analytics",
+      "family": "TITLE",
+      "categories": [
+        "TITLE_MISMATCH"
+      ],
+      "severity": "moderate",
+      "priority": 4.2,
+      "reviewers": [
+        "screening",
+        "recruiter"
+      ],
+      "reviewer_count": 2,
+      "from_script": false,
+      "stage": "recruiter_skim",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "Marketing Intern | June 2025 – August 2025",
+          "reviewer": "recruiter"
+        },
+        {
+          "anchor": "J1",
+          "quote": "Marketing Analytics Intern",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "In a fast skim I see Marketing Intern and newsletter work first. The analytics side of you shows up later.",
+      "fixes": [
+        {
+          "fix_type": "reorder",
+          "suggestion": "Open the internship with the sales numbers bullet so analytics shows in the first lines.",
+          "candidate_question": null,
+          "reviewer": "recruiter"
+        },
+        {
+          "fix_type": "rewrite",
+          "suggestion": "Keep the real title. Lead the bullets with the data work you did, like the weekly sales numbers.",
+          "candidate_question": null,
+          "reviewer": "screening"
+        }
+      ],
+      "jd_anchors": [
+        "J1"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I4",
+      "rank": 4,
+      "title": "Your closest match to this job sits low on the page",
+      "family": "ORDER",
+      "categories": [
+        "ORDER_PRIORITY"
+      ],
+      "severity": "moderate",
+      "priority": 4.2,
+      "reviewers": [
+        "hiring_manager",
+        "competitor"
+      ],
+      "reviewer_count": 2,
+      "from_script": false,
+      "stage": "recruiter_skim",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "Designed a 12 question survey with 3 classmates and collected 140 responses",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "detail": "The survey project is the most analytics-heavy thing here and it comes after two jobs.",
+      "fixes": [
+        {
+          "fix_type": "reorder",
+          "suggestion": "Move the survey project up, or lead the internship with the sales numbers work.",
+          "candidate_question": null,
+          "reviewer": "hiring_manager"
+        },
+        {
+          "fix_type": "reorder",
+          "suggestion": "Put the survey project right after Education.",
+          "candidate_question": null,
+          "reviewer": "competitor"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I5",
+      "rank": 5,
+      "title": "A 300% sales claim with no baseline or method",
+      "family": "CREDIBILITY",
+      "categories": [
+        "UNVERIFIABLE_CLAIM"
+      ],
+      "severity": "major",
+      "priority": 4.0,
+      "reviewers": [
+        "skeptic"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "interview",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Increased online sales by 300% during the summer sale",
+          "reviewer": "skeptic"
+        }
+      ],
+      "detail": "300% compared to what, over what period, and what was your part? An interviewer will ask, and a vague answer hurts every other line.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Say what you actually did for the sale, and keep the number only with its real baseline.",
+          "candidate_question": "What was the 300% measured against, and what did you do for the summer sale?",
+          "reviewer": "skeptic"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I6",
+      "rank": 6,
+      "title": "Required job terms are missing from your resume",
+      "family": "REQUIREMENT",
+      "categories": [
+        "KEYWORD_GAP"
+      ],
+      "severity": "moderate",
+      "priority": 3.75,
+      "reviewers": [
+        "screening"
+      ],
+      "reviewer_count": 1,
+      "from_script": true,
+      "stage": "ats",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "J13",
+          "quote": "- Strong written and verbal communication skills",
+          "reviewer": "screening"
+        },
+        {
+          "anchor": "A:KW-001",
+          "quote": "Not found: \"communication\"",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "Recruiters search and filter by the posting's terms, and AI graders check each basic qualification against your resume.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "For each missing term you truly have, show it in a bullet about real work. If you don't have it, leave it out.",
+          "candidate_question": "Where have you shown communication: a job, class, club or volunteering?",
+          "reviewer": "screening"
+        },
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Show communication through real work you already did, such as the newsletter or the pricing presentation.",
+          "candidate_question": "Did you write the newsletter yourself, and who did you present the survey results to?",
+          "reviewer": "screening"
+        }
+      ],
+      "jd_anchors": [
+        "J13"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I7",
+      "rank": 7,
+      "title": "Some job terms are only listed, not shown in your experience",
+      "family": "SKILL_EVIDENCE",
+      "categories": [
+        "SKILL_UNSUPPORTED"
+      ],
+      "severity": "moderate",
+      "priority": 3.125,
+      "reviewers": [
+        "screening"
+      ],
+      "reviewer_count": 1,
+      "from_script": true,
+      "stage": "hm_review",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "J12",
+          "quote": "- Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+          "reviewer": "screening"
+        },
+        {
+          "anchor": "J18",
+          "quote": "- Experience with email marketing tools such as Mailchimp",
+          "reviewer": "screening"
+        },
+        {
+          "anchor": "A:KW-002",
+          "quote": "\"SQL\" appears only in a list, not in a bullet about your work.",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "A skill in a list is weaker evidence than a bullet that shows you using it.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Where it is true, mention the skill in a bullet that describes the work you did with it.",
+          "candidate_question": "Where have you used SQL, VLOOKUP or Mailchimp? A class, job, project or club counts.",
+          "reviewer": "screening"
+        }
+      ],
+      "jd_anchors": [
+        "J12",
+        "J18"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I8",
+      "rank": 8,
+      "title": "Your own part in the team survey is unclear",
+      "family": "CONTRIBUTION",
+      "categories": [
+        "ATTRIBUTION_UNCLEAR"
+      ],
+      "severity": "moderate",
+      "priority": 2.0,
+      "reviewers": [
+        "teammate"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "interview",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "Designed a 12 question survey with 3 classmates",
+          "reviewer": "teammate"
+        }
+      ],
+      "detail": "The survey is your strongest proof for this job, and it was a team of 4. Which part was yours?",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Name the part you did yourself.",
+          "candidate_question": "Which part of the bike share survey did you do yourself?",
+          "reviewer": "teammate"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I9",
+      "rank": 9,
+      "title": "Weak openers slow the skim",
+      "family": "SKIM",
+      "categories": [
+        "LENGTH_DENSITY"
+      ],
+      "severity": "minor",
+      "priority": 1.4,
+      "reviewers": [
+        "recruiter"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "recruiter_skim",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R11",
+          "quote": "Responsible for the weekly email newsletter",
+          "reviewer": "recruiter"
+        },
+        {
+          "anchor": "R12",
+          "quote": "Helped with Instagram posts",
+          "reviewer": "recruiter"
+        }
+      ],
+      "detail": "Starting bullets with 'Responsible for' and 'Helped with' hides the action.",
+      "fixes": [
+        {
+          "fix_type": "rewrite",
+          "suggestion": "Start each bullet with what you did, keeping your real level of ownership.",
+          "candidate_question": null,
+          "reviewer": "recruiter"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    }
+  ],
+  "notes": [
+    {
+      "id": "KW-005",
+      "title": "Preferred job terms are missing"
+    }
+  ],
+  "top3": [
+    "I1",
+    "I2",
+    "I3"
+  ],
+  "pinned_integrity": [
+    "I5"
+  ],
+  "conflicts": [
+    {
+      "type": "strength_vs_weakness",
+      "issue_id": "I8",
+      "strength_id": "S1",
+      "claim": "• Designed a 12 question survey with 3 classmates and collected 140 responses",
+      "anchors": [
+        "R23"
+      ],
+      "sides": [
+        {
+          "reviewer": "hiring_manager",
+          "view": "Strength: A real survey project with a pricing recommendation",
+          "quote": "collected 140 responses"
+        },
+        {
+          "reviewer": "competitor",
+          "view": "Strength: A real survey with 140 responses and a recommendation",
+          "quote": "collected 140 responses"
+        },
+        {
+          "reviewer": "teammate",
+          "view": "Weakness: Your own part in the team survey is unclear",
+          "quote": "Designed a 12 question survey with 3 classmates"
+        }
+      ],
+      "which_matters": "Praise can get you the interview; in the interview the Skeptic's and Hiring Manager's questions decide. Keep the line only if you can back it up."
+    }
+  ],
+  "strengths": [
+    {
+      "id": "S1",
+      "title": "A real survey project with a pricing recommendation",
+      "reviewers": [
+        "hiring_manager",
+        "competitor"
+      ],
+      "anchors": [
+        "R23",
+        "R24"
+      ],
+      "underused": true
+    },
+    {
+      "id": "S2",
+      "title": "Hands-on Excel work for a weekly team meeting",
+      "reviewers": [
+        "hiring_manager",
+        "ceo"
+      ],
+      "anchors": [
+        "R13"
+      ],
+      "underused": false
+    },
+    {
+      "id": "S3",
+      "title": "Trained new coworkers, which means you can explain your work",
+      "reviewers": [
+        "teammate",
+        "skeptic"
+      ],
+      "anchors": [
+        "R17"
+      ],
+      "underused": false
+    },
+    {
+      "id": "S4",
+      "title": "Contact details and headings parse cleanly",
+      "reviewers": [
+        "screening"
+      ],
+      "anchors": [
+        "R2",
+        "R3"
+      ],
+      "underused": false
+    },
+    {
+      "id": "S5",
+      "title": "Steady part-time job with a lead title during school",
+      "reviewers": [
+        "recruiter"
+      ],
+      "anchors": [
+        "R16"
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "id": "RQ1",
+      "question": "What did you do with SQL in your class projects?",
+      "why": "SQL is required but only shows up as a class",
+      "issue_ids": [
+        "I1",
+        "I7"
+      ],
+      "related_anchors": [
+        "R31",
+        "J12"
+      ]
+    },
+    {
+      "id": "RQ2",
+      "question": "Did you write the newsletter yourself, and who did you present the survey results to?",
+      "why": "Communication is a required term the resume never shows.",
+      "issue_ids": [
+        "I2",
+        "I6",
+        "I9"
+      ],
+      "related_anchors": [
+        "R11",
+        "R24",
+        "J13"
+      ]
+    },
+    {
+      "id": "RQ3",
+      "question": "Which part of the bike share survey did you do yourself?",
+      "why": "Your own part is unclear.",
+      "issue_ids": [
+        "I4",
+        "I8"
+      ],
+      "related_anchors": [
+        "R23"
+      ]
+    },
+    {
+      "id": "RQ4",
+      "question": "What was the 300% measured against, and what did you do for the summer sale?",
+      "why": "A 300% sales claim with no baseline or method",
+      "issue_ids": [
+        "I5"
+      ],
+      "related_anchors": [
+        "R14"
+      ]
+    },
+    {
+      "id": "RQ5",
+      "question": "Where have you shown communication: a job, class, club or volunteering?",
+      "why": "Required job terms are missing from your resume",
+      "issue_ids": [
+        "I6"
+      ],
+      "related_anchors": [
+        "J13"
+      ]
+    },
+    {
+      "id": "RQ6",
+      "question": "Where have you used SQL, VLOOKUP or Mailchimp? A class, job, project or club counts.",
+      "why": "Some job terms are only listed, not shown in your experience",
+      "issue_ids": [
+        "I7",
+        "I1"
+      ],
+      "related_anchors": [
+        "J12",
+        "J18"
+      ]
+    }
+  ],
+  "interview_prep": [
+    {
+      "question": "Walk me through the bike share survey: how did you pick the questions and what did the pivot tables show?",
+      "from": "hiring_manager",
+      "anchor": null
+    },
+    {
+      "question": "What did the weekly sales numbers you pulled into Excel look like, and who used them?",
+      "from": "hiring_manager",
+      "anchor": null
+    },
+    {
+      "question": "Tell me about a SQL query you wrote in class. What data was it on?",
+      "from": "hiring_manager",
+      "anchor": null
+    },
+    {
+      "question": "What was the 300% measured against, and what was your part in it?",
+      "from": "skeptic",
+      "anchor": "R14"
+    },
+    {
+      "question": "How did you get 140 people to answer the survey?",
+      "from": "skeptic",
+      "anchor": "R23"
+    }
+  ],
+  "validation_log": []
+}

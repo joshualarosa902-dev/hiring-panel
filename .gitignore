@@ -1,0 +1,14 @@
+# Release builds (scripts/release.sh)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Run folders hold real resumes; never commit them
+hiring-panel-runs/
+
+# Editor and OS clutter
+.DS_Store
+Thumbs.db

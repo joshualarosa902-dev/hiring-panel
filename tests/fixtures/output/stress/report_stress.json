@@ -1,0 +1,555 @@
+{
+  "schema_version": "1.0",
+  "stage": "final",
+  "hp_version": "1.0.0",
+  "candidate": "Maya Rivera-Montgomery",
+  "target": {
+    "role": "Associate Product Marketing Manager, Growth and Lifecycle Programs",
+    "company": "Very Long Company Name Holdings International"
+  },
+  "date": "2026-10-20",
+  "mode": "sequential",
+  "general_review": true,
+  "mode_note": "",
+  "verdict_strip": {
+    "vote_label": "3 of 7 would move you forward",
+    "screening_band": "Needs work",
+    "mode_label": "One chat, 7 roles in turn (claude.ai)",
+    "strong_line": "Strong resume. The Automated Screening Check came closest to saying no: A very long weakness title that goes on and on about the problem 4, and keeps going well past the point. It still held because that is a minor issue, not a critical or major one."
+  },
+  "strong_resume": true,
+  "closest_to_reject": {
+    "reviewer": "screening",
+    "name": "Automated Screening Check",
+    "verdict": "lean_no",
+    "issue_id": "I4",
+    "severity": "minor",
+    "reason": "A very long weakness title that goes on and on about the problem 4, and keeps going well past the point"
+  },
+  "first_impression": "Thirty words of a deliberately long first impression that keeps going to test how the renderer copes with a recruiter who writes far more than the persona file allows here. Write maya.rivera@example.com or call (512) 555-0142.",
+  "pinned_integrity": [
+    {
+      "issue_id": "I1",
+      "title": "Claim that may not survive a reference check number 1",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "issue_id": "I2",
+      "title": "Claim that may not survive a reference check number 2",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "issue_id": "I3",
+      "title": "Claim that may not survive a reference check number 3",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "issue_id": "I4",
+      "title": "Claim that may not survive a reference check number 4",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    }
+  ],
+  "weaknesses": [
+    {
+      "rank": 1,
+      "issue_id": "I1",
+      "title": "A very long weakness title that goes on and on about the problem 1",
+      "severity": "critical",
+      "flagged_by": [
+        "hiring_manager"
+      ],
+      "flagged_count": 1,
+      "from_script": false,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "fixed",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 2,
+      "issue_id": "I2",
+      "title": "A very long weakness title that goes on and on about the problem 2",
+      "severity": "major",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter"
+      ],
+      "flagged_count": 2,
+      "from_script": true,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "needs_you",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 3,
+      "issue_id": "I3",
+      "title": "A very long weakness title that goes on and on about the problem 3",
+      "severity": "moderate",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo"
+      ],
+      "flagged_count": 3,
+      "from_script": false,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "gap",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 4,
+      "issue_id": "I4",
+      "title": "A very long weakness title that goes on and on about the problem 4",
+      "severity": "minor",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo",
+        "competitor"
+      ],
+      "flagged_count": 4,
+      "from_script": true,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "open",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 5,
+      "issue_id": "I5",
+      "title": "A very long weakness title that goes on and on about the problem 5",
+      "severity": "minor",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo",
+        "competitor",
+        "skeptic"
+      ],
+      "flagged_count": 5,
+      "from_script": false,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "fixed",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 6,
+      "issue_id": "I6",
+      "title": "A very long weakness title that goes on and on about the problem 6",
+      "severity": "minor",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo",
+        "competitor",
+        "skeptic",
+        "teammate"
+      ],
+      "flagged_count": 6,
+      "from_script": true,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "fixed",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 7,
+      "issue_id": "I7",
+      "title": "A very long weakness title that goes on and on about the problem 7",
+      "severity": "minor",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo",
+        "competitor",
+        "skeptic",
+        "teammate",
+        "screening"
+      ],
+      "flagged_count": 7,
+      "from_script": false,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "gap",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "rank": 8,
+      "issue_id": "I8",
+      "title": "A very long weakness title that goes on and on about the problem 8",
+      "severity": "minor",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo",
+        "competitor",
+        "skeptic",
+        "teammate",
+        "screening"
+      ],
+      "flagged_count": 7,
+      "from_script": true,
+      "why": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "evidence_quote": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+      "status": "needs_you",
+      "fix": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    }
+  ],
+  "changes": {
+    "bullets_rewritten": 8,
+    "reordered": true,
+    "numbers_from_you": 3,
+    "cut": [
+      {
+        "ref": "R10",
+        "text": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+        "reason": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "ref": "R11",
+        "text": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+        "reason": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "ref": "R12",
+        "text": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+        "reason": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "ref": "R13",
+        "text": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+        "reason": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "ref": "R14",
+        "text": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+        "reason": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "ref": "R15",
+        "text": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+        "reason": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      }
+    ]
+  },
+  "needs_you": [
+    {
+      "where": "Where number 0 with a long label",
+      "ask": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "where": "Where number 1 with a long label",
+      "ask": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "where": "Where number 2 with a long label",
+      "ask": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "where": "Where number 3 with a long label",
+      "ask": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "where": "Where number 4 with a long label",
+      "ask": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    }
+  ],
+  "real_gaps": [
+    {
+      "title": "Gap number 0 with a long title",
+      "honest_route": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "title": "Gap number 1 with a long title",
+      "honest_route": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "title": "Gap number 2 with a long title",
+      "honest_route": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "title": "Gap number 3 with a long title",
+      "honest_route": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    }
+  ],
+  "panel": [
+    {
+      "id": "screening",
+      "name": "Automated Screening Check",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "lean_no",
+      "advance": "no",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "id": "hiring_manager",
+      "name": "Hiring Manager",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "id": "recruiter",
+      "name": "Recruiter",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "id": "competitor",
+      "name": "Competing Applicant",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "lean_no",
+      "advance": "no",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "id": "ceo",
+      "name": "CEO",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "id": "teammate",
+      "name": "Future Teammate",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    },
+    {
+      "id": "skeptic",
+      "name": "Skeptic",
+      "lens": "A long lens description for this reviewer",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+    }
+  ],
+  "panel_after": {
+    "vote_label": "5 of 7 would move you forward",
+    "rows": [
+      {
+        "id": "screening",
+        "name": "Automated Screening Check",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "lean_no",
+        "advance": "no",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "id": "hiring_manager",
+        "name": "Hiring Manager",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "lean_yes",
+        "advance": "yes",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "id": "recruiter",
+        "name": "Recruiter",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "borderline",
+        "advance": "unsure",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "id": "competitor",
+        "name": "Competing Applicant",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "lean_no",
+        "advance": "no",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "id": "ceo",
+        "name": "CEO",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "borderline",
+        "advance": "unsure",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "id": "teammate",
+        "name": "Future Teammate",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "lean_yes",
+        "advance": "yes",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      },
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "lens": "A long lens description for this reviewer",
+        "verdict": "lean_yes",
+        "advance": "yes",
+        "take": "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+      }
+    ],
+    "note": "Re-read by fresh reviewers; directional."
+  },
+  "screening": {
+    "label": "Simulated screening check",
+    "method": "Overall = 40% file readability + 40% job-keyword match + 20% content signals, rounded to steps of 5. Weights are our judgment, not calibrated to hiring outcomes.",
+    "before": {
+      "overall": 60,
+      "band": "Needs work",
+      "machine_readability": {
+        "value": 85,
+        "band": "Minor risks"
+      },
+      "keyword_match": {
+        "value": null,
+        "band": "No job description provided"
+      },
+      "content_signals": {
+        "value": 50,
+        "band": "Needs work"
+      },
+      "required": {
+        "found": 0,
+        "total": 0,
+        "listed_only": 0
+      }
+    },
+    "after": null,
+    "after_source": null,
+    "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number.",
+    "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes. This check looks for problems known to break resume parsing and for job-description requirements your resume doesn't show. A high score doesn't guarantee an interview, and a low score doesn't mean a robot rejected you. Most automatic rejections come from application questions (work authorization, location, degree, availability), and no resume edit changes those."
+  },
+  "disagreements": [
+    {
+      "claim": "Is the Instagram internship relevant to an analyst role?",
+      "sides": [
+        {
+          "reviewer": "hiring_manager",
+          "view": "Yes: tracking what worked and reporting it is the job.",
+          "quote": "showed the owner which posts did best before the fall menu launch"
+        },
+        {
+          "reviewer": "competitor",
+          "view": "Partly: it reads as content creation first, analysis second.",
+          "quote": "made instagram posts 4x a week for both stores for 10 weeks"
+        }
+      ],
+      "which_matters": "The hiring manager decides interviews. Lead with the tracking work so both readers see it."
+    }
+  ],
+  "keyword_gaps": [
+    {
+      "term": "SQL",
+      "status": "listed_only",
+      "note": "Shown as coursework only. A small project would make it real."
+    },
+    {
+      "term": "Tableau",
+      "status": "gap",
+      "note": "Nice to have. You said you have not used it, so it stays off."
+    },
+    {
+      "term": "Google Analytics",
+      "status": "gap",
+      "note": "Nice to have. You said you have not used it, so it stays off."
+    },
+    {
+      "term": "A/B testing",
+      "status": "gap",
+      "note": "Listed under what you would do. Mention interest in a cover note, not the resume."
+    },
+    {
+      "term": "Excel",
+      "status": "added_with_evidence",
+      "note": "Now named in your skills with pivot tables, from your own lines."
+    }
+  ],
+  "strengths": [
+    {
+      "title": "Real tracking work behind the social posts",
+      "flagged_by": [
+        "hiring_manager",
+        "teammate",
+        "ceo"
+      ],
+      "underused": true
+    },
+    {
+      "title": "Steady job during school, trusted to train new hires",
+      "flagged_by": [
+        "teammate",
+        "recruiter"
+      ],
+      "underused": false
+    },
+    {
+      "title": "Survey design and pivot tables in a graded project",
+      "flagged_by": [
+        "hiring_manager",
+        "competitor"
+      ],
+      "underused": false
+    }
+  ],
+  "interview_prep": [
+    {
+      "question": "Walk me through the spreadsheet you kept. What did you track, and what did the owner change?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "How did you decide the survey questions, and what did the pivot tables show?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "Tell me about a time a post did worse than you expected. What did you do next?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "How do you know the account grew by about 600 followers in those 10 weeks?",
+      "from": "skeptic"
+    },
+    {
+      "question": "What did you write in SQL for your class? Could you write a simple query now?",
+      "from": "skeptic"
+    }
+  ],
+  "knockouts": [
+    {
+      "type": "location",
+      "jd_quote": "Location: Austin, TX (hybrid, 3 days in office).",
+      "advice": "You are in Austin, so this fits. Expect a question about the in-office days."
+    }
+  ],
+  "truth_check": {
+    "ran": "model_only",
+    "passed": null,
+    "invented_facts": null,
+    "bullets_traced": 0,
+    "bullets_total": 12,
+    "provenance": "self"
+  },
+  "limitations": [
+    "We don't run Workday, Greenhouse, Lever, iCIMS or Taleo; their parsers differ by vendor, version and employer settings.",
+    "Scores aren't probabilities and aren't calibrated against interview outcomes.",
+    "The reviewers are simulated by Claude. They can be wrong, and they never saw the real applicant pool."
+  ],
+  "next_steps": [
+    "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+    "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+    "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958.",
+    "This is a deliberately long sentence that keeps going to test how the renderer copes with reviewers who write far more than they should, including details like maya.rivera@example.com and +44 20 7946 0958."
+  ],
+  "files": {
+    "resume_docx": "Maya_Rivera_Resume.docx",
+    "resume_pdf": "Maya_Rivera_Resume.pdf",
+    "resume_md": "Maya_Rivera_Resume.md",
+    "report_pdf": "Hiring_Panel_Report.pdf",
+    "report_md": "Hiring_Panel_Report.md",
+    "report_html": "Hiring_Panel_Report.html"
+  }
+}

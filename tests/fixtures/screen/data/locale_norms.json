@@ -1,0 +1,52 @@
+{
+ "en-US": {
+  "paper": "letter",
+  "pages_student": 1,
+  "pages_experienced": 2,
+  "word": "resume",
+  "photo": "omit",
+  "dob": "omit",
+  "gpa": "optional_3.0_plus",
+  "notes": []
+ },
+ "en-CA": {
+  "paper": "letter",
+  "pages_student": 1,
+  "pages_experienced": 2,
+  "word": "resume",
+  "photo": "omit",
+  "dob": "omit",
+  "gpa": "optional",
+  "notes": []
+ },
+ "en-GB": {
+  "paper": "a4",
+  "pages_student": 2,
+  "pages_experienced": 2,
+  "word": "CV",
+  "photo": "omit",
+  "dob": "omit",
+  "gpa": "degree_classification",
+  "notes": []
+ },
+ "de-DE": {
+  "paper": "a4",
+  "pages_student": 2,
+  "pages_experienced": 3,
+  "word": "CV",
+  "photo": "customary",
+  "dob": "customary",
+  "gpa": "grade",
+  "notes": []
+ },
+ "default": {
+  "paper": "a4",
+  "pages_student": 1,
+  "pages_experienced": 2,
+  "word": "CV",
+  "photo": "omit",
+  "dob": "omit",
+  "gpa": "optional",
+  "notes": []
+ }
+}

@@ -1,0 +1,1078 @@
+{
+  "schema_version": "1.0",
+  "mode": "parallel",
+  "panel_size": 7,
+  "missing_reviewers": [],
+  "reviewers": [
+    {
+      "id": "screening",
+      "name": "Automated Screening Check",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "confidence": "high",
+      "one_line_take": "The file mostly parses, but SQL is missing and your email hides in the header.",
+      "decision_question": "Would this file parse cleanly, and would it come up when a recruiter searches or filters the applicant pool for this job?"
+    },
+    {
+      "id": "hiring_manager",
+      "name": "Hiring Manager",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "confidence": "high",
+      "one_line_take": "The food bank dashboard earns an interview; SQL is the open question.",
+      "decision_question": "Based on this resume alone, would I spend 45 minutes interviewing this person for this role?"
+    },
+    {
+      "id": "recruiter",
+      "name": "Recruiter",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "confidence": "high",
+      "one_line_take": "In seven seconds you read as a marketing intern, not a data analyst.",
+      "decision_question": "In my first fast pass, does this resume go in the 'send to the hiring manager' pile?"
+    },
+    {
+      "id": "competitor",
+      "name": "Competing Applicant",
+      "verdict": "lean_no",
+      "advance": "no",
+      "confidence": "high",
+      "one_line_take": "My resume beats yours on specifics; your dashboard is your best weapon and it is buried.",
+      "decision_question": "If this resume sat next to a typical strong applicant's for this job, would it win the interview slot?"
+    },
+    {
+      "id": "ceo",
+      "name": "CEO",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "confidence": "high",
+      "one_line_take": "One bullet shows real impact; the rest reads like a task list.",
+      "decision_question": "Would this person move something the business cares about, and in a year would I fight to keep them?"
+    },
+    {
+      "id": "teammate",
+      "name": "Future Teammate",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "confidence": "high",
+      "one_line_take": "I could hand you a dashboard ticket next sprint; show me your part in team work.",
+      "decision_question": "Would I want this person on my team for next week's work, and could they contribute without a lot of hand-holding?"
+    },
+    {
+      "id": "skeptic",
+      "name": "Skeptic",
+      "verdict": "strong_no",
+      "advance": "no",
+      "confidence": "high",
+      "one_line_take": "The 300% revenue line will not survive one follow-up question.",
+      "decision_question": "Which lines would not survive a five-minute probe in an interview or a reference check, and does anything read as inflated even if it is true?"
+    }
+  ],
+  "panel_vote": {
+    "advance": 2,
+    "unsure": 3,
+    "no": 2,
+    "total": 7
+  },
+  "verdict_split": {
+    "spread": 3,
+    "is_split": true,
+    "median": "borderline",
+    "outliers": [
+      "skeptic"
+    ],
+    "advance_split": true
+  },
+  "closest_to_reject": {
+    "reviewer": "skeptic",
+    "verdict": "strong_no",
+    "issue_id": "I5",
+    "reason": "Company-wide strategy and 300% revenue in a summer internship"
+  },
+  "issues": [
+    {
+      "id": "I1",
+      "rank": 1,
+      "title": "SQL, a required skill, never appears",
+      "family": "REQUIREMENT",
+      "categories": [
+        "KEYWORD_GAP",
+        "REQUIREMENT_UNPROVEN"
+      ],
+      "severity": "critical",
+      "priority": 22.5,
+      "reviewers": [
+        "screening",
+        "hiring_manager"
+      ],
+      "reviewer_count": 2,
+      "from_script": true,
+      "stage": "ats",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "J9",
+          "quote": "Proficiency in SQL",
+          "reviewer": "screening"
+        },
+        {
+          "anchor": "A:KW-001",
+          "quote": "Required terms missing: SQL",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "SQL, a required skill, never appears.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "Have you used SQL in a class, a project or a job?",
+          "reviewer": "screening"
+        },
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "If you have used SQL, show where. If not, treat it as a gap.",
+          "candidate_question": "Have you used SQL in a class, job, project or activity?",
+          "reviewer": "screening"
+        },
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "Where have you written SQL queries, even in coursework?",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "jd_anchors": [
+        "J9"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I2",
+      "rank": 2,
+      "title": "Bullets describe duties, not results (pattern across 4 lines)",
+      "family": "IMPACT",
+      "categories": [
+        "IMPACT_MISSING",
+        "METRIC_MISSING",
+        "VAGUE_LANGUAGE"
+      ],
+      "severity": "major",
+      "priority": 10.0,
+      "reviewers": [
+        "hiring_manager",
+        "competitor",
+        "ceo"
+      ],
+      "reviewer_count": 3,
+      "from_script": false,
+      "stage": "hm_review",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "various tasks",
+          "reviewer": "ceo"
+        },
+        {
+          "anchor": "R10",
+          "quote": "Helped the team with weekly reports",
+          "reviewer": "ceo"
+        },
+        {
+          "anchor": "R12",
+          "quote": "handled opening shifts",
+          "reviewer": "ceo"
+        },
+        {
+          "anchor": "R15",
+          "quote": "group project analyzing music streaming data",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "detail": "Reads like a task list.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "What happened because of the weekly reports?",
+          "reviewer": "ceo"
+        },
+        {
+          "fix_type": "rewrite",
+          "suggestion": "Say who used the reports and for what.",
+          "candidate_question": null,
+          "reviewer": "hiring_manager"
+        },
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "What changed because of your posts?",
+          "reviewer": "hiring_manager"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": true,
+      "instances": [
+        {
+          "title": "Reads like a task list",
+          "anchors": [
+            "R8",
+            "R10"
+          ],
+          "severity": "major"
+        },
+        {
+          "title": "Opening shifts: so what?",
+          "anchors": [
+            "R12"
+          ],
+          "severity": "moderate"
+        },
+        {
+          "title": "Group project has no result",
+          "anchors": [
+            "R15"
+          ],
+          "severity": "moderate"
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "rank": 3,
+      "title": "Email and phone only in the page header",
+      "family": "PARSE",
+      "categories": [
+        "PARSE_FORMAT",
+        "CONTACT_HEADER"
+      ],
+      "severity": "major",
+      "priority": 9.0,
+      "reviewers": [
+        "screening",
+        "recruiter"
+      ],
+      "reviewer_count": 2,
+      "from_script": true,
+      "stage": "ats",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R1",
+          "quote": "j***@e***.com",
+          "reviewer": "screening"
+        },
+        {
+          "anchor": "A:PARSE-006",
+          "quote": "[header] Jordan Rivera | j***@e***.com | ***-***-0198",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "Some parsing software skips page headers, so your email and phone may not reach your profile.",
+      "fixes": [
+        {
+          "fix_type": "reformat",
+          "suggestion": "Put your email and phone in the body, right under your name.",
+          "candidate_question": null,
+          "reviewer": "screening"
+        },
+        {
+          "fix_type": "reformat",
+          "suggestion": "Move the email and phone into the body under your name.",
+          "candidate_question": null,
+          "reviewer": "screening"
+        },
+        {
+          "fix_type": "reformat",
+          "suggestion": "Put the email under your name.",
+          "candidate_question": null,
+          "reviewer": "recruiter"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I4",
+      "rank": 4,
+      "title": "Reads as a marketing candidate in seven seconds",
+      "family": "TITLE",
+      "categories": [
+        "TITLE_MISMATCH"
+      ],
+      "severity": "major",
+      "priority": 8.4,
+      "reviewers": [
+        "screening",
+        "recruiter"
+      ],
+      "reviewer_count": 2,
+      "from_script": false,
+      "stage": "recruiter_skim",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R7",
+          "quote": "Marketing Intern, BrightPath Co., Jun 2025 - Aug 2025",
+          "reviewer": "recruiter"
+        },
+        {
+          "anchor": "A:KW-004",
+          "quote": "The job title Data Analyst Intern is not on your resume",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "Reads as a marketing candidate in seven seconds.",
+      "fixes": [
+        {
+          "fix_type": "reorder",
+          "suggestion": "Lead with the Projects section so the dashboard shows first.",
+          "candidate_question": null,
+          "reviewer": "recruiter"
+        },
+        {
+          "fix_type": "rewrite",
+          "suggestion": "Add a truthful headline such as Business Analytics student.",
+          "candidate_question": null,
+          "reviewer": "screening"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I5",
+      "rank": 5,
+      "title": "Company-wide strategy and 300% revenue in a summer internship",
+      "family": "CREDIBILITY",
+      "categories": [
+        "SCOPE_INFLATION"
+      ],
+      "severity": "critical",
+      "priority": 8.0,
+      "reviewers": [
+        "skeptic"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "interview",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R9",
+          "quote": "Spearheaded company-wide analytics strategy, increasing revenue 300%",
+          "reviewer": "skeptic"
+        }
+      ],
+      "detail": "Company-wide strategy and 300% revenue in a summer internship.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "What exactly did you build, and how was the revenue change measured?",
+          "reviewer": "skeptic"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I6",
+      "rank": 6,
+      "title": "Tableau appears only in your skills list",
+      "family": "SKILL_EVIDENCE",
+      "categories": [
+        "SKILL_UNSUPPORTED"
+      ],
+      "severity": "moderate",
+      "priority": 6.25,
+      "reviewers": [
+        "screening",
+        "teammate",
+        "skeptic"
+      ],
+      "reviewer_count": 3,
+      "from_script": true,
+      "stage": "hm_review",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "Excel, Python, Tableau",
+          "reviewer": "teammate"
+        },
+        {
+          "anchor": "J11",
+          "quote": "Experience with Tableau or Power BI",
+          "reviewer": "screening"
+        },
+        {
+          "anchor": "A:KW-002",
+          "quote": "\"Tableau\" appears only in your skills or other lists.",
+          "reviewer": "screening"
+        }
+      ],
+      "detail": "A skill that is only listed is weaker than one shown in a bullet.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "Show Tableau inside a bullet about real work, if you used it there.",
+          "candidate_question": "Where have you used Tableau? A class, job, project or club counts.",
+          "reviewer": "screening"
+        },
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "Where did you use Tableau?",
+          "reviewer": "teammate"
+        }
+      ],
+      "jd_anchors": [
+        "J11"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I7",
+      "rank": 7,
+      "title": "Your best data work is buried at the bottom",
+      "family": "ORDER",
+      "categories": [
+        "ORDER_PRIORITY"
+      ],
+      "severity": "major",
+      "priority": 5.6,
+      "reviewers": [
+        "recruiter"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "recruiter_skim",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Built a Python dashboard",
+          "reviewer": "recruiter"
+        }
+      ],
+      "detail": "Your best data work is buried at the bottom.",
+      "fixes": [
+        {
+          "fix_type": "reorder",
+          "suggestion": "Move Projects above Experience.",
+          "candidate_question": null,
+          "reviewer": "recruiter"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I8",
+      "rank": 8,
+      "title": "Generic phrases any applicant could write",
+      "family": "DIFFERENTIATION",
+      "categories": [
+        "GENERIC_DIFFERENTIATION"
+      ],
+      "severity": "major",
+      "priority": 5.0,
+      "reviewers": [
+        "competitor"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "hm_review",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "various tasks",
+          "reviewer": "competitor"
+        }
+      ],
+      "detail": "Generic phrases any applicant could write.",
+      "fixes": [
+        {
+          "fix_type": "rewrite",
+          "suggestion": "",
+          "candidate_question": null,
+          "reviewer": "competitor"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I9",
+      "rank": 9,
+      "title": "No link to the dashboard",
+      "family": "PROOF",
+      "categories": [
+        "PROOF_LINKS"
+      ],
+      "severity": "moderate",
+      "priority": 2.5,
+      "reviewers": [
+        "competitor"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "hm_review",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Built a Python dashboard",
+          "reviewer": "competitor"
+        }
+      ],
+      "detail": "No link to the dashboard.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "Is the dashboard on GitHub or a public link?",
+          "reviewer": "competitor"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I10",
+      "rank": 10,
+      "title": "No link to rural clinics or patient wait times",
+      "family": "FIT",
+      "categories": [
+        "MISSION_ALIGNMENT"
+      ],
+      "severity": "moderate",
+      "priority": 2.125,
+      "reviewers": [
+        "ceo"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "hm_review",
+      "lane": "real_gap",
+      "has_real_gap": true,
+      "real_gap_routes": [
+        "Lean on the food bank dashboard as service work for a real community group."
+      ],
+      "evidence": [
+        {
+          "anchor": "J3",
+          "quote": "reduce patient wait times",
+          "reviewer": "ceo"
+        }
+      ],
+      "detail": "No link to rural clinics or patient wait times.",
+      "fixes": [
+        {
+          "fix_type": "real_gap",
+          "suggestion": "Lean on the food bank dashboard as service work for a real community group.",
+          "candidate_question": null,
+          "reviewer": "ceo"
+        }
+      ],
+      "jd_anchors": [
+        "J3"
+      ],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I11",
+      "rank": 11,
+      "title": "Unclear what you did in the group project",
+      "family": "CONTRIBUTION",
+      "categories": [
+        "ATTRIBUTION_UNCLEAR"
+      ],
+      "severity": "moderate",
+      "priority": 2.0,
+      "reviewers": [
+        "teammate"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "interview",
+      "lane": "needs_your_input",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R15",
+          "quote": "Worked on a group project",
+          "reviewer": "teammate"
+        }
+      ],
+      "detail": "Unclear what you did in the group project.",
+      "fixes": [
+        {
+          "fix_type": "needs_candidate_input",
+          "suggestion": "",
+          "candidate_question": "What was your part of the group project?",
+          "reviewer": "teammate"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I12",
+      "rank": 12,
+      "title": "2,000 responses: whose survey was it?",
+      "family": "CREDIBILITY",
+      "categories": [
+        "UNVERIFIABLE_CLAIM"
+      ],
+      "severity": "moderate",
+      "priority": 1.7,
+      "reviewers": [
+        "skeptic"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "interview",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "tracking 2,000 student survey responses",
+          "reviewer": "skeptic"
+        }
+      ],
+      "detail": "2,000 responses: whose survey was it?.",
+      "fixes": [
+        {
+          "fix_type": "rewrite",
+          "suggestion": "Say who ran the survey.",
+          "candidate_question": null,
+          "reviewer": "skeptic"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I13",
+      "rank": 13,
+      "title": "Bullet starts with a duty phrase",
+      "family": "MECHANICS",
+      "categories": [
+        "TYPO_GRAMMAR"
+      ],
+      "severity": "minor",
+      "priority": 1.4,
+      "reviewers": [
+        "recruiter"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "recruiter_skim",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "Responsible for social media posts",
+          "reviewer": "recruiter"
+        }
+      ],
+      "detail": "Bullet starts with a duty phrase.",
+      "fixes": [
+        {
+          "fix_type": "rewrite",
+          "suggestion": "",
+          "candidate_question": null,
+          "reviewer": "recruiter"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    },
+    {
+      "id": "I14",
+      "rank": 14,
+      "title": "Teamwork is only listed as a skill",
+      "family": "TEAMWORK",
+      "categories": [
+        "COLLABORATION_EVIDENCE"
+      ],
+      "severity": "minor",
+      "priority": 1.0,
+      "reviewers": [
+        "teammate"
+      ],
+      "reviewer_count": 1,
+      "from_script": false,
+      "stage": "interview",
+      "lane": "fixed_by_rewrite",
+      "has_real_gap": false,
+      "real_gap_routes": [],
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "teamwork, communication",
+          "reviewer": "teammate"
+        }
+      ],
+      "detail": "Teamwork is only listed as a skill.",
+      "fixes": [
+        {
+          "fix_type": "rewrite",
+          "suggestion": "",
+          "candidate_question": null,
+          "reviewer": "teammate"
+        }
+      ],
+      "jd_anchors": [],
+      "is_pattern": false,
+      "instances": []
+    }
+  ],
+  "notes": [
+    {
+      "id": "CONTENT-008",
+      "title": "Buzzwords with no evidence: teamwork, communication"
+    },
+    {
+      "id": "KW-005",
+      "title": "Preferred terms missing: healthcare data"
+    }
+  ],
+  "top3": [
+    "I1",
+    "I2",
+    "I3"
+  ],
+  "pinned_integrity": [
+    "I5"
+  ],
+  "conflicts": [
+    {
+      "type": "strength_vs_weakness",
+      "issue_id": "I2",
+      "strength_id": "S2",
+      "claim": "• Trained 6 new baristas and handled opening shifts",
+      "anchors": [
+        "R12"
+      ],
+      "sides": [
+        {
+          "reviewer": "competitor",
+          "view": "Strength: Training new staff is proof you can teach",
+          "quote": "Trained 6 new baristas"
+        },
+        {
+          "reviewer": "teammate",
+          "view": "Strength: Training new baristas shows you can teach",
+          "quote": "Trained 6 new baristas"
+        },
+        {
+          "reviewer": "skeptic",
+          "view": "Strength: Barista training is concrete and checkable",
+          "quote": "Trained 6 new baristas"
+        },
+        {
+          "reviewer": "ceo",
+          "view": "Weakness: Opening shifts: so what?",
+          "quote": "handled opening shifts"
+        }
+      ],
+      "which_matters": "Before the interview, the Hiring Manager's view carries the most weight here."
+    },
+    {
+      "type": "severity_split",
+      "issue_id": "I3",
+      "strength_id": null,
+      "claim": "Email and phone only in the page header",
+      "anchors": [
+        "R1"
+      ],
+      "sides": [
+        {
+          "reviewer": "screening",
+          "view": "Major: Email and phone only in the page header",
+          "quote": "[header] Jordan Rivera | j***@e***.com | ***-***-0198"
+        },
+        {
+          "reviewer": "recruiter",
+          "view": "Minor: Email is in the page header",
+          "quote": "j***@e***.com"
+        }
+      ],
+      "which_matters": "This is decided before a person reads the resume, so the screening view matters first."
+    },
+    {
+      "type": "strength_vs_weakness",
+      "issue_id": "I12",
+      "strength_id": "S1",
+      "claim": "• Built a Python dashboard tracking 2,000 student survey responses for the campus food bank",
+      "anchors": [
+        "R14"
+      ],
+      "sides": [
+        {
+          "reviewer": "hiring_manager",
+          "view": "Strength: A real dashboard with real users",
+          "quote": "Built a Python dashboard tracking 2,000 student survey responses"
+        },
+        {
+          "reviewer": "competitor",
+          "view": "Strength: Real users and real data",
+          "quote": "• Built a Python dashboard tracking 2,000 student survey responses for the campus food bank"
+        },
+        {
+          "reviewer": "ceo",
+          "view": "Strength: The food bank dashboard shows mission-driven ownership",
+          "quote": "for the campus food bank"
+        },
+        {
+          "reviewer": "teammate",
+          "view": "Strength: The dashboard is our exact day-one work",
+          "quote": "Built a Python dashboard"
+        },
+        {
+          "reviewer": "skeptic",
+          "view": "Weakness: 2,000 responses: whose survey was it?",
+          "quote": "tracking 2,000 student survey responses"
+        }
+      ],
+      "which_matters": "Praise can get you the interview; in the interview the Skeptic's and Hiring Manager's questions decide. Keep the line only if you can back it up."
+    }
+  ],
+  "strengths": [
+    {
+      "id": "S1",
+      "title": "A real dashboard with real users",
+      "reviewers": [
+        "hiring_manager",
+        "competitor",
+        "ceo",
+        "teammate"
+      ],
+      "anchors": [
+        "R14"
+      ],
+      "underused": true
+    },
+    {
+      "id": "S2",
+      "title": "Training new staff is proof you can teach",
+      "reviewers": [
+        "competitor",
+        "teammate",
+        "skeptic"
+      ],
+      "anchors": [
+        "R12"
+      ],
+      "underused": true
+    },
+    {
+      "id": "S3",
+      "title": "Name is clear at the top",
+      "reviewers": [
+        "recruiter"
+      ],
+      "anchors": [
+        "R2"
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "id": "RQ1",
+      "question": "Have you used SQL in a class, job, project or activity?",
+      "why": "SQL, a required skill, never appears",
+      "issue_ids": [
+        "I1"
+      ],
+      "related_anchors": [
+        "J9"
+      ]
+    },
+    {
+      "id": "RQ2",
+      "question": "What changed because of your posts?",
+      "why": "Bullets describe duties, not results (pattern across 4 lines)",
+      "issue_ids": [
+        "I2",
+        "I8",
+        "I13"
+      ],
+      "related_anchors": [
+        "R8"
+      ]
+    },
+    {
+      "id": "RQ3",
+      "question": "What exactly did you build, and how was the revenue change measured?",
+      "why": "Company-wide strategy and 300% revenue in a summer internship",
+      "issue_ids": [
+        "I5"
+      ],
+      "related_anchors": [
+        "R9"
+      ]
+    },
+    {
+      "id": "RQ4",
+      "question": "Where have you used Tableau? A class, job, project or club counts.",
+      "why": "Tableau appears only in your skills list",
+      "issue_ids": [
+        "I6"
+      ],
+      "related_anchors": [
+        "J11"
+      ]
+    },
+    {
+      "id": "RQ5",
+      "question": "Is the dashboard on GitHub or a public link?",
+      "why": "No link to the dashboard",
+      "issue_ids": [
+        "I9",
+        "I7",
+        "I12"
+      ],
+      "related_anchors": [
+        "R14"
+      ]
+    },
+    {
+      "id": "RQ6",
+      "question": "What was your part of the group project?",
+      "why": "Unclear what you did in the group project",
+      "issue_ids": [
+        "I11",
+        "I2"
+      ],
+      "related_anchors": [
+        "R15"
+      ]
+    }
+  ],
+  "interview_prep": [
+    {
+      "question": "Walk me through how you built the food bank dashboard.",
+      "from": "hiring_manager",
+      "anchor": null
+    },
+    {
+      "question": "How did you clean the 2,000 survey responses before analyzing them?",
+      "from": "hiring_manager",
+      "anchor": null
+    },
+    {
+      "question": "What did the weekly Excel reports show, and who used them?",
+      "from": "hiring_manager",
+      "anchor": null
+    },
+    {
+      "question": "How was the 300% measured, and what was the starting point?",
+      "from": "skeptic",
+      "anchor": "R9"
+    },
+    {
+      "question": "Who collected the 2,000 responses, and what did the dashboard change?",
+      "from": "skeptic",
+      "anchor": "R14"
+    },
+    {
+      "question": "How did you train the 6 new baristas?",
+      "from": "skeptic",
+      "anchor": "R12"
+    }
+  ],
+  "validation_log": [
+    {
+      "where": "screening:screening-2",
+      "action": "finding_dropped",
+      "reason": "claimed missing but the resume or the screening check has: Python"
+    },
+    {
+      "where": "screening:screening-5",
+      "action": "evidence_dropped",
+      "anchor": "A:PARSE-099",
+      "reason": "no such issue in screening.json"
+    },
+    {
+      "where": "screening:screening-5",
+      "action": "finding_dropped",
+      "reason": "no verifiable evidence (quote not found on its line, or unknown anchor)"
+    },
+    {
+      "where": "recruiter:recruiter-4",
+      "action": "anchor_repaired",
+      "from": "R3",
+      "to": "R1"
+    },
+    {
+      "where": "competitor:competitor-s1",
+      "action": "anchor_repaired",
+      "from": "R3",
+      "to": "R12"
+    },
+    {
+      "where": "ceo:ceo-4",
+      "action": "finding_dropped",
+      "reason": "outside the ceo lens and below major"
+    },
+    {
+      "where": "teammate:teammate-4",
+      "action": "finding_dropped",
+      "reason": "claimed missing but the resume or the screening check has: data visualization"
+    },
+    {
+      "where": "skeptic:skeptic-3",
+      "action": "evidence_dropped",
+      "anchor": "R10",
+      "quote": "Led a team of 12 analysts",
+      "reason": "quote not found on that line or any other"
+    },
+    {
+      "where": "skeptic:skeptic-3",
+      "action": "finding_dropped",
+      "reason": "no verifiable evidence (quote not found on its line, or unknown anchor)"
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.0",
+  "stage": "final",
+  "hp_version": "1.0.0",
+  "candidate": "Maya Rivera",
+  "target": {
+    "role": "Marketing Analyst Intern",
+    "company": "Northwind Foods"
+  },
+  "date": "2026-10-20",
+  "mode": "parallel",
+  "general_review": false,
+  "mode_note": "",
+  "verdict_strip": {
+    "vote_label": "3 of 7 would move you forward",
+    "screening_band": "Needs work",
+    "mode_label": "7 independent reviewers (Claude Code)",
+    "strong_line": ""
+  },
+  "strong_resume": false,
+  "closest_to_reject": {
+    "reviewer": "screening",
+    "name": "Automated Screening Check",
+    "verdict": "lean_no",
+    "issue_id": "I1",
+    "severity": "major",
+    "reason": "Bullets list tasks, not results"
+  },
+  "first_impression": "Marketing student with an analytics internship at Northwind, a dashboard project and a newsletter role; strong on tools, light on results.",
+  "pinned_integrity": [],
+  "weaknesses": [
+    {
+      "rank": 1,
+      "issue_id": "I1",
+      "title": "Bullets list tasks, not results",
+      "severity": "major",
+      "flagged_by": [
+        "hiring_manager",
+        "recruiter",
+        "ceo",
+        "competitor"
+      ],
+      "flagged_count": 4,
+      "from_script": false,
+      "why": "Most lines say what you did but not what changed, so a reader cannot tell how well it went.",
+      "evidence_quote": "kept a spreadsheet of likes and comments",
+      "status": "fixed",
+      "fix": "Each bullet now starts with what you did; the follower growth you gave us is in."
+    },
+    {
+      "rank": 2,
+      "issue_id": "I2",
+      "title": "SQL is required but shows up only as a class",
+      "severity": "major",
+      "flagged_by": [
+        "screening",
+        "hiring_manager"
+      ],
+      "flagged_count": 2,
+      "from_script": true,
+      "why": "The posting lists SQL under what you'll need. Your resume shows it only in a course title.",
+      "evidence_quote": "Experience with SQL",
+      "status": "gap",
+      "fix": "SQL is listed honestly as coursework. A project of your own would close this."
+    },
+    {
+      "rank": 3,
+      "issue_id": "I3",
+      "title": "Your analytics work is buried",
+      "severity": "moderate",
+      "flagged_by": [
+        "hiring_manager",
+        "competitor",
+        "teammate"
+      ],
+      "flagged_count": 3,
+      "from_script": false,
+      "why": "The spreadsheet tracking and the pricing survey are your closest match to this job, but they sit low on the page.",
+      "evidence_quote": "made a 15 question survey and used pivot tables",
+      "status": "fixed",
+      "fix": "The tracking spreadsheet and the pricing survey now sit near the top of their entries."
+    },
+    {
+      "rank": 4,
+      "issue_id": "I4",
+      "title": "No Tableau or Google Analytics",
+      "severity": "moderate",
+      "flagged_by": [
+        "screening",
+        "competitor"
+      ],
+      "flagged_count": 2,
+      "from_script": true,
+      "why": "Both are nice-to-haves in the posting. Other applicants may list them.",
+      "evidence_quote": "Experience with Tableau or Google Analytics",
+      "status": "gap",
+      "fix": "Left off because you have not used them. Do not add them until you have."
+    },
+    {
+      "rank": 5,
+      "issue_id": "I5",
+      "title": "Survey size is unknown",
+      "severity": "minor",
+      "flagged_by": [
+        "skeptic",
+        "ceo"
+      ],
+      "flagged_count": 2,
+      "from_script": false,
+      "why": "A survey result means more when the reader knows how many people answered.",
+      "evidence_quote": "made a 15 question survey",
+      "status": "needs_you",
+      "fix": "Add the response count if you can find it in your class files."
+    },
+    {
+      "rank": 6,
+      "issue_id": "I6",
+      "title": "Two date formats",
+      "severity": "minor",
+      "flagged_by": [
+        "screening",
+        "recruiter"
+      ],
+      "flagged_count": 2,
+      "from_script": true,
+      "why": "Mixed formats ('Sept 2023' and 'Jan 2024') look less polished and can confuse date parsing.",
+      "evidence_quote": "Sept 2023 - Present",
+      "status": "fixed",
+      "fix": "All dates now use one format."
+    }
+  ],
+  "changes": {
+    "bullets_rewritten": 8,
+    "reordered": true,
+    "numbers_from_you": 3,
+    "cut": [
+      {
+        "ref": "R19",
+        "text": "responsible for opening shift some weekends",
+        "reason": "Least related to a marketing analyst role, and it needed space on one page."
+      }
+    ]
+  },
+  "needs_you": [
+    {
+      "where": "Projects: Campus Coffee Pricing Survey",
+      "ask": "How many students answered the survey? Add the number if you find it."
+    }
+  ],
+  "real_gaps": [
+    {
+      "title": "SQL beyond a class",
+      "honest_route": "Build one small project with real data and add it under Projects."
+    },
+    {
+      "title": "Tableau or Google Analytics",
+      "honest_route": "Only add these after you have used them on real work."
+    }
+  ],
+  "panel": [
+    {
+      "id": "screening",
+      "name": "Automated Screening Check",
+      "lens": "Readability and keywords",
+      "verdict": "lean_no",
+      "advance": "no",
+      "take": "Clean file, but only 2 of 5 required terms show up."
+    },
+    {
+      "id": "hiring_manager",
+      "name": "Hiring Manager",
+      "lens": "Can you do this job?",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "The tracking spreadsheet is real analyst work. I would ask about it."
+    },
+    {
+      "id": "recruiter",
+      "name": "Recruiter",
+      "lens": "The 7-second skim",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "take": "Easy to read, but nothing in the top third says analytics."
+    },
+    {
+      "id": "competitor",
+      "name": "Competing Applicant",
+      "lens": "Who else is applying",
+      "verdict": "lean_no",
+      "advance": "no",
+      "take": "Applicants with SQL projects will look stronger on paper."
+    },
+    {
+      "id": "ceo",
+      "name": "CEO",
+      "lens": "Business impact",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "take": "Follower growth is the one business result. One more would help."
+    },
+    {
+      "id": "teammate",
+      "name": "Future Teammate",
+      "lens": "Would I want to work with you?",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "Trained new hires and works during school. Sounds dependable."
+    },
+    {
+      "id": "skeptic",
+      "name": "Skeptic",
+      "lens": "Does every claim hold up?",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "Claims are modest and specific. Nothing I would doubt in an interview."
+    }
+  ],
+  "panel_after": null,
+  "screening": {
+    "label": "Simulated screening check",
+    "method": "Overall = 40% file readability + 40% job-keyword match + 20% content signals, rounded to steps of 5. Weights are our judgment, not calibrated to hiring outcomes.",
+    "before": {
+      "overall": 60,
+      "band": "Needs work",
+      "machine_readability": {
+        "value": 85,
+        "band": "Minor risks"
+      },
+      "keyword_match": {
+        "value": 35,
+        "band": "Weak match"
+      },
+      "content_signals": {
+        "value": 50,
+        "band": "Needs work"
+      },
+      "required": {
+        "found": 2,
+        "total": 5,
+        "listed_only": 1
+      }
+    },
+    "after": {
+      "overall": 75,
+      "band": "Close, fix the top items",
+      "machine_readability": {
+        "value": 100,
+        "band": "Clean"
+      },
+      "keyword_match": {
+        "value": 50,
+        "band": "Partial match"
+      },
+      "content_signals": {
+        "value": 80,
+        "band": "Solid"
+      },
+      "required": {
+        "found": 3,
+        "total": 5,
+        "listed_only": 1
+      }
+    },
+    "after_source": "docx",
+    "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number.",
+    "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes. This check looks for problems known to break resume parsing and for job-description requirements your resume doesn't show. A high score doesn't guarantee an interview, and a low score doesn't mean a robot rejected you. Most automatic rejections come from application questions (work authorization, location, degree, availability), and no resume edit changes those."
+  },
+  "disagreements": [
+    {
+      "claim": "Is the Instagram internship relevant to an analyst role?",
+      "sides": [
+        {
+          "reviewer": "hiring_manager",
+          "view": "Yes: tracking what worked and reporting it is the job.",
+          "quote": "showed the owner which posts did best before the fall menu launch"
+        },
+        {
+          "reviewer": "competitor",
+          "view": "Partly: it reads as content creation first, analysis second.",
+          "quote": "made instagram posts 4x a week for both stores for 10 weeks"
+        }
+      ],
+      "which_matters": "The hiring manager decides interviews. Lead with the tracking work so both readers see it."
+    }
+  ],
+  "keyword_gaps": [
+    {
+      "term": "SQL",
+      "status": "listed_only",
+      "note": "Shown as coursework only. A small project would make it real."
+    },
+    {
+      "term": "Tableau",
+      "status": "gap",
+      "note": "Nice to have. You said you have not used it, so it stays off."
+    },
+    {
+      "term": "Google Analytics",
+      "status": "gap",
+      "note": "Nice to have. You said you have not used it, so it stays off."
+    },
+    {
+      "term": "A/B testing",
+      "status": "gap",
+      "note": "Listed under what you would do. Mention interest in a cover note, not the resume."
+    },
+    {
+      "term": "Excel",
+      "status": "added_with_evidence",
+      "note": "Now named in your skills with pivot tables, from your own lines."
+    }
+  ],
+  "strengths": [
+    {
+      "title": "Real tracking work behind the social posts",
+      "flagged_by": [
+        "hiring_manager",
+        "teammate",
+        "ceo"
+      ],
+      "underused": true
+    },
+    {
+      "title": "Steady job during school, trusted to train new hires",
+      "flagged_by": [
+        "teammate",
+        "recruiter"
+      ],
+      "underused": false
+    },
+    {
+      "title": "Survey design and pivot tables in a graded project",
+      "flagged_by": [
+        "hiring_manager",
+        "competitor"
+      ],
+      "underused": false
+    }
+  ],
+  "interview_prep": [
+    {
+      "question": "Walk me through the spreadsheet you kept. What did you track, and what did the owner change?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "How did you decide the survey questions, and what did the pivot tables show?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "Tell me about a time a post did worse than you expected. What did you do next?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "How do you know the account grew by about 600 followers in those 10 weeks?",
+      "from": "skeptic"
+    },
+    {
+      "question": "What did you write in SQL for your class? Could you write a simple query now?",
+      "from": "skeptic"
+    }
+  ],
+  "knockouts": [
+    {
+      "type": "location",
+      "jd_quote": "Location: Austin, TX (hybrid, 3 days in office).",
+      "advice": "You are in Austin, so this fits. Expect a question about the in-office days."
+    }
+  ],
+  "truth_check": {
+    "ran": "script",
+    "passed": true,
+    "invented_facts": 0,
+    "bullets_traced": 8,
+    "bullets_total": 8,
+    "provenance": "subagent"
+  },
+  "limitations": [
+    "We don't run Workday, Greenhouse, Lever, iCIMS or Taleo; their parsers differ by vendor, version and employer settings.",
+    "Scores aren't probabilities and aren't calibrated against interview outcomes.",
+    "The reviewers are simulated by Claude. They can be wrong, and they never saw the real applicant pool."
+  ],
+  "next_steps": [
+    "Read the new resume line by line and fix anything that is not exactly true.",
+    "Find the survey response count and add it to the Projects bullet.",
+    "Practice the interview questions in the full report out loud before you apply."
+  ],
+  "files": {
+    "resume_docx": "Maya_Rivera_Resume.docx",
+    "resume_pdf": "Maya_Rivera_Resume.pdf",
+    "resume_md": "Maya_Rivera_Resume.md",
+    "report_pdf": "Hiring_Panel_Report.pdf",
+    "report_md": "Hiring_Panel_Report.md",
+    "report_html": "Hiring_Panel_Report.html"
+  }
+}

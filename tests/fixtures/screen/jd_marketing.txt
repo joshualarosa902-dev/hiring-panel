@@ -1,0 +1,22 @@
+Marketing Analytics Intern (Summer 2027)
+Lumen & Pine Co. – Austin, TX
+About Us
+Lumen & Pine is a fictional outdoor goods retailer with 40 stores across Texas.
+What You'll Do
+- Build weekly dashboards in Tableau to track campaign performance
+- Analyze customer data with SQL and Excel
+- Support social media marketing and email marketing campaigns
+- Run A/B testing on landing pages with the web team
+Requirements
+- Currently pursuing a Bachelor's degree in Marketing, Statistics, or a related field
+- Experience with SQL and Microsoft Excel (pivot tables)
+- Strong communication skills
+- Familiarity with Google Analytics is a plus
+- Must be authorized to work in the United States
+Preferred Qualifications
+- Experience with Python or R for statistical analysis
+- Knowledge of search engine optimization (SEO)
+- HubSpot or Salesforce experience
+Benefits
+- $22/hour, hybrid schedule (3 days per week in our Austin office)
+Lumen & Pine is an equal opportunity employer. We consider all applicants without regard to race, color, religion, sex, age, national origin, disability or veteran status.

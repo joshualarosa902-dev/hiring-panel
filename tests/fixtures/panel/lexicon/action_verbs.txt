@@ -1,0 +1,7 @@
+build
+train
+lead|led
+analyze
+help|helped
+work|worked
+spearhead

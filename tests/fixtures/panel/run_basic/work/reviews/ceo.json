@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "ceo",
+  "decision_question": "Would this person move something the business cares about, and in a year would I fight to keep them?",
+  "verdict": "borderline",
+  "verdict_rationale": "The food bank dashboard (R14) served a real group; internship bullets (R8, R10) never say what changed.",
+  "advance": "unsure",
+  "one_line_take": "One bullet shows real impact; the rest reads like a task list.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "E1_business_outcomes",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "E2_ownership",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "E3_judgment",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "E4_alignment",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "E5_ceiling",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "ceo-1",
+      "category": "IMPACT_MISSING",
+      "severity": "major",
+      "confidence": "high",
+      "title": "Reads like a task list",
+      "detail": "Reads like a task list.",
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "various tasks"
+        },
+        {
+          "anchor": "R10",
+          "quote": "Helped the team with weekly reports"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "What happened because of the weekly reports?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "ceo-2",
+      "category": "MISSION_ALIGNMENT",
+      "severity": "moderate",
+      "confidence": "medium",
+      "title": "No link to rural clinics or patient wait times",
+      "detail": "No link to rural clinics or patient wait times.",
+      "evidence": [
+        {
+          "anchor": "J3",
+          "quote": "reduce patient wait times"
+        }
+      ],
+      "fix": {
+        "fix_type": "real_gap",
+        "suggestion": "Lean on the food bank dashboard as service work for a real community group.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "ceo-3",
+      "category": "IMPACT_MISSING",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Opening shifts: so what?",
+      "detail": "Opening shifts: so what?.",
+      "evidence": [
+        {
+          "anchor": "R12",
+          "quote": "handled opening shifts"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "ceo-4",
+      "category": "TYPO_GRAMMAR",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Comma splice",
+      "detail": "Comma splice.",
+      "evidence": [
+        {
+          "anchor": "R9",
+          "quote": "Spearheaded"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "ceo-s1",
+      "title": "The food bank dashboard shows mission-driven ownership",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "for the campus food bank"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "one_sentence_case": "Built a data tool a real campus group used.",
+    "so_what_bullets": [
+      {
+        "anchor": "R10",
+        "quote": "Helped the team with weekly reports in Excel",
+        "missing": "outcome"
+      }
+    ],
+    "keeper_test": "Too early to tell from this page."
+  }
+}

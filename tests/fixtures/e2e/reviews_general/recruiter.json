@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "recruiter",
+  "decision_question": "In my first fast pass, does this resume go in the 'send to the hiring manager' pile?",
+  "verdict": "lean_yes",
+  "verdict_rationale": "Name, school, degree and both jobs are findable at a glance (R1, R5, R9, R15). The top third reads marketing, not analytics, and the 'Responsible for' opener (R11) slows the skim.",
+  "advance": "yes",
+  "one_line_take": "Clean and easy to skim; the top third says marketing more than analytics.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "C1_top_third",
+      "score": 3,
+      "evidence_anchors": [
+        "R5",
+        "R10"
+      ],
+      "note": "Degree is right; title reads marketing."
+    },
+    {
+      "dimension_id": "C2_skimmability",
+      "score": 4,
+      "evidence_anchors": [
+        "R3",
+        "R8"
+      ],
+      "note": "Clear headings, one page, consistent dates."
+    },
+    {
+      "dimension_id": "C3_basic_qualifiers",
+      "score": 4,
+      "evidence_anchors": [
+        "R5"
+      ],
+      "note": "Degree and expected date are clear."
+    },
+    {
+      "dimension_id": "C4_red_flags",
+      "score": 4,
+      "evidence_anchors": [],
+      "note": "Nothing alarming."
+    },
+    {
+      "dimension_id": "C5_instant_fit",
+      "score": 3,
+      "evidence_anchors": [
+        "R10"
+      ],
+      "note": "Close fit for the role title."
+    }
+  ],
+  "findings": [
+    {
+      "id": "recruiter-1",
+      "category": "TITLE_MISMATCH",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "The top third reads marketing, not analytics",
+      "detail": "In a fast skim I see Marketing Intern and newsletter work first. The analytics side of you shows up later.",
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "Marketing Intern | June 2025 – August 2025"
+        }
+      ],
+      "fix": {
+        "fix_type": "reorder",
+        "suggestion": "Open the internship with the sales numbers bullet so analytics shows in the first lines.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "recruiter-2",
+      "category": "LENGTH_DENSITY",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Weak openers slow the skim",
+      "detail": "Starting bullets with 'Responsible for' and 'Helped with' hides the action.",
+      "evidence": [
+        {
+          "anchor": "R11",
+          "quote": "Responsible for the weekly email newsletter"
+        },
+        {
+          "anchor": "R12",
+          "quote": "Helped with Instagram posts"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Start each bullet with what you did, keeping your real level of ownership.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "recruiter-s1",
+      "title": "Steady part-time job with a lead title during school",
+      "evidence": [
+        {
+          "anchor": "R16",
+          "quote": "Shift Lead | September 2023 – Present"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "seven_second_takeaway": "Business analytics student, marketing intern and shift lead, Excel and survey work.",
+    "six_data_points": [
+      {
+        "item": "name",
+        "found": true,
+        "anchor": "R1",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "current_title_org",
+        "found": true,
+        "anchor": "R16",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "previous_title_org",
+        "found": true,
+        "anchor": "R10",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "current_dates",
+        "found": true,
+        "anchor": "R16",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "previous_dates",
+        "found": true,
+        "anchor": "R10",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "education",
+        "found": true,
+        "anchor": "R5",
+        "findable_in_seconds": true
+      }
+    ],
+    "page_count_estimate": 1,
+    "gpa_note": "3.6 is shown and fine to keep.",
+    "locale_applied": "en-US"
+  }
+}

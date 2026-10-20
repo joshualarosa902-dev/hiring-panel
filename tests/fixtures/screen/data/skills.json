@@ -1,0 +1,1183 @@
+{
+ "version": "1.0.0-test",
+ "entries": [
+  {
+   "id": "sql",
+   "canonical": "SQL",
+   "kind": "tool",
+   "aliases": [
+    "structured query language"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "postgresql",
+   "canonical": "PostgreSQL",
+   "kind": "tool",
+   "aliases": [
+    "Postgres"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "sql"
+   ]
+  },
+  {
+   "id": "mysql",
+   "canonical": "MySQL",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "sql"
+   ]
+  },
+  {
+   "id": "python",
+   "canonical": "Python",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "r_lang",
+   "canonical": "R",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": true,
+   "ambiguous": true,
+   "context": [
+    "statistics",
+    "statistical",
+    "rstudio",
+    "ggplot2",
+    "tidyverse",
+    "python",
+    "regression",
+    "data"
+   ],
+   "implies": []
+  },
+  {
+   "id": "c_lang",
+   "canonical": "C",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": true,
+   "ambiguous": true,
+   "context": [
+    "programming",
+    "embedded",
+    "c++",
+    "java",
+    "linux"
+   ],
+   "implies": []
+  },
+  {
+   "id": "go_lang",
+   "canonical": "Go",
+   "kind": "tool",
+   "aliases": [
+    "Golang"
+   ],
+   "acronyms": [],
+   "case_sensitive": true,
+   "ambiguous": true,
+   "context": [
+    "golang",
+    "backend",
+    "microservices",
+    "kubernetes",
+    "programming"
+   ],
+   "implies": []
+  },
+  {
+   "id": "java",
+   "canonical": "Java",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "javascript",
+   "canonical": "JavaScript",
+   "kind": "tool",
+   "aliases": [
+    "JS"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "react",
+   "canonical": "React",
+   "kind": "tool",
+   "aliases": [
+    "React.js",
+    "ReactJS"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "javascript"
+   ]
+  },
+  {
+   "id": "nodejs",
+   "canonical": "Node.js",
+   "kind": "tool",
+   "aliases": [
+    "NodeJS",
+    "Node"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "javascript"
+   ]
+  },
+  {
+   "id": "html",
+   "canonical": "HTML",
+   "kind": "tool",
+   "aliases": [
+    "HTML5"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "css",
+   "canonical": "CSS",
+   "kind": "tool",
+   "aliases": [
+    "CSS3"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "git",
+   "canonical": "Git",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "github",
+   "canonical": "GitHub",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "git"
+   ]
+  },
+  {
+   "id": "frontend_dev",
+   "canonical": "front-end development",
+   "kind": "hard",
+   "aliases": [
+    "frontend development",
+    "front end development",
+    "front-end web development"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "excel",
+   "canonical": "Microsoft Excel",
+   "kind": "tool",
+   "aliases": [
+    "Excel",
+    "MS Excel"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "pivot_tables",
+   "canonical": "pivot tables",
+   "kind": "hard",
+   "aliases": [
+    "pivot table",
+    "pivottables"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "powerpoint",
+   "canonical": "Microsoft PowerPoint",
+   "kind": "tool",
+   "aliases": [
+    "PowerPoint"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "ms_office",
+   "canonical": "Microsoft Office",
+   "kind": "tool",
+   "aliases": [
+    "MS Office",
+    "Office 365",
+    "Microsoft 365"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "tableau",
+   "canonical": "Tableau",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "power_bi",
+   "canonical": "Power BI",
+   "kind": "tool",
+   "aliases": [
+    "PowerBI"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "google_analytics",
+   "canonical": "Google Analytics",
+   "kind": "tool",
+   "aliases": [
+    "GA4"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "seo",
+   "canonical": "search engine optimization",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [
+    "SEO"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "sem",
+   "canonical": "search engine marketing",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [
+    "SEM"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "crm",
+   "canonical": "customer relationship management",
+   "kind": "domain",
+   "aliases": [
+    "CRM software"
+   ],
+   "acronyms": [
+    "CRM"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "salesforce",
+   "canonical": "Salesforce",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "crm"
+   ]
+  },
+  {
+   "id": "hubspot",
+   "canonical": "HubSpot",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "crm"
+   ]
+  },
+  {
+   "id": "ab_testing",
+   "canonical": "A/B testing",
+   "kind": "hard",
+   "aliases": [
+    "split testing",
+    "AB testing"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "data_viz",
+   "canonical": "data visualization",
+   "kind": "hard",
+   "aliases": [
+    "data visualisation",
+    "data visualizations"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "data_analysis",
+   "canonical": "data analysis",
+   "kind": "hard",
+   "aliases": [
+    "data analytics",
+    "analyzing data"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "dashboards",
+   "canonical": "dashboard",
+   "kind": "hard",
+   "aliases": [
+    "dashboards",
+    "reporting dashboard"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "ml",
+   "canonical": "machine learning",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [
+    "ML"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "statistics",
+   "canonical": "statistics",
+   "kind": "domain",
+   "aliases": [
+    "statistical analysis"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "financial_modeling",
+   "canonical": "financial modeling",
+   "kind": "hard",
+   "aliases": [
+    "financial modelling",
+    "financial models"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "accounting",
+   "canonical": "accounting",
+   "kind": "domain",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "quickbooks",
+   "canonical": "QuickBooks",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "budgeting",
+   "canonical": "budgeting",
+   "kind": "hard",
+   "aliases": [
+    "budget management"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "forecasting",
+   "canonical": "forecasting",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "social_media",
+   "canonical": "social media marketing",
+   "kind": "hard",
+   "aliases": [
+    "social media management"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "content_creation",
+   "canonical": "content creation",
+   "kind": "hard",
+   "aliases": [
+    "content creator"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "copywriting",
+   "canonical": "copywriting",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "email_marketing",
+   "canonical": "email marketing",
+   "kind": "hard",
+   "aliases": [
+    "email campaigns"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "canva",
+   "canonical": "Canva",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "photoshop",
+   "canonical": "Adobe Photoshop",
+   "kind": "tool",
+   "aliases": [
+    "Photoshop"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "figma",
+   "canonical": "Figma",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "user_research",
+   "canonical": "user research",
+   "kind": "hard",
+   "aliases": [
+    "UX research"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "project_mgmt",
+   "canonical": "project management",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "agile",
+   "canonical": "Agile",
+   "kind": "hard",
+   "aliases": [
+    "agile methodology"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "scrum",
+   "canonical": "Scrum",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": [
+    "agile"
+   ]
+  },
+  {
+   "id": "customer_service",
+   "canonical": "customer service",
+   "kind": "hard",
+   "aliases": [
+    "customer support"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "communication",
+   "canonical": "communication",
+   "kind": "soft",
+   "aliases": [
+    "communication skills",
+    "written communication",
+    "verbal communication"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "teamwork",
+   "canonical": "teamwork",
+   "kind": "soft",
+   "aliases": [
+    "collaboration"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "leadership",
+   "canonical": "leadership",
+   "kind": "soft",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "problem_solving",
+   "canonical": "problem solving",
+   "kind": "soft",
+   "aliases": [
+    "problem-solving"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "public_speaking",
+   "canonical": "public speaking",
+   "kind": "soft",
+   "aliases": [
+    "presentation skills"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "attention_detail",
+   "canonical": "attention to detail",
+   "kind": "soft",
+   "aliases": [
+    "detail-oriented"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "inventory",
+   "canonical": "inventory management",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "supply_chain",
+   "canonical": "supply chain",
+   "kind": "domain",
+   "aliases": [
+    "supply chain management"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "logistics",
+   "canonical": "logistics",
+   "kind": "domain",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "bls",
+   "canonical": "Basic Life Support",
+   "kind": "cert",
+   "aliases": [
+    "BLS certification"
+   ],
+   "acronyms": [
+    "BLS"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "cpr",
+   "canonical": "CPR certification",
+   "kind": "cert",
+   "aliases": [
+    "CPR certified",
+    "CPR"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "rn_license",
+   "canonical": "Registered Nurse license",
+   "kind": "cert",
+   "aliases": [
+    "RN license"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "patient_care",
+   "canonical": "patient care",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "ehr",
+   "canonical": "electronic health records",
+   "kind": "tool",
+   "aliases": [
+    "electronic medical records",
+    "EMR"
+   ],
+   "acronyms": [
+    "EHR"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "epic",
+   "canonical": "Epic",
+   "kind": "tool",
+   "aliases": [
+    "Epic Systems"
+   ],
+   "acronyms": [],
+   "case_sensitive": true,
+   "ambiguous": true,
+   "context": [
+    "ehr",
+    "emr",
+    "charting",
+    "electronic health records",
+    "health"
+   ],
+   "implies": []
+  },
+  {
+   "id": "lesson_planning",
+   "canonical": "lesson planning",
+   "kind": "hard",
+   "aliases": [
+    "lesson plans"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "classroom_mgmt",
+   "canonical": "classroom management",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "autocad",
+   "canonical": "AutoCAD",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "solidworks",
+   "canonical": "SolidWorks",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "matlab",
+   "canonical": "MATLAB",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "cad",
+   "canonical": "computer-aided design",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [
+    "CAD"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "pcr",
+   "canonical": "polymerase chain reaction",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [
+    "PCR"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "lab_safety",
+   "canonical": "lab safety",
+   "kind": "hard",
+   "aliases": [
+    "laboratory safety"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "spanish",
+   "canonical": "Spanish",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "event_planning",
+   "canonical": "event planning",
+   "kind": "hard",
+   "aliases": [
+    "event coordination"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "fundraising",
+   "canonical": "fundraising",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "grant_writing",
+   "canonical": "grant writing",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "market_research",
+   "canonical": "market research",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "data_entry",
+   "canonical": "data entry",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "marketing",
+   "canonical": "marketing",
+   "kind": "domain",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "sales",
+   "canonical": "sales",
+   "kind": "domain",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "finance",
+   "canonical": "finance",
+   "kind": "domain",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "google_ads",
+   "canonical": "Google Ads",
+   "kind": "tool",
+   "aliases": [
+    "Google AdWords",
+    "AdWords"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "marketing_intern",
+   "canonical": "Marketing Intern",
+   "kind": "title",
+   "aliases": [
+    "Marketing Internship"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "data_analyst",
+   "canonical": "Data Analyst",
+   "kind": "title",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "software_engineer",
+   "canonical": "Software Engineer",
+   "kind": "title",
+   "aliases": [
+    "Software Developer"
+   ],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "ai",
+   "canonical": "artificial intelligence",
+   "kind": "hard",
+   "aliases": [],
+   "acronyms": [
+    "AI"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "it_support",
+   "canonical": "information technology",
+   "kind": "domain",
+   "aliases": [
+    "IT support"
+   ],
+   "acronyms": [
+    "IT"
+   ],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "cpp",
+   "canonical": "C++",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  },
+  {
+   "id": "csharp",
+   "canonical": "C#",
+   "kind": "tool",
+   "aliases": [],
+   "acronyms": [],
+   "case_sensitive": false,
+   "ambiguous": false,
+   "context": [],
+   "implies": []
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "competitor",
+  "decision_question": "If this resume sat next to a typical strong applicant's for this job, would it win the interview slot?",
+  "verdict": "lean_no",
+  "verdict_rationale": "Generic lines (R8) and vague verbs (R10) lose side by side; the dashboard (R14) is buried.",
+  "advance": "no",
+  "one_line_take": "My resume beats yours on specifics; your dashboard is your best weapon and it is buried.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "P1_table_stakes",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "P2_differentiation",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "P3_specificity",
+      "score": 1,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "P4_proof_density",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "P5_positioning",
+      "score": 1,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "competitor-1",
+      "category": "GENERIC_DIFFERENTIATION",
+      "severity": "major",
+      "confidence": "high",
+      "title": "Generic phrases any applicant could write",
+      "detail": "Generic phrases any applicant could write.",
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "various tasks"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "competitor-2",
+      "category": "VAGUE_LANGUAGE",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "\"Helped\" hides what you did",
+      "detail": "\"Helped\" hides what you did.",
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "Helped the team"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "competitor-3",
+      "category": "PROOF_LINKS",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "No link to the dashboard",
+      "detail": "No link to the dashboard.",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Built a Python dashboard"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "",
+        "candidate_question": "Is the dashboard on GitHub or a public link?"
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "competitor-s1",
+      "title": "Training new staff is proof you can teach",
+      "evidence": [
+        {
+          "anchor": "R3",
+          "quote": "Trained 6 new baristas"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "benchmark_profile": {
+      "level": "intern",
+      "basis": "posting",
+      "typical_signals": [
+        "SQL from a class or project",
+        "One dashboard or analysis project"
+      ],
+      "basis_jd_anchors": [
+        "J9",
+        "J5"
+      ],
+      "disclaimer": "Assumed from the job description, not data about real applicants."
+    },
+    "head_to_head": [
+      {
+        "axis": "P1_table_stakes",
+        "this_resume": "Python yes, SQL no",
+        "typical_competitor": "Python and SQL",
+        "edge": "competitor"
+      },
+      {
+        "axis": "P2_differentiation",
+        "this_resume": "Food bank dashboard",
+        "typical_competitor": "Class project",
+        "edge": "candidate"
+      },
+      {
+        "axis": "P3_specificity",
+        "this_resume": "Several generic lines",
+        "typical_competitor": "Specific lines",
+        "edge": "competitor"
+      },
+      {
+        "axis": "P4_proof_density",
+        "this_resume": "Few numbers, no links",
+        "typical_competitor": "Numbers and a link",
+        "edge": "competitor"
+      },
+      {
+        "axis": "P5_positioning",
+        "this_resume": "Best work at the bottom",
+        "typical_competitor": "Best work first",
+        "edge": "competitor"
+      }
+    ],
+    "unfair_advantages": [
+      {
+        "anchor": "R14",
+        "why_it_stands_out": "Real users and real data",
+        "currently_buried": true
+      }
+    ],
+    "generic_phrases": [
+      {
+        "anchor": "R8",
+        "quote": "various tasks"
+      }
+    ]
+  }
+}

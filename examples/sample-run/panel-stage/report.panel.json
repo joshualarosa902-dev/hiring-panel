@@ -1,0 +1,451 @@
+{
+  "schema_version": "1.0",
+  "stage": "panel",
+  "hp_version": "1.0.0",
+  "candidate": "Riley Castellano",
+  "target": {
+    "role": "Marketing Analytics Intern",
+    "company": "Northwind Foods"
+  },
+  "date": "2026-10-20",
+  "mode": "parallel",
+  "general_review": false,
+  "mode_note": "",
+  "verdict_strip": {
+    "vote_label": "4 of 7 would move you forward",
+    "screening_band": "Ready to send",
+    "mode_label": "7 independent reviewers (Claude Code)",
+    "strong_line": "",
+    "mixed_line": ""
+  },
+  "strong_resume": false,
+  "closest_to_reject": {
+    "reviewer": "skeptic",
+    "name": "Skeptic",
+    "verdict": "lean_no",
+    "issue_id": "I5",
+    "severity": "major",
+    "reason": "A 300% sales claim with no baseline or method"
+  },
+  "first_impression": "Business analytics student, marketing intern and shift lead, Excel and survey work.",
+  "pinned_integrity": [
+    {
+      "issue_id": "I5",
+      "title": "A 300% sales claim with no baseline or method",
+      "fix": "Say what you actually did for the sale, and keep the number only with its real baseline."
+    }
+  ],
+  "weaknesses": [
+    {
+      "rank": 1,
+      "issue_id": "I1",
+      "title": "SQL is required but only shows up as a class",
+      "severity": "major",
+      "flagged_by": [
+        "hiring_manager"
+      ],
+      "flagged_count": 1,
+      "from_script": false,
+      "why": "The posting asks for SQL experience. I see it in your coursework and skills list, but no line shows you using it, so I cannot tell how far you got.",
+      "evidence_quote": "SQL (class projects)",
+      "status": "open",
+      "fix": "If a class project used SQL, describe it in one line with what you queried."
+    },
+    {
+      "rank": 2,
+      "issue_id": "I2",
+      "title": "Internship bullets describe duties, not results",
+      "severity": "moderate",
+      "flagged_by": [
+        "hiring_manager",
+        "competitor",
+        "ceo"
+      ],
+      "flagged_count": 3,
+      "from_script": false,
+      "why": "I can see what you were responsible for, not what changed because you did it.",
+      "evidence_quote": "Responsible for the weekly email newsletter to about 600 subscribers",
+      "status": "open",
+      "fix": "Say what you wrote or tracked and what happened next."
+    },
+    {
+      "rank": 3,
+      "issue_id": "I3",
+      "title": "The top third reads marketing, not analytics",
+      "severity": "moderate",
+      "flagged_by": [
+        "screening",
+        "recruiter"
+      ],
+      "flagged_count": 2,
+      "from_script": false,
+      "why": "In a fast skim I see Marketing Intern and newsletter work first. The analytics side of you shows up later.",
+      "evidence_quote": "Marketing Intern | June 2025 – August 2025",
+      "status": "open",
+      "fix": "Open the internship with the sales numbers bullet so analytics shows in the first lines."
+    },
+    {
+      "rank": 4,
+      "issue_id": "I4",
+      "title": "Your closest match to this job sits low on the page",
+      "severity": "moderate",
+      "flagged_by": [
+        "hiring_manager",
+        "competitor"
+      ],
+      "flagged_count": 2,
+      "from_script": false,
+      "why": "The survey project is the most analytics-heavy thing here and it comes after two jobs.",
+      "evidence_quote": "Designed a 12 question survey with 3 classmates and collected 140 responses",
+      "status": "open",
+      "fix": "Move the survey project up, or lead the internship with the sales numbers work."
+    },
+    {
+      "rank": 5,
+      "issue_id": "I5",
+      "title": "A 300% sales claim with no baseline or method",
+      "severity": "major",
+      "flagged_by": [
+        "skeptic"
+      ],
+      "flagged_count": 1,
+      "from_script": false,
+      "why": "300% compared to what, over what period, and what was your part? An interviewer will ask, and a vague answer hurts every other line.",
+      "evidence_quote": "Increased online sales by 300% during the summer sale",
+      "status": "open",
+      "fix": "Say what you actually did for the sale, and keep the number only with its real baseline."
+    },
+    {
+      "rank": 6,
+      "issue_id": "I6",
+      "title": "Required job terms are missing from your resume",
+      "severity": "moderate",
+      "flagged_by": [
+        "screening"
+      ],
+      "flagged_count": 1,
+      "from_script": true,
+      "why": "Recruiters search and filter by the posting's terms, and AI graders check each basic qualification against your resume.",
+      "evidence_quote": "Strong written and verbal communication skills",
+      "status": "open",
+      "fix": "For each missing term you truly have, show it in a bullet about real work. If you don't have it, leave it out."
+    },
+    {
+      "rank": 7,
+      "issue_id": "I7",
+      "title": "Some job terms are only listed, not shown in your experience",
+      "severity": "moderate",
+      "flagged_by": [
+        "screening"
+      ],
+      "flagged_count": 1,
+      "from_script": true,
+      "why": "A skill in a list is weaker evidence than a bullet that shows you using it.",
+      "evidence_quote": "Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+      "status": "open",
+      "fix": "Where it is true, mention the skill in a bullet that describes the work you did with it."
+    },
+    {
+      "rank": 8,
+      "issue_id": "I8",
+      "title": "Your own part in the team survey is unclear",
+      "severity": "moderate",
+      "flagged_by": [
+        "teammate"
+      ],
+      "flagged_count": 1,
+      "from_script": false,
+      "why": "The survey is your strongest proof for this job, and it was a team of 4. Which part was yours?",
+      "evidence_quote": "Designed a 12 question survey with 3 classmates",
+      "status": "open",
+      "fix": "Name the part you did yourself."
+    },
+    {
+      "rank": 9,
+      "issue_id": "I9",
+      "title": "Weak openers slow the skim",
+      "severity": "minor",
+      "flagged_by": [
+        "recruiter"
+      ],
+      "flagged_count": 1,
+      "from_script": false,
+      "why": "Starting bullets with 'Responsible for' and 'Helped with' hides the action.",
+      "evidence_quote": "Responsible for the weekly email newsletter",
+      "status": "open",
+      "fix": "Start each bullet with what you did, keeping your real level of ownership."
+    }
+  ],
+  "changes": null,
+  "needs_you": [
+    {
+      "where": "SQL is required but only shows up as a class",
+      "ask": "What did you do with SQL in your class projects?"
+    },
+    {
+      "where": "Internship bullets describe duties, not results",
+      "ask": "Did you write the newsletter yourself, and who did you present the survey results to?"
+    },
+    {
+      "where": "Your closest match to this job sits low on the page",
+      "ask": "Which part of the bike share survey did you do yourself?"
+    },
+    {
+      "where": "A 300% sales claim with no baseline or method",
+      "ask": "What was the 300% measured against, and what did you do for the summer sale?"
+    },
+    {
+      "where": "Required job terms are missing from your resume",
+      "ask": "Where have you shown communication: a job, class, club or volunteering?"
+    },
+    {
+      "where": "Some job terms are only listed, not shown in your experience",
+      "ask": "Where have you used SQL, VLOOKUP or Mailchimp? A class, job, project or club counts."
+    }
+  ],
+  "real_gaps": [],
+  "panel": [
+    {
+      "id": "screening",
+      "name": "Automated Screening Check",
+      "lens": "Machine readability and job keywords",
+      "verdict": "strong_yes",
+      "advance": "yes",
+      "take": "The file parses cleanly and most required terms are there; communication is the missing one."
+    },
+    {
+      "id": "hiring_manager",
+      "name": "Hiring Manager",
+      "lens": "Proof you can do this job",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "The survey project and the Excel work earn a call; SQL beyond a class is the open question."
+    },
+    {
+      "id": "recruiter",
+      "name": "Recruiter",
+      "lens": "The fast first skim",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "Clean and easy to skim; the top third says marketing more than analytics."
+    },
+    {
+      "id": "competitor",
+      "name": "Competing Applicant",
+      "lens": "Side by side with a strong applicant",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "take": "Your survey project is a real edge, but it is buried and SQL is only listed."
+    },
+    {
+      "id": "ceo",
+      "name": "CEO",
+      "lens": "Business outcomes and ownership",
+      "verdict": "borderline",
+      "advance": "unsure",
+      "take": "I see useful work, but not yet what changed for the business because of you."
+    },
+    {
+      "id": "teammate",
+      "name": "Future Teammate",
+      "lens": "Day-one usefulness on the team",
+      "verdict": "lean_yes",
+      "advance": "yes",
+      "take": "I could hand you an Excel task next sprint; SQL and dashboards would need some ramp-up."
+    },
+    {
+      "id": "skeptic",
+      "name": "Skeptic",
+      "lens": "Claims that must survive a probe",
+      "verdict": "lean_no",
+      "advance": "no",
+      "take": "The 300% sales line will not survive one follow-up question; the rest holds up."
+    }
+  ],
+  "panel_after": null,
+  "screening": {
+    "label": "Simulated screening check",
+    "method": "Overall = 40% file readability + 40% job-keyword match + 20% content signals, rounded to steps of 5. Weights are our judgment, not calibrated to hiring outcomes.",
+    "before": {
+      "overall": 90,
+      "band": "Ready to send",
+      "machine_readability": {
+        "value": 100,
+        "band": "Clean"
+      },
+      "keyword_match": {
+        "value": 80,
+        "band": "Strong match"
+      },
+      "content_signals": {
+        "value": 85,
+        "band": "Polished"
+      },
+      "required": {
+        "found": 5,
+        "total": 6,
+        "listed_only": 2,
+        "label": "Required terms"
+      }
+    },
+    "after": null,
+    "after_source": null,
+    "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number.",
+    "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes. This check looks for problems known to break resume parsing and for job-description requirements your resume doesn't show. A high score doesn't guarantee an interview, and a low score doesn't mean a robot rejected you. Most automatic rejections come from application questions (work authorization, location, degree, availability), and no resume edit changes those."
+  },
+  "disagreements": [
+    {
+      "claim": "Designed a 12 question survey with 3 classmates and collected 140 responses",
+      "sides": [
+        {
+          "reviewer": "hiring_manager",
+          "view": "Strength: A real survey project with a pricing recommendation",
+          "quote": "collected 140 responses"
+        },
+        {
+          "reviewer": "competitor",
+          "view": "Strength: A real survey with 140 responses and a recommendation",
+          "quote": "collected 140 responses"
+        },
+        {
+          "reviewer": "teammate",
+          "view": "Weakness: Your own part in the team survey is unclear",
+          "quote": "Designed a 12 question survey with 3 classmates"
+        }
+      ],
+      "which_matters": "Praise can get you the interview; in the interview the Skeptic's and Hiring Manager's questions decide. Keep the line only if you can back it up."
+    }
+  ],
+  "keyword_gaps": [
+    {
+      "term": "communication",
+      "status": "gap",
+      "note": "Required by the posting and not named on your resume. Show it through a real example, if you have one."
+    },
+    {
+      "term": "SQL",
+      "status": "listed_only",
+      "note": "Now shown as coursework or a class project. That is honest; keep the qualifier."
+    },
+    {
+      "term": "VLOOKUP",
+      "status": "listed_only",
+      "note": "Only in your skills list. Show it in a bullet about real work, if you can."
+    },
+    {
+      "term": "dashboards",
+      "status": "gap",
+      "note": "Nice to have. Add it only if you have used it."
+    },
+    {
+      "term": "A/B testing",
+      "status": "gap",
+      "note": "Nice to have. Add it only if you have used it."
+    },
+    {
+      "term": "CRM",
+      "status": "gap",
+      "note": "Nice to have. Add it only if you have used it."
+    }
+  ],
+  "strengths": [
+    {
+      "title": "A real survey project with a pricing recommendation",
+      "flagged_by": [
+        "hiring_manager",
+        "competitor"
+      ],
+      "underused": true
+    },
+    {
+      "title": "Hands-on Excel work for a weekly team meeting",
+      "flagged_by": [
+        "hiring_manager",
+        "ceo"
+      ],
+      "underused": false
+    },
+    {
+      "title": "Trained new coworkers, which means you can explain your work",
+      "flagged_by": [
+        "teammate",
+        "skeptic"
+      ],
+      "underused": false
+    },
+    {
+      "title": "Contact details and headings parse cleanly",
+      "flagged_by": [
+        "screening"
+      ],
+      "underused": false
+    }
+  ],
+  "interview_prep": [
+    {
+      "question": "Walk me through the bike share survey: how did you pick the questions and what did the pivot tables show?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "What did the weekly sales numbers you pulled into Excel look like, and who used them?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "Tell me about a SQL query you wrote in class. What data was it on?",
+      "from": "hiring_manager"
+    },
+    {
+      "question": "What was the 300% measured against, and what was your part in it?",
+      "from": "skeptic"
+    },
+    {
+      "question": "How did you get 140 people to answer the survey?",
+      "from": "skeptic"
+    }
+  ],
+  "knockouts": [
+    {
+      "type": "onsite hybrid",
+      "jd_quote": "Northwind Foods – Columbus, OH (Hybrid)",
+      "advice": "The posting sets where you work. Answer honestly in the application; your resume doesn't need to address it."
+    },
+    {
+      "type": "work authorization",
+      "jd_quote": "Applicants must be authorized to work in the United States.",
+      "advice": "This is usually an application question. Answer truthfully; the resume can't and shouldn't address it."
+    },
+    {
+      "type": "sponsorship",
+      "jd_quote": "Northwind Foods does not sponsor visas for this role.",
+      "advice": "This is usually an application question. Answer truthfully; the resume can't and shouldn't address it."
+    }
+  ],
+  "truth_check": {
+    "ran": "not_run",
+    "passed": null,
+    "invented_facts": null,
+    "bullets_traced": 0,
+    "bullets_total": 0,
+    "provenance": "not_run"
+  },
+  "limitations": [
+    "We don't run Workday, Greenhouse, Lever, iCIMS or Taleo; their parsers differ by vendor, version and employer settings.",
+    "Our text extraction stands in for theirs (method: docx-xml).",
+    "The skills dictionary is finite, and AI matchers may credit related experience differently.",
+    "We can't see the application questions the employer set up.",
+    "Scores aren't probabilities and aren't calibrated against interview outcomes.",
+    "Column detection is limited to Word section settings.",
+    "Dates are read to the month; seasons are approximated.",
+    "The reviewers are simulated by Claude. They can be wrong, and they never saw the real applicant pool."
+  ],
+  "next_steps": [
+    "Fix what 'Fix before you send' lists before you apply anywhere.",
+    "Answer the questions in chat, or reply skip. Then Claude rebuilds your resume.",
+    "Read the biggest weaknesses first. They are ranked by how much they hurt."
+  ],
+  "files": {
+    "report_pdf": "Hiring_Panel_Report.pdf",
+    "report_md": "Hiring_Panel_Report.md",
+    "report_html": "Hiring_Panel_Report.html"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "bullets": 9,
+    "bullets_with_evidence": 9,
+    "placeholders_open": 0,
+    "numbers_from_answers": 0
+  }
+}

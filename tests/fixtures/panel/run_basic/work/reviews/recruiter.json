@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "recruiter",
+  "decision_question": "In my first fast pass, does this resume go in the 'send to the hiring manager' pile?",
+  "verdict": "borderline",
+  "verdict_rationale": "Top third shows a marketing title and a barista job; the data work is buried in Projects (R14).",
+  "advance": "unsure",
+  "one_line_take": "In seven seconds you read as a marketing intern, not a data analyst.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "C1_top_third",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "C2_skimmability",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "C3_basic_qualifiers",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "C4_red_flags",
+      "score": 3,
+      "evidence_anchors": [],
+      "note": ""
+    },
+    {
+      "dimension_id": "C5_instant_fit",
+      "score": 2,
+      "evidence_anchors": [],
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "recruiter-1",
+      "category": "TITLE_MISMATCH",
+      "severity": "major",
+      "confidence": "high",
+      "title": "Reads as a marketing candidate in seven seconds",
+      "detail": "Reads as a marketing candidate in seven seconds.",
+      "evidence": [
+        {
+          "anchor": "R7",
+          "quote": "Marketing Intern, BrightPath Co., Jun 2025 - Aug 2025"
+        }
+      ],
+      "fix": {
+        "fix_type": "reorder",
+        "suggestion": "Lead with the Projects section so the dashboard shows first.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "recruiter-2",
+      "category": "ORDER_PRIORITY",
+      "severity": "major",
+      "confidence": "high",
+      "title": "Your best data work is buried at the bottom",
+      "detail": "Your best data work is buried at the bottom.",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Built a Python dashboard"
+        }
+      ],
+      "fix": {
+        "fix_type": "reorder",
+        "suggestion": "Move Projects above Experience.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "recruiter-3",
+      "category": "TYPO_GRAMMAR",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Bullet starts with a duty phrase",
+      "detail": "Bullet starts with a duty phrase.",
+      "evidence": [
+        {
+          "anchor": "R8",
+          "quote": "Responsible for social media posts"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "recruiter-4",
+      "category": "CONTACT_HEADER",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Email is in the page header",
+      "detail": "Email is in the page header.",
+      "evidence": [
+        {
+          "anchor": "R3",
+          "quote": "jordan.rivera@example.com"
+        }
+      ],
+      "fix": {
+        "fix_type": "reformat",
+        "suggestion": "Put the email under your name.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "recruiter-s1",
+      "title": "Name is clear at the top",
+      "evidence": [
+        {
+          "anchor": "R2",
+          "quote": "Jordan Rivera"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "seven_second_takeaway": "Business analytics student; marketing intern and barista; data work not visible.",
+    "six_data_points": [
+      {
+        "item": "name",
+        "found": true,
+        "anchor": "R2",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "current_title_org",
+        "found": true,
+        "anchor": "R11",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "previous_title_org",
+        "found": true,
+        "anchor": "R7",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "current_dates",
+        "found": true,
+        "anchor": "R11",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "previous_dates",
+        "found": true,
+        "anchor": "R7",
+        "findable_in_seconds": true
+      },
+      {
+        "item": "education",
+        "found": true,
+        "anchor": "R5",
+        "findable_in_seconds": true
+      }
+    ],
+    "page_count_estimate": 1,
+    "gpa_note": null,
+    "locale_applied": "en-US"
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "schemaVersion": "1.0",
+  "meta": {
+    "variant": "improved",
+    "locale": "en-US",
+    "pageSize": null,
+    "layout": "classic",
+    "stage": "student",
+    "target": {
+      "role": "Marketing Analytics Intern",
+      "company": "Northwind Foods"
+    },
+    "addressed": [
+      {
+        "issue_id": "I1",
+        "status": "gap",
+        "note": "SQL stays labeled as class projects. A small project of your own that uses SQL would close this."
+      },
+      {
+        "issue_id": "I2",
+        "status": "fixed",
+        "note": "Bullets now say what you wrote, tracked and changed, using your own answers."
+      },
+      {
+        "issue_id": "I3",
+        "status": "fixed",
+        "note": "The internship now opens with the weekly sales numbers work."
+      },
+      {
+        "issue_id": "I4",
+        "status": "fixed",
+        "note": "The survey project now sits right after Education."
+      },
+      {
+        "issue_id": "I5",
+        "status": "fixed",
+        "note": "The 300% figure is out. The bullet now says what you did: you wrote the sale email."
+      },
+      {
+        "issue_id": "I6",
+        "status": "fixed",
+        "note": "Writing the newsletter and presenting the survey results now show communication."
+      },
+      {
+        "issue_id": "I7",
+        "status": "gap",
+        "note": "VLOOKUP is now in a work bullet. SQL stays in Skills because you used it only in class."
+      },
+      {
+        "issue_id": "I8",
+        "status": "fixed",
+        "note": "The survey bullet now says you wrote most of the questions and built the pivot tables."
+      },
+      {
+        "issue_id": "I9",
+        "status": "fixed",
+        "note": "Bullets start with what you did. 'Helped' stays where that was your real role."
+      }
+    ],
+    "cuts": [
+      {
+        "ref": "R14",
+        "reason": "You said the 300% compared the sale weekend to a normal weekend and you did not measure it, so the figure was dropped."
+      }
+    ]
+  },
+  "basics": {
+    "name": "Riley Castellano",
+    "headline": "Business Analytics Student",
+    "location": "Columbus, OH",
+    "email": "riley.castellano@example.com",
+    "phone": "(555) 010-0147",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "linkedin.com/in/riley-castellano-example"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "education",
+      "type": "education",
+      "title": "Education",
+      "items": [
+        {
+          "id": "edu1",
+          "school": "Lakeshore State University",
+          "location": "Columbus, OH",
+          "degree": "Bachelor of Science",
+          "field": "Business Analytics",
+          "minor": "Marketing",
+          "end": "2027-05",
+          "endLabel": "Expected",
+          "gpa": "3.6/4.0",
+          "honors": [
+            "Dean's List (3 semesters)"
+          ],
+          "coursework": [
+            "Intro to SQL",
+            "Statistics for Business",
+            "Marketing Research",
+            "Data Visualization"
+          ],
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R4-R7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "type": "projects",
+      "title": "Projects",
+      "items": [
+        {
+          "id": "proj1",
+          "name": "Campus Bike Share Survey",
+          "context": "Marketing Research class project, team of 4",
+          "start": "2025-01",
+          "end": "2025-05",
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R21-R22"
+            }
+          ],
+          "bullets": [
+            {
+              "id": "proj1.b1",
+              "text": "Wrote most of the questions for a 12-question survey with 3 classmates and collected 140 responses",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R23",
+                  "quote": "Designed a 12 question survey with 3 classmates and collected 140 responses"
+                },
+                {
+                  "src": "user",
+                  "ref": "Q4",
+                  "quote": "I wrote most of the questions"
+                }
+              ],
+              "ops": [
+                "REPHRASE",
+                "SURFACE"
+              ],
+              "originalText": "Designed a 12 question survey with 3 classmates and collected 140 responses"
+            },
+            {
+              "id": "proj1.b2",
+              "text": "Built the pivot tables in Excel to analyze the results and presented a pricing recommendation to the class",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R24",
+                  "quote": "Analyzed the results in Excel with pivot tables and presented a pricing recommendation"
+                },
+                {
+                  "src": "user",
+                  "ref": "Q4",
+                  "quote": "built the pivot tables"
+                },
+                {
+                  "src": "user",
+                  "ref": "Q2",
+                  "quote": "presented our survey results to the class"
+                }
+              ],
+              "ops": [
+                "REPHRASE",
+                "SURFACE"
+              ],
+              "originalText": "Analyzed the results in Excel with pivot tables and presented a pricing recommendation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "type": "experience",
+      "title": "Experience",
+      "items": [
+        {
+          "id": "exp1",
+          "org": "Tallgrass Outfitters",
+          "role": "Marketing Intern",
+          "location": "Columbus, OH",
+          "start": "2025-06",
+          "end": "2025-08",
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R9-R10"
+            }
+          ],
+          "bullets": [
+            {
+              "id": "exp1.b1",
+              "text": "Pulled weekly sales numbers into Excel for the Monday team meeting, using VLOOKUP to match product codes",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R13",
+                  "quote": "Pulled weekly sales numbers into Excel for the Monday team meeting"
+                },
+                {
+                  "src": "user",
+                  "ref": "Q2",
+                  "quote": "used VLOOKUP at Tallgrass to match product codes to the weekly sales numbers"
+                }
+              ],
+              "ops": [
+                "SURFACE",
+                "REORDER"
+              ],
+              "originalText": "Pulled weekly sales numbers into Excel for the Monday team meeting"
+            },
+            {
+              "id": "exp1.b2",
+              "text": "Wrote the weekly email newsletter for about 600 subscribers, with a {{p1}} open rate",
+              "textIfUnknown": "Wrote the weekly email newsletter for about 600 subscribers",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R11",
+                  "quote": "weekly email newsletter to about 600 subscribers"
+                },
+                {
+                  "src": "user",
+                  "ref": "Q2",
+                  "quote": "wrote the weekly newsletter myself"
+                }
+              ],
+              "ops": [
+                "REPHRASE",
+                "SURFACE"
+              ],
+              "originalText": "Responsible for the weekly email newsletter to about 600 subscribers"
+            },
+            {
+              "id": "exp1.b3",
+              "text": "Helped with Instagram posts 3x a week and tracked likes in a spreadsheet; the owner started posting more photos of new arrivals because those got the most likes",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R12",
+                  "quote": "Helped with Instagram posts 3x a week and tracked likes in a spreadsheet"
+                },
+                {
+                  "src": "user",
+                  "ref": "Q5",
+                  "quote": "the owner started posting more photos of new arrivals because those got the most likes"
+                }
+              ],
+              "ops": [
+                "SURFACE"
+              ],
+              "originalText": "Helped with Instagram posts 3x a week and tracked likes in a spreadsheet"
+            },
+            {
+              "id": "exp1.b4",
+              "text": "Wrote the email that announced the summer sale",
+              "evidence": [
+                {
+                  "src": "user",
+                  "ref": "Q1",
+                  "quote": "I wrote the email that announced the sale"
+                },
+                {
+                  "src": "orig",
+                  "ref": "R14",
+                  "quote": "during the summer sale"
+                }
+              ],
+              "ops": [
+                "REPHRASE"
+              ],
+              "originalText": "Increased online sales by 300% during the summer sale"
+            }
+          ]
+        },
+        {
+          "id": "exp2",
+          "org": "Cedar Hollow Market",
+          "role": "Shift Lead",
+          "location": "Columbus, OH",
+          "start": "2023-09",
+          "end": "present",
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R15-R16"
+            }
+          ],
+          "bullets": [
+            {
+              "id": "exp2.b1",
+              "text": "Trained 4 new cashiers on the register and the opening checklist",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R17",
+                  "quote": "Trained 4 new cashiers on the register and the opening checklist"
+                }
+              ],
+              "ops": []
+            },
+            {
+              "id": "exp2.b2",
+              "text": "Handle closing cash counts and customer questions at the service desk while working about 18 hours a week during the semester",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R18",
+                  "quote": "Handle closing cash counts and customer questions at the service desk"
+                },
+                {
+                  "src": "orig",
+                  "ref": "R19",
+                  "quote": "Work about 18 hours a week during the semester"
+                }
+              ],
+              "ops": [
+                "MERGE"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activities",
+      "type": "experience",
+      "title": "Leadership & Activities",
+      "items": [
+        {
+          "id": "act1",
+          "org": "Lakeshore Analytics Club",
+          "role": "Member",
+          "location": "Columbus, OH",
+          "start": "2024-01",
+          "end": "present",
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R26-R27"
+            }
+          ],
+          "bullets": [
+            {
+              "id": "act1.b1",
+              "text": "Helped organize 2 Excel workshops for first-year students",
+              "evidence": [
+                {
+                  "src": "orig",
+                  "ref": "R28",
+                  "quote": "Helped organize 2 Excel workshops for first-year students"
+                }
+              ],
+              "ops": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "type": "skills",
+      "title": "Skills",
+      "groups": [
+        {
+          "label": "Tools",
+          "items": [
+            "Excel (pivot tables, VLOOKUP)",
+            "Google Sheets",
+            "Canva",
+            "Mailchimp"
+          ],
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R30"
+            }
+          ]
+        },
+        {
+          "label": "Data",
+          "items": [
+            "SQL (class projects)",
+            "Python (intro course)"
+          ],
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R31"
+            },
+            {
+              "src": "user",
+              "ref": "Q2",
+              "quote": "Intro to SQL class"
+            }
+          ]
+        },
+        {
+          "label": "Languages",
+          "items": [
+            "English",
+            "Spanish (conversational)"
+          ],
+          "evidence": [
+            {
+              "src": "orig",
+              "ref": "R32"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placeholders": {
+    "p1": {
+      "bullet": "exp1.b2",
+      "ask": "Roughly what share of subscribers opened the weekly newsletter?",
+      "kind": "percent",
+      "label": "open rate",
+      "status": "declined",
+      "value": null,
+      "question": "Q3"
+    }
+  }
+}

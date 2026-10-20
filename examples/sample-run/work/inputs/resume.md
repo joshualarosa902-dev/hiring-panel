@@ -1,0 +1,32 @@
+Riley Castellano
+Columbus, OH | (555) 010-0147 | riley.castellano@example.com | linkedin.com/in/riley-castellano-example
+EDUCATION
+Lakeshore State University, Columbus, OH
+Bachelor of Science in Business Analytics, Minor in Marketing | Expected May 2027
+GPA: 3.6/4.0 | Dean's List (3 semesters)
+Relevant Coursework: Intro to SQL, Statistics for Business, Marketing Research, Data Visualization
+EXPERIENCE
+Tallgrass Outfitters, Columbus, OH
+Marketing Intern | June 2025 – August 2025
+• Responsible for the weekly email newsletter to about 600 subscribers
+• Helped with Instagram posts 3x a week and tracked likes in a spreadsheet
+• Pulled weekly sales numbers into Excel for the Monday team meeting
+• Increased online sales by 300% during the summer sale
+Cedar Hollow Market, Columbus, OH
+Shift Lead | September 2023 – Present
+• Trained 4 new cashiers on the register and the opening checklist
+• Handle closing cash counts and customer questions at the service desk
+• Work about 18 hours a week during the semester
+PROJECTS
+Campus Bike Share Survey, Marketing Research class project
+Team of 4 | January 2025 – May 2025
+• Designed a 12 question survey with 3 classmates and collected 140 responses
+• Analyzed the results in Excel with pivot tables and presented a pricing recommendation
+LEADERSHIP & ACTIVITIES
+Lakeshore Analytics Club, Columbus, OH
+Member | January 2024 – Present
+• Helped organize 2 Excel workshops for first-year students
+SKILLS
+Tools: Excel (pivot tables, VLOOKUP), Google Sheets, Canva, Mailchimp
+Data: SQL (class projects), Python (intro course)
+Languages: English, Spanish (conversational)

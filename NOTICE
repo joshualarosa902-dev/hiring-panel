@@ -1,0 +1,19 @@
+Hiring Panel
+Copyright (c) 2026 Joshua LaRosa. Released under the MIT License (see LICENSE).
+
+Third-party material
+--------------------
+Hiring Panel bundles no third-party code, fonts or datasets.
+
+- The skills dictionary, section headings, action verbs and other word lists in
+  plugins/hiring-panel/skills/hiring-panel/scripts/hp/data/ were written for this project from
+  general knowledge. No O*NET, Lightcast or other licensed taxonomy data is included.
+- The research behind the reviewer personas and the simulated screening check is cited by link in
+  plugins/hiring-panel/skills/hiring-panel/references/sources.md.
+- The people, companies, schools, emails and phone numbers in examples/ and tests/ are fictional.
+- The idea of a seven-reviewer resume panel comes from Alex Chen's original hiring-panel skill
+  (MIT, https://github.com/alexyc9381/hiring-panel-skill). Hiring Panel is a from-scratch rebuild
+  and includes none of its code or text. See "Credits" in README.md and CITATION.cff.
+
+Hiring Panel is not affiliated with Anthropic or with any applicant tracking system vendor. Vendor
+and product names appear only to say what the simulated check does and does not imitate.

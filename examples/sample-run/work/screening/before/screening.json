@@ -1,0 +1,915 @@
+{
+  "schema_version": "1.0",
+  "tool": {
+    "name": "hiring-panel-screen",
+    "version": "1.0.0",
+    "lexicon_version": "1.0.0"
+  },
+  "mode": "script",
+  "generated_at": "2026-10-20",
+  "as_of": "2026-10-20",
+  "level": "student",
+  "locale": "en-US",
+  "language": "en",
+  "inputs": {
+    "resume": {
+      "format": "docx",
+      "sha256": "5301fc0b4c4fd9b1fefb5a945e63f1ea412fb7b3d98aea25ab3fb2041507bd65",
+      "bytes": 3731,
+      "pages": 1,
+      "producer": null,
+      "creator": "Microsoft Office Word"
+    },
+    "job_description": {
+      "sha256": "c31fd66e283abce4ae54dc37000af811f674db2f650d64a7721a9065e14feb27",
+      "chars": 1335,
+      "title_guess": "Marketing Analytics Intern",
+      "url": null,
+      "platform_guess": "unknown",
+      "language": "en",
+      "blocks": [
+        {
+          "kind": "unspecified",
+          "heading": null,
+          "lines": [
+            "Marketing Analytics Intern (Summer 2026)",
+            "Northwind Foods – Columbus, OH (Hybrid)"
+          ]
+        },
+        {
+          "kind": "boilerplate",
+          "heading": "About Northwind Foods",
+          "lines": [
+            "About Northwind Foods",
+            "Northwind Foods is a fictional regional grocery brand with 60 stores across Ohio and Indiana."
+          ]
+        },
+        {
+          "kind": "responsibility",
+          "heading": "What You'll Do",
+          "lines": [
+            "What You'll Do",
+            "- Build weekly dashboards that track email and social campaign performance",
+            "- Analyze customer and sales data with SQL and Excel",
+            "- Support A/B testing of email subject lines with the CRM team",
+            "- Present findings to the marketing team every two weeks"
+          ]
+        },
+        {
+          "kind": "required",
+          "heading": "Requirements",
+          "lines": [
+            "Requirements",
+            "- Currently pursuing a bachelor's degree in Business Analytics, Marketing, Statistics or a related field",
+            "- Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+            "- Strong written and verbal communication skills",
+            "- Able to work 20 hours per week during the summer"
+          ]
+        },
+        {
+          "kind": "preferred",
+          "heading": "Preferred Qualifications",
+          "lines": [
+            "Preferred Qualifications",
+            "- Experience with Tableau or Power BI",
+            "- Familiarity with Google Analytics",
+            "- Experience with email marketing tools such as Mailchimp"
+          ]
+        },
+        {
+          "kind": "boilerplate",
+          "heading": "Pay",
+          "lines": [
+            "Pay: $20 per hour. This internship is hybrid, 3 days a week in our Columbus office.",
+            "Applicants must be authorized to work in the United States. Northwind Foods does not sponsor visas for this role.",
+            "Northwind Foods is an equal opportunity employer. All qualified applicants will receive consideration without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or veteran status."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "provided": 0,
+      "accepted": 0,
+      "rejected": 0
+    }
+  },
+  "extraction": {
+    "method": "docx-xml",
+    "text_chars": 1611,
+    "lines": 32,
+    "ats_view_file": "inputs/ats_view.txt",
+    "header_footer_text": null,
+    "column_check": "docx_section_only",
+    "warnings": []
+  },
+  "scores": {
+    "overall": {
+      "value": 90,
+      "band": "Ready to send",
+      "explanation": "Overall = 40% file readability + 40% job-keyword match + 20% content signals, rounded to steps of 5. Weights are our judgment, not calibrated to hiring outcomes.",
+      "drivers": [
+        "KW-005",
+        "KW-001",
+        "CONTENT-002"
+      ]
+    },
+    "parse_safety": {
+      "value": 100,
+      "band": "Clean",
+      "explanation": "Starts at 100 and loses points for each file-readability risk (critical 45, high 15, medium 7, low 2), scaled by how sure the check is. Any critical risk caps it at 40. Risks counted: 0.",
+      "drivers": []
+    },
+    "keyword_match": {
+      "value": 80,
+      "band": "Strong match",
+      "explanation": "Required terms: 5 of 6 found (2 only in your skills list). Preferred terms: 4 of 9 found. Weighted 70% required, 20% preferred and duties, 10% shown in experience.",
+      "drivers": [
+        "KW-005",
+        "KW-001",
+        "KW-002"
+      ]
+    },
+    "content_signals": {
+      "value": 85,
+      "band": "Polished",
+      "explanation": "60% of 10 bullets show a number (target 35% or more). 40% start with an action verb (target 70% or more). Points also come off for weak openers, long bullets, missing dates, missing sections and missing contact details.",
+      "drivers": [
+        "CONTENT-002"
+      ]
+    },
+    "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number."
+  },
+  "issues": [
+    {
+      "id": "KW-001",
+      "rank": 1,
+      "category": "keywords",
+      "severity": "medium",
+      "title": "Required job terms are missing from your resume",
+      "evidence": [
+        "Not found: \"communication\""
+      ],
+      "why_it_matters": "Recruiters search and filter by the posting's terms, and AI graders check each basic qualification against your resume.",
+      "fix": "For each missing term you truly have, show it in a bullet about real work. If you don't have it, leave it out.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {
+        "parse_safety": 0.0,
+        "keyword_match": 4.91,
+        "content_signals": 0.0,
+        "overall": 1.96
+      },
+      "source_refs": [
+        "wd_hiredscore_2026_08",
+        "gh_blog_after_apply"
+      ]
+    },
+    {
+      "id": "KW-002",
+      "rank": 2,
+      "category": "keywords",
+      "severity": "medium",
+      "title": "Some job terms are only listed, not shown in your experience",
+      "evidence": [
+        "\"SQL\" appears only in a list, not in a bullet about your work.",
+        "\"VLOOKUP\" appears only in a list, not in a bullet about your work.",
+        "\"Mailchimp\" appears only in a list, not in a bullet about your work."
+      ],
+      "why_it_matters": "A skill in a list is weaker evidence than a bullet that shows you using it.",
+      "fix": "Where it is true, mention the skill in a bullet that describes the work you did with it.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {
+        "parse_safety": 0.0,
+        "keyword_match": 3.82,
+        "content_signals": 0.0,
+        "overall": 1.53
+      },
+      "source_refs": [
+        "wd_hiredscore_2026_08"
+      ]
+    },
+    {
+      "id": "CONTENT-002",
+      "rank": 3,
+      "category": "content",
+      "severity": "low",
+      "title": "Some bullets start with weak openers",
+      "evidence": [
+        "Responsible for the weekly email newsletter to about 600 subscribers",
+        "Helped with Instagram posts 3x a week and tracked likes in a spreadsheet",
+        "Helped organize 2 Excel workshops for first-year students"
+      ],
+      "why_it_matters": "Openers like \"Responsible for\" describe duties, not what you did.",
+      "fix": "Start with a verb that says what you did, such as \"Built\" or \"Organized\".",
+      "honesty_note": "Keep your real role. \"Helped with\" should not become \"Led\".",
+      "confidence": "high",
+      "detected_by": "heuristic",
+      "score_impact": {
+        "parse_safety": 0.0,
+        "keyword_match": 0.0,
+        "content_signals": 9.0,
+        "overall": 1.8
+      },
+      "source_refs": []
+    },
+    {
+      "id": "KW-005",
+      "rank": 4,
+      "category": "keywords",
+      "severity": "info",
+      "title": "Preferred job terms are missing",
+      "evidence": [
+        "Not found: \"dashboards\"",
+        "Not found: \"A/B testing\"",
+        "Not found: \"CRM\"",
+        "Not found: \"Tableau or Power BI\"",
+        "Not found: \"Google Analytics\""
+      ],
+      "why_it_matters": "Preferred terms are not required, but they can separate similar applicants.",
+      "fix": "Add only the ones you can show in real work.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {
+        "parse_safety": 0.0,
+        "keyword_match": 12.11,
+        "content_signals": 0.0,
+        "overall": 4.84
+      },
+      "source_refs": []
+    }
+  ],
+  "keywords": {
+    "status": "checked",
+    "note": null,
+    "required": [
+      {
+        "term": "SQL",
+        "canonical": "SQL",
+        "kind": "hard",
+        "importance": "required",
+        "weight": 3.75,
+        "jd_frequency": 2,
+        "jd_quote": "- Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "SQL",
+        "evidence_level": "listed",
+        "resume_locations": [
+          "coursework",
+          "skills"
+        ],
+        "snippets": [
+          "Relevant Coursework: Intro to SQL, Statistics for Business, Marketing Research, Data Visualiz...",
+          "Data: SQL (class projects), Python (intro course)"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "Microsoft Excel",
+        "canonical": "Microsoft Excel",
+        "kind": "tool",
+        "importance": "required",
+        "weight": 3.75,
+        "jd_frequency": 2,
+        "jd_quote": "- Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "Excel",
+        "evidence_level": "demonstrated",
+        "resume_locations": [
+          "experience",
+          "leadership_activities",
+          "projects",
+          "skills"
+        ],
+        "snippets": [
+          "• Pulled weekly sales numbers into Excel for the Monday team meeting",
+          "• Analyzed the results in Excel with pivot tables and presented a pricing recommendation"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "Business Analytics, Marketing, Statistics",
+        "canonical": "Business Analytics or Marketing or Statistics",
+        "kind": "domain",
+        "importance": "required",
+        "weight": 2.4,
+        "jd_frequency": 1,
+        "jd_quote": "- Currently pursuing a bachelor's degree in Business Analytics, Marketing, Statistics or a related field",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "Business Analytics",
+        "evidence_level": "demonstrated",
+        "resume_locations": [
+          "education"
+        ],
+        "snippets": [
+          "Bachelor of Science in Business Analytics, Minor in Marketing | Expected May 2027"
+        ],
+        "group": "degree_field",
+        "alternatives": [
+          "Business Analytics",
+          "Marketing",
+          "Statistics"
+        ],
+        "matched_alternative": "Business Analytics"
+      },
+      {
+        "term": "pivot tables",
+        "canonical": "Pivot Tables",
+        "kind": "hard",
+        "importance": "required",
+        "weight": 3.0,
+        "jd_frequency": 1,
+        "jd_quote": "- Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "pivot tables",
+        "evidence_level": "demonstrated",
+        "resume_locations": [
+          "projects",
+          "skills"
+        ],
+        "snippets": [
+          "• Analyzed the results in Excel with pivot tables and presented a pricing recommendation",
+          "Tools: Excel (pivot tables, VLOOKUP), Google Sheets, Canva, Mailchimp"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "VLOOKUP",
+        "canonical": "VLOOKUP",
+        "kind": "hard",
+        "importance": "required",
+        "weight": 3.0,
+        "jd_frequency": 1,
+        "jd_quote": "- Experience with SQL and Microsoft Excel (pivot tables, VLOOKUP)",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "VLOOKUP",
+        "evidence_level": "listed",
+        "resume_locations": [
+          "skills"
+        ],
+        "snippets": [
+          "Tools: Excel (pivot tables, VLOOKUP), Google Sheets, Canva, Mailchimp"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "communication",
+        "canonical": "Communication",
+        "kind": "soft",
+        "importance": "required",
+        "weight": 1.2,
+        "jd_frequency": 1,
+        "jd_quote": "- Strong written and verbal communication skills",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "none",
+        "credit": 0.0,
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": [],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      }
+    ],
+    "preferred": [
+      {
+        "term": "dashboards",
+        "canonical": "Dashboards",
+        "kind": "hard",
+        "importance": "responsibility",
+        "weight": 1.5,
+        "jd_frequency": 1,
+        "jd_quote": "- Build weekly dashboards that track email and social campaign performance",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "none",
+        "credit": 0.0,
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": [],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "sales",
+        "canonical": "Sales",
+        "kind": "domain",
+        "importance": "responsibility",
+        "weight": 1.2,
+        "jd_frequency": 1,
+        "jd_quote": "- Analyze customer and sales data with SQL and Excel",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "sales",
+        "evidence_level": "demonstrated",
+        "resume_locations": [
+          "experience"
+        ],
+        "snippets": [
+          "• Pulled weekly sales numbers into Excel for the Monday team meeting",
+          "• Increased online sales by 300% during the summer sale"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "A/B testing",
+        "canonical": "A/B Testing",
+        "kind": "hard",
+        "importance": "responsibility",
+        "weight": 1.5,
+        "jd_frequency": 1,
+        "jd_quote": "- Support A/B testing of email subject lines with the CRM team",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "none",
+        "credit": 0.0,
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": [],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "CRM",
+        "canonical": "Customer Relationship Management",
+        "kind": "hard",
+        "importance": "responsibility",
+        "weight": 1.5,
+        "jd_frequency": 1,
+        "jd_quote": "- Support A/B testing of email subject lines with the CRM team",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "none",
+        "credit": 0.0,
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": [],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "marketing",
+        "canonical": "Marketing",
+        "kind": "domain",
+        "importance": "responsibility",
+        "weight": 1.2,
+        "jd_frequency": 1,
+        "jd_quote": "- Present findings to the marketing team every two weeks",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "Marketing",
+        "evidence_level": "demonstrated",
+        "resume_locations": [
+          "experience",
+          "projects",
+          "coursework",
+          "education"
+        ],
+        "snippets": [
+          "Marketing Intern | June 2025 – August 2025",
+          "Campus Bike Share Survey, Marketing Research class project"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "Tableau or Power BI",
+        "canonical": "Tableau or Microsoft Power BI",
+        "kind": "tool",
+        "importance": "preferred",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "- Experience with Tableau or Power BI",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "none",
+        "credit": 0.0,
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": [],
+        "group": "any_of",
+        "alternatives": [
+          "Tableau",
+          "Power BI"
+        ],
+        "matched_alternative": null
+      },
+      {
+        "term": "Google Analytics",
+        "canonical": "Google Analytics",
+        "kind": "tool",
+        "importance": "preferred",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "- Familiarity with Google Analytics",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "none",
+        "credit": 0.0,
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": [],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "email marketing",
+        "canonical": "Email Marketing",
+        "kind": "hard",
+        "importance": "preferred",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "- Experience with email marketing tools such as Mailchimp",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "inflection",
+        "credit": 0.9,
+        "resume_wording": "email newsletter",
+        "evidence_level": "demonstrated",
+        "resume_locations": [
+          "experience",
+          "skills"
+        ],
+        "snippets": [
+          "• Responsible for the weekly email newsletter to about 600 subscribers",
+          "Tools: Excel (pivot tables, VLOOKUP), Google Sheets, Canva, Mailchimp"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      },
+      {
+        "term": "Mailchimp",
+        "canonical": "Mailchimp",
+        "kind": "tool",
+        "importance": "preferred",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "- Experience with email marketing tools such as Mailchimp",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": true,
+        "match_type": "exact",
+        "credit": 1.0,
+        "resume_wording": "Mailchimp",
+        "evidence_level": "listed",
+        "resume_locations": [
+          "skills"
+        ],
+        "snippets": [
+          "Tools: Excel (pivot tables, VLOOKUP), Google Sheets, Canva, Mailchimp"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      }
+    ],
+    "other": [
+      {
+        "term": "Marketing Analytics",
+        "canonical": "Marketing Analytics",
+        "kind": "hard",
+        "importance": "unspecified",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "Marketing Analytics Intern (Summer 2026)",
+        "source": "lexicon",
+        "confidence": "high",
+        "found": false,
+        "match_type": "partial",
+        "credit": 0.5,
+        "resume_wording": "Analytics, Minor in Marketing",
+        "evidence_level": "listed",
+        "resume_locations": [
+          "education"
+        ],
+        "snippets": [
+          "Bachelor of Science in Business Analytics, Minor in Marketing | Expected May 2027"
+        ],
+        "group": null,
+        "alternatives": [],
+        "matched_alternative": null
+      }
+    ],
+    "job_title": {
+      "jd_title": "Marketing Analytics Intern",
+      "resume_titles": [
+        "Tallgrass Outfitters, Columbus, OH",
+        "Marketing Intern | June 2025 – August 2025",
+        "Cedar Hollow Market, Columbus, OH",
+        "Shift Lead | September 2023 – Present",
+        "Campus Bike Share Survey, Marketing Research class project",
+        "Team of 4 | January 2025 – May 2025",
+        "Lakeshore Analytics Club, Columbus, OH",
+        "Member | January 2024 – Present"
+      ],
+      "match": "close"
+    },
+    "coverage": {
+      "required_found": 5,
+      "required_total": 6,
+      "required_listed_only": 2,
+      "preferred_found": 4,
+      "preferred_total": 9,
+      "other_found": 0,
+      "other_total": 1,
+      "basis": "required_preferred",
+      "basis_found": 5,
+      "basis_total": 6,
+      "basis_listed_only": 2,
+      "required_weighted": 0.93,
+      "preferred_weighted": 0.39,
+      "evidence_share": 0.62,
+      "listed_only": [
+        "SQL",
+        "VLOOKUP",
+        "Mailchimp"
+      ]
+    }
+  },
+  "knockout_signals": [
+    {
+      "type": "onsite_hybrid",
+      "importance": "unspecified",
+      "jd_quote": "Northwind Foods – Columbus, OH (Hybrid)",
+      "resume_evidence": null,
+      "status": "unclear",
+      "advice": "The posting sets where you work. Answer honestly in the application; your resume doesn't need to address it."
+    },
+    {
+      "type": "degree",
+      "importance": "required",
+      "jd_quote": "- Currently pursuing a bachelor's degree in Business Analytics, Marketing, Statistics or a related field",
+      "resume_evidence": "Bachelor of Science in Business Analytics, Minor in Marketing | Expected May 2027",
+      "status": "appears_met",
+      "advice": "Make sure your degree and graduation date (or expected date) are written out in your Education section."
+    },
+    {
+      "type": "major",
+      "importance": "required",
+      "jd_quote": "- Currently pursuing a bachelor's degree in Business Analytics, Marketing, Statistics or a related field",
+      "resume_evidence": "Bachelor of Science in Business Analytics, Minor in Marketing | Expected May 2027",
+      "status": "appears_met",
+      "advice": "Make sure your major is written out in your Education section."
+    },
+    {
+      "type": "work_authorization",
+      "importance": "required",
+      "jd_quote": "Applicants must be authorized to work in the United States.",
+      "resume_evidence": null,
+      "status": "not_on_resume_by_design",
+      "advice": "This is usually an application question. Answer truthfully; the resume can't and shouldn't address it."
+    },
+    {
+      "type": "sponsorship",
+      "importance": "unspecified",
+      "jd_quote": "Northwind Foods does not sponsor visas for this role.",
+      "resume_evidence": null,
+      "status": "not_on_resume_by_design",
+      "advice": "This is usually an application question. Answer truthfully; the resume can't and shouldn't address it."
+    }
+  ],
+  "sections": {
+    "detected": [
+      {
+        "heading": "EDUCATION",
+        "canonical": "education",
+        "line": 3,
+        "standard": true,
+        "combined": false,
+        "inline": false
+      },
+      {
+        "heading": "Relevant Coursework",
+        "canonical": "coursework",
+        "line": 7,
+        "standard": true,
+        "combined": false,
+        "inline": true
+      },
+      {
+        "heading": "EXPERIENCE",
+        "canonical": "experience",
+        "line": 8,
+        "standard": true,
+        "combined": false,
+        "inline": false
+      },
+      {
+        "heading": "PROJECTS",
+        "canonical": "projects",
+        "line": 20,
+        "standard": true,
+        "combined": false,
+        "inline": false
+      },
+      {
+        "heading": "LEADERSHIP & ACTIVITIES",
+        "canonical": "leadership_activities",
+        "line": 25,
+        "standard": true,
+        "combined": false,
+        "inline": false
+      },
+      {
+        "heading": "SKILLS",
+        "canonical": "skills",
+        "line": 29,
+        "standard": true,
+        "combined": false,
+        "inline": false
+      },
+      {
+        "heading": "Languages",
+        "canonical": "languages",
+        "line": 32,
+        "standard": true,
+        "combined": false,
+        "inline": true
+      }
+    ],
+    "missing_core": [],
+    "order": [
+      "education",
+      "experience",
+      "projects",
+      "leadership_activities",
+      "skills"
+    ]
+  },
+  "contact": {
+    "name": "Riley Castellano",
+    "email": "riley.castellano@example.com",
+    "phone": "(555) 010-0147",
+    "location": "Columbus, OH",
+    "linkedin": "linkedin.com/in/riley-castellano-example",
+    "github": null,
+    "portfolio": null,
+    "found_in": "body_top",
+    "street_address_present": false,
+    "emails_found": 1
+  },
+  "experience": {
+    "entries": [
+      {
+        "section": "education",
+        "header": "Lakeshore State University, Columbus, OH | Bachelor of Science in Business Analytics, Minor in Marketing | Expected May 2027 | GPA: 3.6/4.0 | Dean's List (3...",
+        "date_text": "May 2027",
+        "start": null,
+        "end": "2027-05",
+        "is_current": false,
+        "expected": true,
+        "date_format": "month_year_name",
+        "bullet_count": 0,
+        "line": 4
+      },
+      {
+        "section": "experience",
+        "header": "Tallgrass Outfitters, Columbus, OH | Marketing Intern | June 2025 – August 2025",
+        "date_text": "June 2025 – August 2025",
+        "start": "2025-06",
+        "end": "2025-08",
+        "is_current": false,
+        "expected": false,
+        "date_format": "month_year_name",
+        "bullet_count": 4,
+        "line": 9
+      },
+      {
+        "section": "experience",
+        "header": "Cedar Hollow Market, Columbus, OH | Shift Lead | September 2023 – Present",
+        "date_text": "September 2023 – Present",
+        "start": "2023-09",
+        "end": "2026-10",
+        "is_current": true,
+        "expected": false,
+        "date_format": "month_year_name",
+        "bullet_count": 3,
+        "line": 15
+      },
+      {
+        "section": "projects",
+        "header": "Campus Bike Share Survey, Marketing Research class project | Team of 4 | January 2025 – May 2025",
+        "date_text": "January 2025 – May 2025",
+        "start": "2025-01",
+        "end": "2025-05",
+        "is_current": false,
+        "expected": false,
+        "date_format": "month_year_name",
+        "bullet_count": 2,
+        "line": 21
+      },
+      {
+        "section": "leadership_activities",
+        "header": "Lakeshore Analytics Club, Columbus, OH | Member | January 2024 – Present",
+        "date_text": "January 2024 – Present",
+        "start": "2024-01",
+        "end": "2026-10",
+        "is_current": true,
+        "expected": false,
+        "date_format": "month_year_name",
+        "bullet_count": 1,
+        "line": 26
+      }
+    ],
+    "gaps": [],
+    "months_since_last_activity": 0,
+    "total_months_experience": 38,
+    "date_formats_consistent": true,
+    "reverse_chronological": true
+  },
+  "bullets": {
+    "count": 10,
+    "words_median": 11.0,
+    "too_long": 0,
+    "too_short": 0,
+    "action_verb_ratio": 0.4,
+    "quantified_ratio": 0.6,
+    "weak_openers": [
+      "helped",
+      "helped with",
+      "responsible for"
+    ],
+    "repeated_openers": {},
+    "first_person_count": 0,
+    "buzzwords": [],
+    "total_words": 221
+  },
+  "readability": {
+    "flesch_reading_ease": 44.7,
+    "fk_grade": 9.5,
+    "note": "For information only; not scored."
+  },
+  "platform": {
+    "guess": "unknown",
+    "notes": []
+  },
+  "limitations": [
+    "We don't run Workday, Greenhouse, Lever, iCIMS or Taleo; their parsers differ by vendor, version and employer settings.",
+    "Our text extraction stands in for theirs (method: docx-xml).",
+    "The skills dictionary is finite, and AI matchers may credit related experience differently.",
+    "We can't see the application questions the employer set up.",
+    "Scores aren't probabilities and aren't calibrated against interview outcomes.",
+    "Column detection is limited to Word section settings.",
+    "Dates are read to the month; seasons are approximated."
+  ],
+  "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes. This check looks for problems known to break resume parsing and for job-description requirements your resume doesn't show. A high score doesn't guarantee an interview, and a low score doesn't mean a robot rejected you. Most automatic rejections come from application questions (work authorization, location, degree, availability), and no resume edit changes those."
+}

@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "resume_lines": [
+    {
+      "id": "R1",
+      "section": "contact",
+      "text": "MAYA RIVERA"
+    },
+    {
+      "id": "R2",
+      "section": "contact",
+      "text": "maya.rivera@example.com | (512) 555-0142 | Austin, TX | linkedin.com/in/maya-rivera-example"
+    },
+    {
+      "id": "R3",
+      "section": "education",
+      "text": "EDUCATION"
+    },
+    {
+      "id": "R4",
+      "section": "education",
+      "text": "Hill Country University, Austin, TX"
+    },
+    {
+      "id": "R5",
+      "section": "education",
+      "text": "BBA Marketing, Minor in Statistics, Expected May 2027"
+    },
+    {
+      "id": "R6",
+      "section": "education",
+      "text": "GPA 3.7/4.0, Dean's List 4 semesters"
+    },
+    {
+      "id": "R7",
+      "section": "education",
+      "text": "Classes: Marketing Analytics, Consumer Behavior, Statistics for Business, Intro to SQL"
+    },
+    {
+      "id": "R8",
+      "section": "experience",
+      "text": "EXPERIENCE"
+    },
+    {
+      "id": "R9",
+      "section": "experience",
+      "text": "Bluebonnet Coffee Co."
+    },
+    {
+      "id": "R10",
+      "section": "experience",
+      "text": "Social Media Marketing Intern, Summer 2025, Austin TX"
+    },
+    {
+      "id": "R11",
+      "section": "experience",
+      "text": "- made instagram posts 4x a week for both stores for 10 weeks"
+    },
+    {
+      "id": "R12",
+      "section": "experience",
+      "text": "- kept a spreadsheet of likes and comments"
+    },
+    {
+      "id": "R13",
+      "section": "experience",
+      "text": "- showed the owner which posts did best before the fall menu launch"
+    },
+    {
+      "id": "R14",
+      "section": "experience",
+      "text": "- took photos and made 40+ graphics in Canva, some used for in-store signs"
+    },
+    {
+      "id": "R15",
+      "section": "experience",
+      "text": "Pecan Street Market"
+    },
+    {
+      "id": "R16",
+      "section": "experience",
+      "text": "Customer Service Associate, Sept 2023 - Present, Austin TX"
+    },
+    {
+      "id": "R17",
+      "section": "experience",
+      "text": "- help customers at the service desk, returns, questions"
+    },
+    {
+      "id": "R18",
+      "section": "experience",
+      "text": "- trained 3 new hires"
+    },
+    {
+      "id": "R19",
+      "section": "experience",
+      "text": "- responsible for opening shift some weekends"
+    },
+    {
+      "id": "R20",
+      "section": "projects",
+      "text": "PROJECTS"
+    },
+    {
+      "id": "R21",
+      "section": "projects",
+      "text": "Campus Coffee Pricing Survey (Marketing Analytics class), Spring 2025"
+    },
+    {
+      "id": "R22",
+      "section": "projects",
+      "text": "- made a 15 question survey and used pivot tables"
+    },
+    {
+      "id": "R23",
+      "section": "projects",
+      "text": "- presented our price recommendation, got an A"
+    },
+    {
+      "id": "R24",
+      "section": "leadership",
+      "text": "ACTIVITIES"
+    },
+    {
+      "id": "R25",
+      "section": "leadership",
+      "text": "Hill Country Marketing Club"
+    },
+    {
+      "id": "R26",
+      "section": "leadership",
+      "text": "Events Committee Member, Jan 2024 - Present"
+    },
+    {
+      "id": "R27",
+      "section": "leadership",
+      "text": "- helped plan 2 speaker events, sent emails, ran check in"
+    },
+    {
+      "id": "R28",
+      "section": "skills",
+      "text": "SKILLS"
+    },
+    {
+      "id": "R29",
+      "section": "skills",
+      "text": "Excel, pivot tables, charts, SQL (class), survey design"
+    },
+    {
+      "id": "R30",
+      "section": "skills",
+      "text": "Instagram, Canva, content calendars"
+    },
+    {
+      "id": "R31",
+      "section": "skills",
+      "text": "English, Spanish (fluent)"
+    }
+  ],
+  "jd_items": [
+    {
+      "id": "J1",
+      "kind": "other",
+      "block": 0,
+      "text": "Marketing Analyst Intern (Summer 2026)"
+    },
+    {
+      "id": "J2",
+      "kind": "other",
+      "block": 0,
+      "text": "Northwind Foods, Austin, TX"
+    },
+    {
+      "id": "J3",
+      "kind": "company",
+      "block": 1,
+      "text": "About us"
+    },
+    {
+      "id": "J4",
+      "kind": "company",
+      "block": 1,
+      "text": "Northwind Foods makes snacks sold in 1,200 grocery stores across Texas."
+    },
+    {
+      "id": "J5",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "What you'll do"
+    },
+    {
+      "id": "J6",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "- Pull weekly sales and social media data and build simple dashboards"
+    },
+    {
+      "id": "J7",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "- Analyze campaign results and present findings to the brand team"
+    },
+    {
+      "id": "J8",
+      "kind": "responsibility",
+      "block": 2,
+      "text": "- Help plan A/B tests for email and social campaigns"
+    },
+    {
+      "id": "J9",
+      "kind": "must",
+      "block": 3,
+      "text": "What you'll need"
+    },
+    {
+      "id": "J10",
+      "kind": "must",
+      "block": 3,
+      "text": "- Currently pursuing a bachelor's degree in Marketing, Business, Statistics or a related field"
+    },
+    {
+      "id": "J11",
+      "kind": "must",
+      "block": 3,
+      "text": "- Strong Excel skills (pivot tables, lookups)"
+    },
+    {
+      "id": "J12",
+      "kind": "must",
+      "block": 3,
+      "text": "- Experience with SQL"
+    },
+    {
+      "id": "J13",
+      "kind": "must",
+      "block": 3,
+      "text": "- Clear written and verbal communication"
+    },
+    {
+      "id": "J14",
+      "kind": "nice",
+      "block": 4,
+      "text": "Nice to have"
+    },
+    {
+      "id": "J15",
+      "kind": "nice",
+      "block": 4,
+      "text": "- Experience with Tableau or Google Analytics"
+    },
+    {
+      "id": "J16",
+      "kind": "nice",
+      "block": 4,
+      "text": "- Experience creating social media content"
+    },
+    {
+      "id": "J17",
+      "kind": "logistics",
+      "block": 5,
+      "text": "Location: Austin, TX (hybrid, 3 days in office). Pay: $22/hour."
+    },
+    {
+      "id": "J18",
+      "kind": "logistics",
+      "block": 5,
+      "text": "Northwind Foods is an equal opportunity employer."
+    }
+  ],
+  "target": {
+    "role_title": "Marketing Analyst Intern",
+    "role_level": "intern",
+    "company": "Northwind Foods",
+    "locale": "en-US",
+    "general_review": false
+  }
+}

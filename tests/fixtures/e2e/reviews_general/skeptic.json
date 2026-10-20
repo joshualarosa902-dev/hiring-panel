@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "skeptic",
+  "decision_question": "Which lines would not survive a five-minute probe in an interview or a reference check, and does anything read as inflated even if it is true?",
+  "verdict": "lean_no",
+  "verdict_rationale": "The 300% sales line (R14) has no baseline, no timeframe and no link to your own work in a summer internship. Everything else is modest and checkable.",
+  "advance": "no",
+  "one_line_take": "The 300% sales line will not survive one follow-up question; the rest holds up.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "K1_verifiability",
+      "score": 3,
+      "evidence_anchors": [
+        "R23",
+        "R17"
+      ],
+      "note": "Most numbers are checkable."
+    },
+    {
+      "dimension_id": "K2_scope_plausibility",
+      "score": 1,
+      "evidence_anchors": [
+        "R14"
+      ],
+      "note": "300% in a summer internship needs context."
+    },
+    {
+      "dimension_id": "K3_attribution",
+      "score": 2,
+      "evidence_anchors": [
+        "R14"
+      ],
+      "note": "Unclear who drove the sales change."
+    },
+    {
+      "dimension_id": "K4_internal_consistency",
+      "score": 4,
+      "evidence_anchors": [
+        "R10",
+        "R16"
+      ],
+      "note": "Dates line up."
+    },
+    {
+      "dimension_id": "K5_inflation_density",
+      "score": 3,
+      "evidence_anchors": [
+        "R14"
+      ],
+      "note": "One inflated line."
+    }
+  ],
+  "findings": [
+    {
+      "id": "skeptic-1",
+      "category": "UNVERIFIABLE_CLAIM",
+      "severity": "major",
+      "confidence": "high",
+      "title": "A 300% sales claim with no baseline or method",
+      "detail": "300% compared to what, over what period, and what was your part? An interviewer will ask, and a vague answer hurts every other line.",
+      "evidence": [
+        {
+          "anchor": "R14",
+          "quote": "Increased online sales by 300% during the summer sale"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "Say what you actually did for the sale, and keep the number only with its real baseline.",
+        "candidate_question": "What was the 300% measured against, and what did you do for the summer sale?"
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "skeptic-s1",
+      "title": "Modest, specific claims you can back up",
+      "evidence": [
+        {
+          "anchor": "R17",
+          "quote": "Trained 4 new cashiers"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "question": "What was the 300% measured against, and what did you do for the summer sale?",
+      "why": "The claim needs a baseline and your role.",
+      "related_anchors": [
+        "R14"
+      ]
+    }
+  ],
+  "lens_data": {
+    "claim_audit": [
+      {
+        "anchor": "R14",
+        "quote": "Increased online sales by 300%",
+        "claim_type": "metric",
+        "risk": "high",
+        "probe_question": "What was the 300% measured against, and what was your part in it?",
+        "recommended": "verify_with_candidate"
+      },
+      {
+        "anchor": "R23",
+        "quote": "collected 140 responses",
+        "claim_type": "metric",
+        "risk": "low",
+        "probe_question": "How did you get 140 people to answer the survey?",
+        "recommended": "keep_prepare_story"
+      }
+    ],
+    "consistency_checks": [
+      {
+        "check": "date overlaps",
+        "result": "pass",
+        "anchors": [
+          "R10",
+          "R16"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "screening",
+  "decision_question": "Would this file parse cleanly, and would it come up when a recruiter searches or filters the applicant pool for this job?",
+  "verdict": "strong_yes",
+  "verdict_rationale": "The script reads the file cleanly (Clean) and finds 7 of 8 required terms. Only the communication requirement (J13) is missing, and four terms sit only in the skills list (R30, R31).",
+  "advance": "yes",
+  "one_line_take": "The file parses cleanly and most required terms are there; communication is the missing one.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "S1_parse_safety",
+      "score": 4,
+      "evidence_anchors": [
+        "R2"
+      ],
+      "note": "Clean parse: contact details in the body, standard headings, one column."
+    },
+    {
+      "dimension_id": "S2_required_coverage",
+      "score": 3,
+      "evidence_anchors": [
+        "J12",
+        "J13",
+        "R31"
+      ],
+      "note": "7 of 8 required terms found; communication is missing."
+    },
+    {
+      "dimension_id": "S3_title_alignment",
+      "score": 3,
+      "evidence_anchors": [
+        "R10",
+        "J1"
+      ],
+      "note": "Marketing Intern is close to Marketing Analytics Intern."
+    },
+    {
+      "dimension_id": "S4_knockout_exposure",
+      "score": 4,
+      "evidence_anchors": [
+        "J20"
+      ],
+      "note": "Work authorization is an application question, not a resume item."
+    },
+    {
+      "dimension_id": "S5_keyword_context",
+      "score": 2,
+      "evidence_anchors": [
+        "R30",
+        "R31"
+      ],
+      "note": "SQL, VLOOKUP and Mailchimp appear only in the skills list."
+    }
+  ],
+  "findings": [
+    {
+      "id": "screening-1",
+      "category": "KEYWORD_GAP",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Written and verbal communication is never shown",
+      "detail": "The posting requires strong written and verbal communication skills. The script found no line that shows writing or presenting, so a keyword search for it would miss you.",
+      "evidence": [
+        {
+          "anchor": "J13",
+          "quote": "Strong written and verbal communication skills"
+        },
+        {
+          "anchor": "A:KW-001"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "Show communication through real work you already did, such as the newsletter or the pricing presentation.",
+        "candidate_question": "Did you write the newsletter yourself, and who did you present the survey results to?"
+      },
+      "out_of_lens": false,
+      "searched_terms": [
+        "written and verbal communication",
+        "communication skills",
+        "written communication",
+        "verbal communication"
+      ]
+    },
+    {
+      "id": "screening-2",
+      "category": "TITLE_MISMATCH",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Your title says marketing, the posting says analytics",
+      "detail": "A recruiter searching for the posting title finds Marketing Intern, not analytics work.",
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "Marketing Intern"
+        },
+        {
+          "anchor": "J1",
+          "quote": "Marketing Analytics Intern"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Keep the real title. Lead the bullets with the data work you did, like the weekly sales numbers.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "screening-s1",
+      "title": "Contact details and headings parse cleanly",
+      "evidence": [
+        {
+          "anchor": "R2",
+          "quote": "Columbus, OH | (555) 010-0147"
+        },
+        {
+          "anchor": "R3",
+          "quote": "EDUCATION"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [
+    {
+      "question": "Did you write the newsletter yourself, and who did you present the survey results to?",
+      "why": "Communication is a required term the resume never shows.",
+      "related_anchors": [
+        "J13",
+        "R11",
+        "R24"
+      ]
+    }
+  ],
+  "lens_data": {
+    "script_bands": {
+      "overall": "Ready to send",
+      "parse_safety": "Clean",
+      "keyword_match": "Good match",
+      "content_signals": "Polished"
+    },
+    "keyword_table": [
+      {
+        "term": "SQL",
+        "importance": "required",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "listed",
+        "resume_wording": "SQL",
+        "jd_anchor": "J12",
+        "resume_anchors": [
+          "R7",
+          "R31"
+        ],
+        "truthful_fix": "ask_candidate"
+      },
+      {
+        "term": "Excel",
+        "importance": "required",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "demonstrated",
+        "resume_wording": "Excel",
+        "jd_anchor": "J12",
+        "resume_anchors": [
+          "R13",
+          "R24"
+        ],
+        "truthful_fix": "none_needed"
+      },
+      {
+        "term": "pivot tables",
+        "importance": "required",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "demonstrated",
+        "resume_wording": "pivot tables",
+        "jd_anchor": "J12",
+        "resume_anchors": [
+          "R24"
+        ],
+        "truthful_fix": "none_needed"
+      },
+      {
+        "term": "VLOOKUP",
+        "importance": "required",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "listed",
+        "resume_wording": "VLOOKUP",
+        "jd_anchor": "J12",
+        "resume_anchors": [
+          "R30"
+        ],
+        "truthful_fix": "ask_candidate"
+      },
+      {
+        "term": "written and verbal communication",
+        "importance": "required",
+        "found": false,
+        "match_type": "none",
+        "evidence_level": "none",
+        "resume_wording": null,
+        "jd_anchor": "J13",
+        "resume_anchors": [],
+        "truthful_fix": "ask_candidate"
+      },
+      {
+        "term": "Mailchimp",
+        "importance": "preferred",
+        "found": true,
+        "match_type": "exact",
+        "evidence_level": "listed",
+        "resume_wording": "Mailchimp",
+        "jd_anchor": "J18",
+        "resume_anchors": [
+          "R30"
+        ],
+        "truthful_fix": "already_supported_elsewhere"
+      },
+      {
+        "term": "Tableau",
+        "importance": "preferred",
+        "found": false,
+        "match_type": "none",
+        "evidence_level": "none",
+        "resume_wording": null,
+        "jd_anchor": "J16",
+        "resume_anchors": [],
+        "truthful_fix": "do_not_add"
+      }
+    ],
+    "parse_risks": [],
+    "knockouts": [
+      {
+        "type": "work_authorization",
+        "jd_anchor": "J20",
+        "status": "not_on_resume_by_design",
+        "note": "An application question. Answer it truthfully there."
+      }
+    ]
+  }
+}

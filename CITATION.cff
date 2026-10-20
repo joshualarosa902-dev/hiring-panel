@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you share or build on Hiring Panel, please credit it as below."
+type: software
+title: "Hiring Panel"
+abstract: "A free Claude skill that runs a resume past a simulated seven-reviewer hiring panel, ranks the biggest weaknesses first, and rebuilds the resume from the candidate's real experience only, with a script-checked screening simulation and truth check."
+authors:
+  - given-names: Joshua
+    family-names: LaRosa
+    alias: joshualarosa.ai
+repository-code: "https://github.com/joshualarosa902-dev/hiring-panel"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-20"
+keywords:
+  - claude
+  - claude-skills
+  - resume
+  - job-search
+references:
+  - type: software
+    title: "hiring-panel-skill"
+    abstract: "The original hiring-panel skill that inspired Hiring Panel."
+    authors:
+      - given-names: Alex
+        family-names: Chen
+        alias: nocodealex
+        website: "https://chen.media"
+    repository-code: "https://github.com/alexyc9381/hiring-panel-skill"
+    license: MIT

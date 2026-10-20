@@ -1,0 +1,141 @@
+{
+  "scores": {
+    "overall": {
+      "value": 55,
+      "band": "Needs work"
+    },
+    "parse_safety": {
+      "value": 85,
+      "band": "Minor risks"
+    },
+    "keyword_match": {
+      "value": 50,
+      "band": "Partial match"
+    },
+    "content_signals": {
+      "value": 70,
+      "band": "Solid"
+    }
+  },
+  "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number.",
+  "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes.",
+  "top_issues": [
+    {
+      "id": "KW-001",
+      "severity": "high",
+      "title": "Required terms missing: SQL",
+      "evidence": "Not found: \"SQL\""
+    },
+    {
+      "id": "PARSE-006",
+      "severity": "high",
+      "title": "Email and phone only in the page header",
+      "evidence": "[header] Jordan Rivera | jordan.rivera@example.com | (512) 555-0198"
+    },
+    {
+      "id": "KW-002",
+      "severity": "medium",
+      "title": "Tableau appears only in your skills list",
+      "evidence": "\"Tableau\" appears only in your skills or other lists."
+    },
+    {
+      "id": "CONTENT-002",
+      "severity": "low",
+      "title": "Weak openers: Responsible for, Helped, Worked on",
+      "evidence": "Responsible for social media posts and various tasks"
+    },
+    {
+      "id": "KW-004",
+      "severity": "low",
+      "title": "The job title Data Analyst Intern is not on your resume",
+      "evidence": "Posting title: \"Data Analyst Intern\""
+    },
+    {
+      "id": "CONTENT-008",
+      "severity": "info",
+      "title": "Buzzwords with no evidence: teamwork, communication",
+      "evidence": "teamwork"
+    },
+    {
+      "id": "KW-005",
+      "severity": "info",
+      "title": "Preferred terms missing: healthcare data",
+      "evidence": "Not found: \"healthcare data\""
+    }
+  ],
+  "keywords": [
+    {
+      "term": "SQL",
+      "importance": "required",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "Python",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "demonstrated",
+      "resume_wording": "Python"
+    },
+    {
+      "term": "Tableau",
+      "importance": "required",
+      "found": true,
+      "match_type": "exact",
+      "evidence_level": "listed",
+      "resume_wording": "Tableau"
+    },
+    {
+      "term": "healthcare data",
+      "importance": "preferred",
+      "found": false,
+      "match_type": "none",
+      "evidence_level": "none",
+      "resume_wording": null
+    },
+    {
+      "term": "dashboards",
+      "importance": "responsibility",
+      "found": true,
+      "match_type": "inflection",
+      "evidence_level": "demonstrated",
+      "resume_wording": "dashboard"
+    },
+    {
+      "term": "data visualization",
+      "importance": "responsibility",
+      "found": true,
+      "match_type": "implied",
+      "evidence_level": "listed",
+      "resume_wording": "Tableau"
+    }
+  ],
+  "coverage": {
+    "required_found": 2,
+    "required_total": 3,
+    "preferred_found": 0,
+    "preferred_total": 1,
+    "required_weighted": 0.67,
+    "preferred_weighted": 0.0,
+    "evidence_share": 0.6,
+    "listed_only": [
+      "Tableau"
+    ]
+  },
+  "knockouts": [
+    {
+      "type": "onsite_hybrid",
+      "importance": "unspecified",
+      "jd_quote": "Location: Austin, TX (hybrid, 3 days a week in the office)",
+      "resume_evidence": "Austin, TX",
+      "status": "not_on_resume_by_design",
+      "advice": "This is usually an application question. Answer truthfully; the resume can't and shouldn't address it."
+    }
+  ],
+  "job_title": "Data Analyst Intern",
+  "platform_guess": "unknown",
+  "language": "en"
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "hiring_manager",
+  "decision_question": "Based on this resume alone, would I spend 45 minutes interviewing this person for this role?",
+  "verdict": "lean_yes",
+  "verdict_rationale": "No posting provided, so I judged against a typical marketing analytics intern: the survey project (R23, R24) and the weekly sales numbers (R13) fit, the internship bullets (R11, R12) describe duties.",
+  "advance": "yes",
+  "one_line_take": "For a marketing analytics internship, the survey and Excel work earn a call.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "H1_requirement_match",
+      "score": 3,
+      "evidence_anchors": [
+        "R24",
+        "R31"
+      ],
+      "note": "Excel shown in work; SQL only from a class."
+    },
+    {
+      "dimension_id": "H2_proof_of_work",
+      "score": 3,
+      "evidence_anchors": [
+        "R23",
+        "R24"
+      ],
+      "note": "A real survey with 140 responses and a recommendation."
+    },
+    {
+      "dimension_id": "H3_results",
+      "score": 2,
+      "evidence_anchors": [
+        "R11",
+        "R12"
+      ],
+      "note": "Duties more than results in the internship."
+    },
+    {
+      "dimension_id": "H4_problem_solving",
+      "score": 2,
+      "evidence_anchors": [
+        "R24"
+      ],
+      "note": "One recommendation, no decisions described."
+    },
+    {
+      "dimension_id": "H5_trajectory",
+      "score": 3,
+      "evidence_anchors": [
+        "R16",
+        "R10"
+      ],
+      "note": "Steady job plus an internship while studying."
+    }
+  ],
+  "findings": [
+    {
+      "id": "hiring_manager-1",
+      "category": "IMPACT_MISSING",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Internship bullets describe duties, not results",
+      "detail": "I can see what you were responsible for, not what changed because you did it.",
+      "evidence": [
+        {
+          "anchor": "R11",
+          "quote": "Responsible for the weekly email newsletter to about 600 subscribers"
+        },
+        {
+          "anchor": "R12",
+          "quote": "Helped with Instagram posts 3x a week"
+        }
+      ],
+      "fix": {
+        "fix_type": "needs_candidate_input",
+        "suggestion": "Say what you wrote or tracked and what happened next.",
+        "candidate_question": "What happened because of the newsletter or the posts you tracked?"
+      },
+      "out_of_lens": false
+    },
+    {
+      "id": "hiring_manager-2",
+      "category": "ORDER_PRIORITY",
+      "severity": "moderate",
+      "confidence": "high",
+      "title": "Your closest match to this job sits low on the page",
+      "detail": "The survey project is the most analytics-heavy thing here and it comes after two jobs.",
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "Designed a 12 question survey with 3 classmates and collected 140 responses"
+        }
+      ],
+      "fix": {
+        "fix_type": "reorder",
+        "suggestion": "Move the survey project up, or lead the internship with the sales numbers work.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "hiring_manager-s1",
+      "title": "A real survey project with a pricing recommendation",
+      "evidence": [
+        {
+          "anchor": "R23",
+          "quote": "collected 140 responses"
+        },
+        {
+          "anchor": "R24",
+          "quote": "presented a pricing recommendation"
+        }
+      ],
+      "underused": true
+    },
+    {
+      "id": "hiring_manager-s2",
+      "title": "Hands-on Excel work for a weekly team meeting",
+      "evidence": [
+        {
+          "anchor": "R13",
+          "quote": "Pulled weekly sales numbers into Excel for the Monday team meeting"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "basis": "role_title",
+    "requirement_map": [],
+    "case_for_candidate": "A business analytics student who already pulls weekly sales numbers into Excel for a team meeting and ran a 140-response survey with a pricing recommendation.",
+    "biggest_doubt": "The internship lines show duties rather than results (no posting provided).",
+    "interview_questions": [
+      "Walk me through the bike share survey: how did you pick the questions and what did the pivot tables show?",
+      "What did the weekly sales numbers you pulled into Excel look like, and who used them?",
+      "What would you want to learn first in a marketing analytics internship?"
+    ]
+  }
+}

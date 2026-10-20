@@ -1,0 +1,25 @@
+{
+  "name": "hiring-panel",
+  "owner": {
+    "name": "Joshua LaRosa",
+    "url": "https://github.com/joshualarosa902-dev"
+  },
+  "metadata": {
+    "description": "Free, open-source resume review panel for Claude.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "hiring-panel",
+      "source": "./plugins/hiring-panel",
+      "description": "A simulated 7-reviewer hiring panel for your resume or CV, then an honest rewrite as .docx, .pdf and .md built only from your real experience.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joshua LaRosa"
+      },
+      "license": "MIT",
+      "category": "career",
+      "keywords": ["resume", "cv", "job-search", "hiring", "career", "students"]
+    }
+  ]
+}

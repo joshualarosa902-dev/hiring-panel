@@ -1,0 +1,35 @@
+{
+  "version": "2026-10-20",
+  "tiers": {
+    "primary": "Official vendor or institution page, read directly",
+    "primary_snippet": "Official page seen only via search-engine summary; page did not render for fetch",
+    "study": "Survey or test; sponsor noted",
+    "secondary": "Blog, press or marketing; not independently verified"
+  },
+  "sources": {
+    "gh_app_rules": {"tier": "primary", "url": "https://support.greenhouse.io/hc/en-us/articles/203105595-Application-Rules-Overview", "supports": "Greenhouse Auto-Reject/Auto-Advance (Plus, Pro) and Auto-Tag fire on custom application question answers."},
+    "gh_parse_fail": {"tier": "primary", "url": "https://support.greenhouse.io/hc/en-us/articles/200989175-Unsuccessful-resume-parse", "supports": "2.5MB parse limit; placeholder data skipped; graphics/photos/word art; image uploads; tables, headers, footers; contact info in headers/footers/text boxes; columns; inconsistent sections; letters separated by spaces; missing company identifiers; abbreviated titles; partial parses."},
+    "gh_blog_after_apply": {"tier": "primary", "url": "https://my.greenhouse.com/blogs/what-really-happens-after-you-apply-for-a-job", "supports": "Auto-rejection is recruiter-set rules; 'AI doesn't score or rank applications'; AI suggests keywords for recruiter searches; >50% of roles email on auto-reject."},
+    "gh_unleash_2025": {"tier": "primary", "url": "https://www.greenhouse.com/newsroom/greenhouse-unveils-new-ai-driven-products-at-unleash-to-streamline-hiring-in-saturated-job-market", "supports": "May 2025: AI filters for years of experience and skills."},
+    "wd_parsing_admin": {"tier": "primary", "url": "https://doc.workday.com/admin-guide/en-us/human-capital-management/recruiting/candidates/set-up-prospects-and-candidates/hdc1552497830785.html", "supports": "Parsing results vary with resume format and word order; avoid images/image-based styles; Skills and Languages fields are not auto-filled."},
+    "wd_hiredscore_2026_08": {"tier": "primary", "url": "https://doc.workday.com/hiredscore/en-us/workday-hiredscore/hiredscore-release-notes/2026/august/wednesday--5th-august.html", "supports": "HiredScore Spotlight A/B/C/D grades; LLM evaluates each qualification against the parsed resume; basic quals decide A/B vs C/D; Fit & Gap view."},
+    "lever_parsing": {"tier": "primary_snippet", "url": "https://help.lever.co/hc/en-us/articles/20087345054749", "supports": "Lever parses Word/PDF/RTF/WordPerfect/HTML/ODF; cannot parse image files; if you can't highlight text it's likely unparseable."},
+    "lever_archive": {"tier": "primary_snippet", "url": "https://help.lever.co/hc/en-us/articles/20087374094365", "supports": "Automation commonly used to auto-archive candidates based on knockout questions."},
+    "icims_rolefit_2021": {"tier": "primary_snippet", "url": "https://community.icims.com/articles/Knowledge/Release-Notes-Winter-Release-2021-iCIMS-Talent-Cloud-AI", "supports": "iCIMS candidate ranking per job, tiers, available once Talent Cloud AI implemented."},
+    "taleo_prescreen": {"tier": "primary", "url": "https://docs.oracle.com/en/cloud/saas/taleo-enterprise/20b/otrec/candidate-prescreening.html", "supports": "Disqualification questions can instantly exit candidates; Required/Asset criteria; weighting; ACE alert tiers."},
+    "taleo_dq_23c": {"tier": "primary", "url": "https://docs.oracle.com/en/cloud/saas/taleo-enterprise/23c/otfru/t-createdusqualificationquestioninlibrary.html", "supports": "Disqualification answers set to pass / disqualify / to be verified."},
+    "textkernel_getting_started": {"tier": "primary", "url": "https://developer.textkernel.com/tx-platform/v9/resume-parser/overview/getting-started/", "supports": "Avoid PDF to minimize conversion problems; many PDFs parse fine; corrupt PDFs unrecoverable; OCR for scans (~5% of docs); graphic-design resumes poor."},
+    "rchilli_tips_2020": {"tier": "primary", "url": "https://docs.rchilli.com/resumeparser/Tips%20for%20Creating%20Awesome%20Electronic%20Resumes.pdf", "supports": "Parser vendor tips: scanned/password/corrupt; PDF columns read left-first; header/footer ignored in doc/docx; tables; hidden fields; caps via formatting; combined/unusual headings; year-only dates and split date ranges break employers; split degree lines."},
+    "harvard_gazette_2021": {"tier": "primary", "url": "https://news.harvard.edu/gazette/story/2021/09/new-study-says-hidden-workers-are-being-excluded/", "supports": "Fuller: half of US companies filter out applicants not employed in the last six months."},
+    "hbs_hidden_workers_register": {"tier": "study", "url": "https://www.theregister.com/2021/09/08/harvard_jobs_report/", "supports": "HBS/Accenture 2021: 88% (high-skill) / 94% (middle-skill) of employers say qualified candidates are vetted out for not matching exact criteria; >90% use RMS to filter or rank."},
+    "enhancv_recruiters_2025": {"tier": "study", "url": "https://enhancv.com/blog/does-ats-reject-resumes/", "supports": "Vendor interviews, n=25 US recruiters: 92% say no auto-reject on formatting/content; knockout questions common; 44% have AI fit score, mostly used as a guide."},
+    "enhancv_columns_test": {"tier": "study", "url": "https://enhancv.com/blog/two-column-resume-ats-test/", "supports": "Vendor extraction test: columns don't lose words but can break section order; LLM parse lost employer names 17% of the time with interleaving."},
+    "jobscan_tutorial": {"tier": "primary", "url": "https://www.jobscan.co/jobscan-tutorial", "supports": "Jobscan recommends >=75% match rate; weights hard skills; word count and measurable results not in match rate; 'designed to mimic' popular ATS."},
+    "myth_75_percent": {"tier": "secondary", "url": "https://itbrief.co.uk/story/study-reveals-ats-rarely-auto-rejects-cvs-debunks-75-myth", "supports": "The '75% rejected by ATS' figure traces to a 2012 Preptel marketing claim."},
+    "hidden_text_builtin": {"tier": "secondary", "url": "https://builtin.com/articles/hidden-ai-prompts-in-resume", "supports": "Greenhouse estimate ~1% of resumes contain hidden text; ATS show plain text; recruiters reject."},
+    "mobley_v_workday": {"tier": "secondary", "url": "https://www.lawandtheworkplace.com/?p=10832", "supports": "Mobley v. Workday ADEA collective conditionally certified May 2025."},
+    "anthropic_code_exec": {"tier": "primary", "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool", "supports": "Code execution container pre-installs python-docx, pypdf, pdfplumber, reportlab, python-dateutil; no internet."},
+    "anthropic_skills_overview": {"tier": "primary", "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview", "supports": "Skill runtime constraints per surface; scripts run via bash and only output enters context; claude.ai network varies."},
+    "onet_license": {"tier": "primary_snippet", "url": "https://www.onetcenter.org/license_agreements.html", "supports": "Most O*NET content is CC BY 4.0; some third-party exceptions."}
+  }
+}

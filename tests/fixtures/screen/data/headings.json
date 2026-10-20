@@ -1,0 +1,125 @@
+{
+ "resume": {
+  "summary": [
+   "Summary",
+   "Professional Summary",
+   "Profile",
+   "Objective",
+   "About Me"
+  ],
+  "experience": [
+   "Experience",
+   "Work Experience",
+   "Professional Experience",
+   "Relevant Experience",
+   "Employment History",
+   "Work History",
+   "Internship Experience"
+  ],
+  "education": [
+   "Education",
+   "Academic Background"
+  ],
+  "skills": [
+   "Skills",
+   "Technical Skills",
+   "Skills & Tools",
+   "Core Skills"
+  ],
+  "projects": [
+   "Projects",
+   "Academic Projects",
+   "Personal Projects"
+  ],
+  "certifications": [
+   "Certifications",
+   "Licenses & Certifications",
+   "Certificates"
+  ],
+  "leadership_activities": [
+   "Leadership",
+   "Activities",
+   "Leadership & Activities",
+   "Campus Involvement",
+   "Extracurricular Activities"
+  ],
+  "volunteer": [
+   "Volunteer Experience",
+   "Volunteering",
+   "Community Service"
+  ],
+  "awards": [
+   "Awards",
+   "Honors",
+   "Honors & Awards"
+  ],
+  "publications": [
+   "Publications"
+  ],
+  "coursework": [
+   "Relevant Coursework",
+   "Coursework"
+  ],
+  "languages": [
+   "Languages"
+  ],
+  "interests": [
+   "Interests",
+   "Hobbies"
+  ],
+  "references": [
+   "References"
+  ]
+ },
+ "jd": {
+  "required": [
+   "Requirements",
+   "Qualifications",
+   "Minimum Qualifications",
+   "Basic Qualifications",
+   "Required Qualifications",
+   "Must Have",
+   "What You'll Need",
+   "What We're Looking For",
+   "Who You Are",
+   "You Have",
+   "You Bring",
+   "Skills and Experience"
+  ],
+  "preferred": [
+   "Preferred Qualifications",
+   "Nice to Have",
+   "Bonus Points",
+   "Bonus",
+   "Pluses",
+   "Desired Skills",
+   "Extra Credit"
+  ],
+  "responsibility": [
+   "Responsibilities",
+   "What You'll Do",
+   "The Role",
+   "Your Impact",
+   "Day to Day",
+   "Key Duties",
+   "In This Role"
+  ],
+  "boilerplate": [
+   "About Us",
+   "Who We Are",
+   "Benefits",
+   "Perks",
+   "Compensation",
+   "Salary",
+   "Pay Range",
+   "Equal Opportunity",
+   "EEO Statement",
+   "Accommodations",
+   "Privacy",
+   "Our Values",
+   "Why Join Us",
+   "Culture",
+   "What We Offer"
+  ]
+ }
+}

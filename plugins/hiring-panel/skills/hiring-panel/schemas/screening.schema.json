@@ -1,0 +1,1380 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hiring-panel:schema:screening:1.0",
+  "title": "Hiring Panel simulated screening check (screening.json)",
+  "description": "Output of hp.screen.run_screening. Always labeled 'Simulated screening check', never an 'ATS score'. Deterministic: same inputs give byte-identical JSON.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tool",
+    "mode",
+    "generated_at",
+    "as_of",
+    "level",
+    "locale",
+    "language",
+    "inputs",
+    "extraction",
+    "scores",
+    "issues",
+    "keywords",
+    "knockout_signals",
+    "sections",
+    "contact",
+    "experience",
+    "bullets",
+    "readability",
+    "platform",
+    "limitations",
+    "disclaimer"
+  ],
+  "$defs": {
+    "severity": {
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "info"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "month": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+      "description": "YYYY-MM, month precision only"
+    },
+    "band_score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "band",
+        "explanation",
+        "drivers"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 5,
+          "description": "Rounded to steps of 5; null when the part could not be checked"
+        },
+        "band": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "drivers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "description": "Issue ids that moved this score most, largest first"
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "heading",
+        "lines"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "required",
+            "preferred",
+            "responsibility",
+            "boilerplate",
+            "unspecified"
+          ]
+        },
+        "heading": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "description": "One run of posting lines. All blocks together partition every non-empty posting line, in order."
+    },
+    "term": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "term",
+        "canonical",
+        "kind",
+        "importance",
+        "weight",
+        "jd_frequency",
+        "jd_quote",
+        "source",
+        "confidence",
+        "found",
+        "match_type",
+        "credit",
+        "resume_wording",
+        "evidence_level",
+        "resume_locations",
+        "snippets"
+      ],
+      "properties": {
+        "term": {
+          "type": "string",
+          "description": "Wording as it appears in the posting (verbatim, never the dictionary's name). For a group of alternatives, the posting's words for the whole group, e.g. \"Python or R\""
+        },
+        "canonical": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "hard",
+            "tool",
+            "cert",
+            "domain",
+            "soft",
+            "title",
+            "unknown"
+          ]
+        },
+        "importance": {
+          "enum": [
+            "required",
+            "preferred",
+            "responsibility",
+            "unspecified"
+          ]
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0
+        },
+        "jd_frequency": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "jd_quote": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Verbatim piece of the posting line"
+        },
+        "source": {
+          "enum": [
+            "lexicon",
+            "acronym_definition",
+            "tech_token",
+            "ngram",
+            "llm_verified"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "found": {
+          "type": "boolean"
+        },
+        "match_type": {
+          "enum": [
+            "exact",
+            "alias",
+            "acronym",
+            "inflection",
+            "implied",
+            "partial",
+            "ambiguous",
+            "none"
+          ]
+        },
+        "credit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "resume_wording": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 120
+        },
+        "evidence_level": {
+          "enum": [
+            "demonstrated",
+            "listed",
+            "claimed",
+            "none"
+          ],
+          "description": "demonstrated: shown in experience, projects, leadership or volunteer lines; listed: skills, education and other lists; claimed: summary or top lines. A certification or diploma listed anywhere, and a degree field found in Education, count as demonstrated (listing is how they are shown)"
+        },
+        "resume_locations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "snippets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "maxItems": 2
+        },
+        "group": {
+          "enum": [
+            null,
+            "any_of",
+            "degree_field"
+          ],
+          "description": "any_of: alternatives in one requirement (\"Python or R\", \"BLS/CPR\"), satisfied by any member and counted once; degree_field: fields after \"degree in\", matched against Education only. null for a single term"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "description": "Group members in the posting's words; [] for a single term"
+        },
+        "matched_alternative": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 80,
+          "description": "The member that was found (posting's words), or null"
+        }
+      }
+    },
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "rank",
+        "category",
+        "severity",
+        "title",
+        "evidence",
+        "why_it_matters",
+        "fix",
+        "honesty_note",
+        "confidence",
+        "detected_by",
+        "score_impact",
+        "source_refs"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(PARSE|CONTACT|KW|SECT|DATE|CONTENT)-[0-9]{3}b?$"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "category": {
+          "enum": [
+            "parse",
+            "contact",
+            "keywords",
+            "sections",
+            "dates",
+            "content"
+          ]
+        },
+        "severity": {
+          "$ref": "#/$defs/severity"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 90
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "maxItems": 5
+        },
+        "why_it_matters": {
+          "type": "string"
+        },
+        "fix": {
+          "type": "string"
+        },
+        "honesty_note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Present whenever the fix could tempt fabrication"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "detected_by": {
+          "enum": [
+            "file_structure",
+            "extracted_text",
+            "jd_comparison",
+            "heuristic"
+          ]
+        },
+        "score_impact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "parse_safety",
+            "keyword_match",
+            "content_signals",
+            "overall"
+          ],
+          "properties": {
+            "parse_safety": {
+              "type": "number"
+            },
+            "keyword_match": {
+              "type": "number"
+            },
+            "content_signals": {
+              "type": "number"
+            },
+            "overall": {
+              "type": "number"
+            }
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Keys into hp/screen/sources.json"
+        }
+      }
+    },
+    "knockout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "importance",
+        "jd_quote",
+        "resume_evidence",
+        "status",
+        "advice"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "work_authorization",
+            "sponsorship",
+            "location",
+            "onsite_hybrid",
+            "relocation",
+            "years_experience",
+            "degree",
+            "major",
+            "gpa",
+            "graduation_window",
+            "certification",
+            "license",
+            "clearance",
+            "travel",
+            "schedule",
+            "physical",
+            "age",
+            "language",
+            "background_check",
+            "other"
+          ]
+        },
+        "importance": {
+          "enum": [
+            "required",
+            "preferred",
+            "unspecified"
+          ]
+        },
+        "jd_quote": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "resume_evidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "appears_met",
+            "unclear",
+            "appears_unmet",
+            "not_on_resume_by_design"
+          ]
+        },
+        "advice": {
+          "type": "string"
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section",
+        "header",
+        "date_text",
+        "start",
+        "end",
+        "is_current",
+        "expected",
+        "date_format",
+        "bullet_count",
+        "line"
+      ],
+      "properties": {
+        "section": {
+          "enum": [
+            "contact",
+            "summary",
+            "experience",
+            "education",
+            "skills",
+            "projects",
+            "certifications",
+            "leadership_activities",
+            "volunteer",
+            "awards",
+            "publications",
+            "coursework",
+            "languages",
+            "interests",
+            "references",
+            "other"
+          ]
+        },
+        "header": {
+          "type": "string"
+        },
+        "date_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start": {
+          "$ref": "#/$defs/month"
+        },
+        "end": {
+          "$ref": "#/$defs/month"
+        },
+        "is_current": {
+          "type": "boolean"
+        },
+        "expected": {
+          "type": "boolean"
+        },
+        "date_format": {
+          "enum": [
+            "month_year_name",
+            "month_year_numeric",
+            "year_only",
+            "season_year",
+            "two_digit_year",
+            "missing"
+          ]
+        },
+        "bullet_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "line": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version",
+        "lexicon_version"
+      ],
+      "properties": {
+        "name": {
+          "const": "hiring-panel-screen"
+        },
+        "version": {
+          "type": "string"
+        },
+        "lexicon_version": {
+          "type": "string"
+        }
+      }
+    },
+    "mode": {
+      "enum": [
+        "script",
+        "manual"
+      ],
+      "description": "manual = Claude applied the checklist without the script"
+    },
+    "generated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The as-of date; no clock time, so output stays byte-identical"
+    },
+    "as_of": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "level": {
+      "enum": [
+        "student",
+        "early_career",
+        "experienced"
+      ]
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^([a-z]{2}|und)$",
+      "description": "Resume language guess; keyword and content checks run only for en"
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resume",
+        "job_description",
+        "terms"
+      ],
+      "properties": {
+        "resume": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "format",
+            "sha256",
+            "bytes",
+            "pages",
+            "producer",
+            "creator"
+          ],
+          "properties": {
+            "format": {
+              "enum": [
+                "docx",
+                "pdf",
+                "txt",
+                "md",
+                "rtf",
+                "doc",
+                "pages",
+                "odt",
+                "image",
+                "unknown"
+              ]
+            },
+            "sha256": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "bytes": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "pages": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "producer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "creator": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "job_description": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sha256",
+            "chars",
+            "title_guess",
+            "url",
+            "platform_guess",
+            "language",
+            "blocks"
+          ],
+          "properties": {
+            "sha256": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "chars": {
+              "type": "integer"
+            },
+            "title_guess": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "platform_guess": {
+              "enum": [
+                "workday",
+                "greenhouse",
+                "lever",
+                "icims",
+                "taleo",
+                "oracle_recruiting",
+                "smartrecruiters",
+                "ashby",
+                "other",
+                "unknown"
+              ]
+            },
+            "language": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^([a-z]{2}|und)$"
+            },
+            "blocks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/block"
+              }
+            }
+          }
+        },
+        "terms": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provided",
+            "accepted",
+            "rejected"
+          ],
+          "properties": {
+            "provided": {
+              "type": "integer"
+            },
+            "accepted": {
+              "type": "integer"
+            },
+            "rejected": {
+              "type": "integer"
+            }
+          },
+          "description": "Claude-extracted terms (--terms): accepted only with a verbatim posting quote"
+        }
+      }
+    },
+    "extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "text_chars",
+        "lines",
+        "ats_view_file",
+        "header_footer_text",
+        "column_check",
+        "warnings"
+      ],
+      "properties": {
+        "method": {
+          "enum": [
+            "docx-xml",
+            "pdfplumber",
+            "pypdf",
+            "pdfkit",
+            "builtin-pdf",
+            "text",
+            "rtf",
+            "none",
+            "unknown"
+          ]
+        },
+        "text_chars": {
+          "type": "integer"
+        },
+        "lines": {
+          "type": "integer"
+        },
+        "ats_view_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "header_footer_text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Shown separately; some parsers skip it"
+        },
+        "column_check": {
+          "enum": [
+            "performed",
+            "docx_section_only",
+            "unavailable",
+            "not_applicable"
+          ]
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overall",
+        "parse_safety",
+        "keyword_match",
+        "content_signals",
+        "precision_note"
+      ],
+      "properties": {
+        "overall": {
+          "$ref": "#/$defs/band_score"
+        },
+        "parse_safety": {
+          "$ref": "#/$defs/band_score"
+        },
+        "keyword_match": {
+          "$ref": "#/$defs/band_score"
+        },
+        "content_signals": {
+          "$ref": "#/$defs/band_score"
+        },
+        "precision_note": {
+          "type": "string"
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issue"
+      },
+      "description": "Ranked: severity, then points removed from Overall, then category, then id"
+    },
+    "keywords": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "note",
+        "required",
+        "preferred",
+        "other",
+        "job_title",
+        "coverage"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "checked",
+            "thin_jd",
+            "no_jd",
+            "not_english",
+            "no_text"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/term"
+          }
+        },
+        "preferred": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/term"
+          }
+        },
+        "other": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/term"
+          }
+        },
+        "job_title": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "jd_title",
+            "resume_titles",
+            "match"
+          ],
+          "properties": {
+            "jd_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "resume_titles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "match": {
+              "enum": [
+                "exact",
+                "close",
+                "none",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required_found",
+            "required_total",
+            "required_listed_only",
+            "preferred_found",
+            "preferred_total",
+            "other_found",
+            "other_total",
+            "basis",
+            "basis_found",
+            "basis_total",
+            "basis_listed_only",
+            "required_weighted",
+            "preferred_weighted",
+            "evidence_share",
+            "listed_only"
+          ],
+          "properties": {
+            "required_found": {
+              "type": "integer"
+            },
+            "required_total": {
+              "type": "integer"
+            },
+            "required_listed_only": {
+              "type": "integer"
+            },
+            "preferred_found": {
+              "type": "integer"
+            },
+            "preferred_total": {
+              "type": "integer"
+            },
+            "other_found": {
+              "type": "integer"
+            },
+            "other_total": {
+              "type": "integer"
+            },
+            "basis": {
+              "enum": [
+                "required_preferred",
+                "required_only",
+                "all_terms",
+                null
+              ],
+              "description": "Which terms form the 'required' part of the keyword match. all_terms = the posting has no requirements list, so every term counts."
+            },
+            "basis_found": {
+              "type": "integer"
+            },
+            "basis_total": {
+              "type": "integer"
+            },
+            "basis_listed_only": {
+              "type": "integer"
+            },
+            "required_weighted": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "preferred_weighted": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "evidence_share": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "listed_only": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Found terms that appear only in lists (skills, coursework...), not in bullets"
+            }
+          }
+        }
+      },
+      "description": "The ONLY keyword source; nobody recomputes coverage"
+    },
+    "knockout_signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/knockout"
+      },
+      "description": "Never scored"
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "detected",
+        "missing_core",
+        "order"
+      ],
+      "properties": {
+        "detected": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "heading",
+              "canonical",
+              "line",
+              "standard",
+              "combined",
+              "inline"
+            ],
+            "properties": {
+              "heading": {
+                "type": "string"
+              },
+              "canonical": {
+                "enum": [
+                  "contact",
+                  "summary",
+                  "experience",
+                  "education",
+                  "skills",
+                  "projects",
+                  "certifications",
+                  "leadership_activities",
+                  "volunteer",
+                  "awards",
+                  "publications",
+                  "coursework",
+                  "languages",
+                  "interests",
+                  "references",
+                  "other"
+                ]
+              },
+              "line": {
+                "type": "integer"
+              },
+              "standard": {
+                "type": "boolean"
+              },
+              "combined": {
+                "type": "boolean"
+              },
+              "inline": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "missing_core": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "email",
+        "phone",
+        "location",
+        "linkedin",
+        "github",
+        "portfolio",
+        "found_in",
+        "street_address_present",
+        "emails_found"
+      ],
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "linkedin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "github": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "portfolio": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "found_in": {
+          "enum": [
+            "body_top",
+            "body_elsewhere",
+            "header_footer_only",
+            "text_box_or_table",
+            "missing"
+          ]
+        },
+        "street_address_present": {
+          "type": "boolean"
+        },
+        "emails_found": {
+          "type": "integer"
+        }
+      }
+    },
+    "experience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entries",
+        "gaps",
+        "months_since_last_activity",
+        "total_months_experience",
+        "date_formats_consistent",
+        "reverse_chronological"
+      ],
+      "properties": {
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "from",
+              "to",
+              "months"
+            ],
+            "properties": {
+              "from": {
+                "$ref": "#/$defs/month"
+              },
+              "to": {
+                "$ref": "#/$defs/month"
+              },
+              "months": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "months_since_last_activity": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "total_months_experience": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "date_formats_consistent": {
+          "type": "boolean"
+        },
+        "reverse_chronological": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "bullets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "count",
+        "words_median",
+        "too_long",
+        "too_short",
+        "action_verb_ratio",
+        "quantified_ratio",
+        "weak_openers",
+        "repeated_openers",
+        "first_person_count",
+        "buzzwords",
+        "total_words"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "words_median": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "too_long": {
+          "type": "integer"
+        },
+        "too_short": {
+          "type": "integer"
+        },
+        "action_verb_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "quantified_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "weak_openers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "repeated_openers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "first_person_count": {
+          "type": "integer"
+        },
+        "buzzwords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "total_words": {
+          "type": "integer"
+        }
+      }
+    },
+    "readability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "flesch_reading_ease",
+        "fk_grade",
+        "note"
+      ],
+      "properties": {
+        "flesch_reading_ease": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "fk_grade": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "platform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "guess",
+        "notes"
+      ],
+      "properties": {
+        "guess": {
+          "enum": [
+            "workday",
+            "greenhouse",
+            "lever",
+            "icims",
+            "taleo",
+            "oracle_recruiting",
+            "smartrecruiters",
+            "ashby",
+            "other",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "source_refs"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "source_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3
+    },
+    "disclaimer": {
+      "type": "string",
+      "minLength": 50
+    }
+  }
+}

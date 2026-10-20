@@ -1,0 +1,13 @@
+{"version": "0.0.1", "entries": [
+ {"id": "sql", "canonical": "SQL", "kind": "hard", "aliases": ["sql"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []},
+ {"id": "postgresql", "canonical": "PostgreSQL", "kind": "tool", "aliases": ["postgres", "postgresql"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": ["sql"]},
+ {"id": "python", "canonical": "Python", "kind": "hard", "aliases": ["python"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []},
+ {"id": "r", "canonical": "R", "kind": "hard", "aliases": ["R"], "acronyms": [], "case_sensitive": true, "ambiguous": true, "context": ["programming", "statistics", "rstudio"], "implies": []},
+ {"id": "tableau", "canonical": "Tableau", "kind": "tool", "aliases": ["tableau"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": ["data_visualization"]},
+ {"id": "power_bi", "canonical": "Power BI", "kind": "tool", "aliases": ["power bi", "powerbi"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": ["data_visualization"]},
+ {"id": "data_visualization", "canonical": "data visualization", "kind": "hard", "aliases": ["data visualization", "data viz"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []},
+ {"id": "dashboards", "canonical": "dashboards", "kind": "hard", "aliases": ["dashboards", "dashboard"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []},
+ {"id": "excel", "canonical": "Excel", "kind": "tool", "aliases": ["excel", "microsoft excel"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []},
+ {"id": "healthcare_data", "canonical": "healthcare data", "kind": "domain", "aliases": ["healthcare data"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []},
+ {"id": "data_analyst", "canonical": "Data Analyst", "kind": "title", "aliases": ["data analyst"], "acronyms": [], "case_sensitive": false, "ambiguous": false, "context": [], "implies": []}
+]}

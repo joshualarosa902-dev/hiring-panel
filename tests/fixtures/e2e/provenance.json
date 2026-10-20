@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "auditor": "skeptic-provenance",
+  "mode": "subagent",
+  "items": [
+    {
+      "bullet_id": "exp1.b3",
+      "audited_text": "Helped with Instagram posts 3x a week and tracked likes in a spreadsheet; the owner started posting more photos of new arrivals because those got the most likes",
+      "verdict": "ok",
+      "problem": null,
+      "suggested_text": null
+    },
+    {
+      "bullet_id": "exp1.b4",
+      "audited_text": "Wrote the email that announced the summer sale",
+      "verdict": "ok",
+      "problem": null,
+      "suggested_text": null
+    }
+  ]
+}

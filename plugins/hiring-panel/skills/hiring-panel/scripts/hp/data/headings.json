@@ -1,0 +1,209 @@
+{
+  "version": "1.0.0",
+  "_note": "Lowercase heading synonyms. Normalize a candidate heading line the same way before lookup (casefold, '&' -> 'and', strip punctuation, collapse spaces) and normalize these entries with the same function, because some keep apostrophes or hyphens for readability. An exact match means standard=true (ATS spec section 7). 'resume_core_words' is the fallback map for non-standard headings that contain a core word.",
+  "resume": {
+    "contact": [
+      "contact", "contact information", "contact info", "contact details", "personal information",
+      "personal details", "personal data", "personal info", "links", "online profiles", "online presence",
+      "websites", "social media"
+    ],
+    "summary": [
+      "summary", "professional summary", "career summary", "summary of qualifications", "qualifications summary",
+      "profile", "professional profile", "career profile", "personal profile", "about me", "about",
+      "objective", "career objective", "professional objective", "job objective", "personal statement",
+      "executive summary", "overview", "professional overview", "highlights", "career highlights",
+      "qualifications highlights", "introduction", "bio", "professional bio", "who i am"
+    ],
+    "experience": [
+      "experience", "work experience", "professional experience", "employment", "employment history",
+      "work history", "relevant experience", "related experience", "relevant work experience",
+      "career history", "professional history", "internships", "internship experience", "internship",
+      "industry experience", "additional experience", "other experience", "selected experience",
+      "professional background", "employment experience", "job experience", "research experience",
+      "research", "teaching experience", "clinical experience", "clinical rotations", "clinicals",
+      "field experience", "practicum", "practicum experience", "practicums", "work", "positions held",
+      "military experience", "military service", "freelance experience", "freelance work",
+      "technical experience", "student teaching", "student teaching experience", "co-op experience",
+      "co-op", "co-ops", "cooperative education", "externships", "externship", "apprenticeship",
+      "apprenticeships", "career experience", "legal experience", "healthcare experience",
+      "laboratory experience", "lab experience", "work and research experience",
+      "professional and research experience", "experience and internships", "internships and experience",
+      "work experience and internships", "part-time experience", "part-time employment"
+    ],
+    "education": [
+      "education", "academic background", "educational background", "academics", "academic history",
+      "education and training", "education and qualifications", "academic qualifications",
+      "academic credentials", "degrees", "university education", "schooling", "education history",
+      "educational history", "academic profile", "education and certifications",
+      "education and credentials", "formal education"
+    ],
+    "skills": [
+      "skills", "technical skills", "core skills", "key skills", "skills summary", "summary of skills",
+      "skill set", "skillset", "competencies", "core competencies", "key competencies", "areas of expertise",
+      "expertise", "technical proficiencies", "proficiencies", "technologies", "tools",
+      "tools and technologies", "technical expertise", "computer skills", "software", "software skills",
+      "relevant skills", "professional skills", "hard skills", "soft skills", "transferable skills",
+      "lab skills", "laboratory skills", "clinical skills", "programming languages", "programming",
+      "skills and abilities", "abilities", "strengths", "capabilities", "digital skills", "it skills",
+      "additional skills", "other skills", "skills and tools", "skills and technologies",
+      "skills and certifications", "skills and interests", "skills and languages", "technical competencies",
+      "technical toolkit", "toolkit", "software and tools", "systems", "platforms", "frameworks",
+      "qualifications and skills", "skills and qualifications", "core qualifications", "specialties"
+    ],
+    "projects": [
+      "projects", "project experience", "academic projects", "relevant projects", "selected projects",
+      "personal projects", "technical projects", "key projects", "course projects", "class projects",
+      "independent projects", "research projects", "capstone", "capstone project", "capstone projects",
+      "senior design", "senior design project", "senior project", "portfolio", "side projects",
+      "hackathons", "design projects", "engineering projects", "software projects", "projects and research",
+      "notable projects", "featured projects", "project highlights", "academic and personal projects",
+      "school projects", "thesis", "senior thesis", "honors thesis"
+    ],
+    "certifications": [
+      "certifications", "certificates", "certification", "certificate", "licenses",
+      "licenses and certifications", "certifications and licenses", "licensure", "licensure and certifications",
+      "credentials", "professional certifications", "training", "training and certifications",
+      "certifications and training", "professional development", "courses and certifications",
+      "continuing education", "trainings", "accreditations", "professional licenses",
+      "professional training", "relevant certifications", "certifications and awards",
+      "certifications and professional development", "online courses", "online certifications"
+    ],
+    "leadership_activities": [
+      "leadership", "leadership experience", "leadership and activities", "activities", "extracurricular activities",
+      "extracurriculars", "extracurricular", "campus involvement", "involvement", "campus activities",
+      "student activities", "activities and leadership", "leadership and involvement", "organizations",
+      "student organizations", "memberships", "professional memberships", "affiliations",
+      "professional affiliations", "clubs", "clubs and organizations", "athletics", "varsity athletics",
+      "student leadership", "co-curricular activities", "extra-curricular activities",
+      "leadership and service", "campus leadership", "leadership roles", "activities and organizations",
+      "organizations and activities", "professional organizations", "associations", "student involvement"
+    ],
+    "volunteer": [
+      "volunteer", "volunteer experience", "volunteering", "volunteer work", "community service",
+      "community involvement", "service", "civic engagement", "volunteer and community service",
+      "community engagement", "service experience", "volunteer activities", "volunteer service",
+      "volunteerism", "community and volunteer experience", "service and volunteering", "volunteer roles"
+    ],
+    "awards": [
+      "awards", "honors", "honors and awards", "awards and honors", "achievements", "accomplishments",
+      "recognition", "scholarships", "awards and recognition", "distinctions", "honours", "honours and awards",
+      "awards and scholarships", "scholarships and awards", "key achievements", "academic honors",
+      "academic achievements", "notable achievements", "honors and scholarships", "prizes",
+      "awards and achievements", "achievements and awards", "competitions", "grants and awards"
+    ],
+    "publications": [
+      "publications", "presentations", "publications and presentations", "research publications", "papers",
+      "conference presentations", "posters", "selected publications", "patents", "research and publications",
+      "articles", "published work", "conference papers", "presentations and publications",
+      "talks", "posters and presentations", "manuscripts", "peer-reviewed publications", "bibliography"
+    ],
+    "coursework": [
+      "coursework", "relevant coursework", "related coursework", "courses", "relevant courses",
+      "selected coursework", "key coursework", "academic coursework", "course highlights", "modules",
+      "relevant modules", "key modules", "graduate coursework", "upper-division coursework",
+      "upper division coursework", "core coursework", "select coursework", "relevant classes", "classes",
+      "coursework highlights", "major coursework"
+    ],
+    "languages": [
+      "languages", "language skills", "language proficiency", "languages spoken", "foreign languages",
+      "spoken languages", "language proficiencies", "language", "linguistic skills"
+    ],
+    "interests": [
+      "interests", "hobbies", "hobbies and interests", "personal interests", "interests and hobbies",
+      "activities and interests", "outside interests", "other interests", "pastimes", "personal",
+      "interests and activities", "hobbies and activities", "fun facts"
+    ],
+    "references": [
+      "references", "referees", "professional references", "references available upon request",
+      "references available on request", "reference", "references upon request", "referees available on request",
+      "available upon request"
+    ],
+    "other": [
+      "additional information", "additional", "miscellaneous", "other", "other information", "misc",
+      "further information", "additional details", "other experience and skills", "more about me",
+      "additional activities", "selected highlights", "appendix"
+    ]
+  },
+  "resume_core_words": {
+    "experience": "experience",
+    "education": "education",
+    "skills": "skills",
+    "projects": "projects",
+    "certifications": "certifications",
+    "leadership": "leadership_activities",
+    "activities": "leadership_activities",
+    "volunteer": "volunteer",
+    "awards": "awards",
+    "honors": "awards",
+    "publications": "publications",
+    "coursework": "coursework",
+    "languages": "languages",
+    "interests": "interests",
+    "summary": "summary",
+    "profile": "summary",
+    "objective": "summary"
+  },
+  "jd": {
+    "required": [
+      "requirements", "qualifications", "minimum qualifications", "basic qualifications", "required qualifications",
+      "required skills", "requirements and qualifications", "qualifications and requirements", "must have",
+      "must-have", "must haves", "must-haves", "what you'll need", "what you will need", "what you need",
+      "what you need to succeed", "what we're looking for", "what we are looking for", "who we're looking for",
+      "who we are looking for", "who you are", "you have", "you bring", "what you bring", "what you'll bring",
+      "what you will bring", "skills and experience", "experience and skills", "your qualifications",
+      "your skills", "your experience", "your background", "about you", "ideal candidate",
+      "the ideal candidate", "the ideal candidate will have", "you should have", "you'll have",
+      "you will have", "required experience", "required education", "education and experience",
+      "experience and education", "experience", "skills", "skills and qualifications", "qualifications and skills",
+      "knowledge, skills and abilities", "knowledge, skills, and abilities", "ksas", "job requirements",
+      "position requirements", "minimum requirements", "basic requirements", "essential qualifications",
+      "essential requirements", "essential skills", "essential criteria", "selection criteria",
+      "key selection criteria", "key requirements", "eligibility", "eligibility requirements",
+      "what it takes", "to be successful", "to be successful in this role", "required", "requirements:",
+      "who you'll be", "is this you", "your profile", "candidate profile", "person specification",
+      "required competencies", "minimum requirements and qualifications", "minimum education and experience"
+    ],
+    "preferred": [
+      "preferred qualifications", "preferred skills", "preferred experience", "nice to have", "nice-to-have",
+      "nice to haves", "nice-to-haves", "bonus", "bonus points", "bonus points if you have",
+      "bonus if you have", "pluses", "a plus", "plus", "desired qualifications", "desired skills",
+      "desired experience", "desirable", "desirable criteria", "desirable skills", "desirable qualifications",
+      "extra credit", "preferred", "desired", "additional qualifications", "ideally you have", "ideally", "even better",
+      "even better if you have", "good to have", "great to have", "it's a plus if you have",
+      "preferred requirements", "added advantage", "optional", "nice to haves but not required",
+      "preferred but not required", "what sets you apart", "standout qualifications", "you might also have"
+    ],
+    "responsibility": [
+      "responsibilities", "key responsibilities", "job responsibilities", "duties", "key duties",
+      "duties and responsibilities", "responsibilities and duties", "main duties", "essential duties",
+      "essential functions", "essential duties and responsibilities", "primary responsibilities",
+      "what you'll do", "what you will do", "what you'll be doing", "what you will be doing", "the role",
+      "about the role", "role overview", "your role", "in this role", "in this role you will", "your impact",
+      "the impact you'll have", "day to day", "day-to-day", "a day in the life", "your responsibilities",
+      "job duties", "job summary", "position summary", "position overview", "role summary",
+      "what you'll work on", "what you will work on", "how you'll make an impact", "your mission",
+      "the opportunity", "scope of role", "accountabilities", "key accountabilities", "principal accountabilities",
+      "main tasks", "tasks", "your tasks", "the position", "position description", "role description",
+      "what you'll learn", "what you will learn", "as an intern you will"
+    ],
+    "boilerplate": [
+      "about us", "who we are", "about the company", "about the team", "our company", "company overview",
+      "company description", "our mission", "our story", "our values", "our culture", "culture", "why join us",
+      "why join", "why you'll love working here", "why work with us", "why work here", "what we offer",
+      "what we provide", "benefits", "perks", "perks and benefits", "benefits and perks", "compensation",
+      "compensation and benefits", "salary", "pay", "pay range", "salary range", "pay transparency",
+      "base salary", "salary and benefits", "equal opportunity", "equal opportunity employer",
+      "equal employment opportunity", "eeo", "eeo statement", "diversity", "diversity and inclusion",
+      "diversity, equity and inclusion", "diversity, equity, and inclusion", "commitment to diversity",
+      "our commitment to diversity", "accommodation", "accommodations", "reasonable accommodation",
+      "reasonable accommodations", "privacy", "privacy notice", "privacy policy", "applicant privacy notice",
+      "how to apply", "application process", "application instructions", "our hiring process",
+      "hiring process", "interview process", "location", "work location", "schedule", "work schedule",
+      "physical requirements", "physical demands", "work environment", "working conditions", "travel",
+      "travel requirements", "e-verify", "disclaimer", "legal disclaimer", "agency disclaimer",
+      "notice to recruiters", "recruitment fraud", "fraud alert", "visa sponsorship", "sponsorship",
+      "work authorization", "employment type", "job type", "additional information", "other information",
+      "about the employer", "life at the company", "total rewards", "our benefits"
+    ]
+  }
+}

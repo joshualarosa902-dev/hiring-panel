@@ -1,0 +1,437 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "checked": "2026-10-20",
+    "purpose": "Country norms for resumes and CVs. Read by the renderer (paper size, page target), the screening check (no US-only advice outside en-US) and the recruiter persona via references/locale-norms.md. These are conventions, not rules: the job posting's own instructions always win.",
+    "fields": {
+      "name": "Human-readable region name.",
+      "paper": "letter | a4. Paper size for the rendered resume.",
+      "pages_student": "Page target (maximum) for students and recent graduates. The renderer reports overflow above this.",
+      "pages_experienced": "Page target (maximum) for experienced candidates.",
+      "word": "What English speakers in this market usually call the document: resume | CV.",
+      "local_word": "The usual local-language term, for non-English documents.",
+      "photo": "omit | optional | customary. omit = not expected, remove it; optional = acceptable either way, never a red flag, never add one just for this; customary = commonly included locally, but never required and leaving it out is fine.",
+      "dob": "omit | optional | customary. Same meaning as photo, for date of birth or age.",
+      "personal_details": "omit | optional | customary. Marital status, nationality, place of birth. Never infer or comment on protected traits either way.",
+      "gpa": "optional_3.0_plus | optional_if_strong | degree_classification | cgpa_or_percentage | local_grade_scale.",
+      "gpa_note": "How grades are usually expressed.",
+      "notes": "Short, plain-language guidance for the recruiter persona and the report.",
+      "confidence": "high | medium | low: how well the sources below agree.",
+      "uncertain": "Fields where sources disagree or no authoritative source was found.",
+      "sources": "Keys into _sources."
+    }
+  },
+  "en-US": {
+    "name": "United States",
+    "paper": "letter",
+    "pages_student": 1,
+    "pages_experienced": 2,
+    "word": "resume",
+    "local_word": "resume",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "optional_3.0_plus",
+    "gpa_note": "4.0 scale. List it if it is 3.0 or higher or the posting asks for it.",
+    "notes": [
+      "One page is the norm for students and recent graduates; two pages are fine once you have several years of relevant experience.",
+      "Leave out a photo, date of birth, age and marital status. US employers do not expect them.",
+      "3.0 is the most common GPA cutoff among employers that screen by GPA, and fewer employers screen by GPA than a few years ago. Never add a GPA the candidate did not give.",
+      "City and state are enough for location; a full street address is not needed."
+    ],
+    "confidence": "high",
+    "uncertain": [],
+    "sources": ["nace_gpa_2022", "us_otterbein", "us_wcupa", "us_psu_checklist"]
+  },
+  "en-CA": {
+    "name": "Canada",
+    "paper": "letter",
+    "pages_student": 1,
+    "pages_experienced": 2,
+    "word": "resume",
+    "local_word": "resume (French: CV)",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "optional_if_strong",
+    "gpa_note": "Scales differ by province and school (4.0, 4.3, 9-point, percentages). Include it only if strong or requested, with the scale.",
+    "notes": [
+      "One page is the usual target for students; two pages is the upper limit the Government of Canada Job Bank recommends.",
+      "Leave out a photo, age, marital status, religion and other personal details. Never include a Social Insurance Number.",
+      "In Quebec, a French-language resume may be expected; follow the posting."
+    ],
+    "confidence": "medium",
+    "uncertain": ["pages_student"],
+    "sources": ["ca_job_bank"]
+  },
+  "en-GB": {
+    "name": "United Kingdom",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "CV",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "degree_classification",
+    "gpa_note": "Degree classification: First, 2:1 (upper second), 2:2 (lower second), Third. Current students often give a predicted or expected classification. A-level grades are common for graduates.",
+    "notes": [
+      "No longer than two sides of A4; a shorter CV is fine for part-time student jobs, and very senior roles may run to three.",
+      "No photo unless the role is acting or modelling, and no date of birth.",
+      "Give the degree classification (or expected classification), not a GPA. Changing a classification, for example 2:2 to 2:1, counts as degree fraud.",
+      "Call the document a CV."
+    ],
+    "confidence": "high",
+    "uncertain": [],
+    "sources": ["uk_prospects"]
+  },
+  "en-IE": {
+    "name": "Ireland",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "CV",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "degree_classification",
+    "gpa_note": "Honours degree classes: First Class Honours, Second Class Honours Grade 1 (2.1), Grade 2 (2.2), Third, Pass. Leaving Certificate points or grades are sometimes listed by recent school leavers.",
+    "notes": [
+      "Two pages is the usual length.",
+      "A photo is not the convention in Ireland; leave out date of birth and marital status unless an application explicitly asks.",
+      "Give the degree classification (or expected classification), not a GPA."
+    ],
+    "confidence": "medium",
+    "uncertain": [],
+    "sources": ["ie_dcu"]
+  },
+  "en-AU": {
+    "name": "Australia",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 3,
+    "word": "resume",
+    "local_word": "resume (CV is also used)",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "optional_if_strong",
+    "gpa_note": "Many universities report GPA on a 7-point scale or a weighted average mark (WAM, a percentage); honours degrees carry a class (First Class, 2A, 2B, Third). Include with the scale if strong or requested.",
+    "notes": [
+      "Two pages is the usual target for graduates; experienced candidates often run to three. Published guidance ranges from one to four pages, so follow the posting.",
+      "Leave out a photo, date of birth, marital status, religion and nationality.",
+      "Referees (usually two) are common; 'referees available on request' is also acceptable. Never list a referee's details without asking them.",
+      "Australian Public Service roles often ask you to address selection criteria in a separate document."
+    ],
+    "confidence": "medium",
+    "uncertain": ["pages_student", "pages_experienced"],
+    "sources": ["au_uq", "au_veterans", "au_asic"]
+  },
+  "en-NZ": {
+    "name": "New Zealand",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 3,
+    "word": "CV",
+    "local_word": "CV",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "optional_if_strong",
+    "gpa_note": "Universities report letter grades, and some calculate a GPA (scales differ by university). Include with the scale if strong or requested.",
+    "notes": [
+      "New Zealand CVs are typically two to three pages; two is enough for most graduates.",
+      "Leave out a photo, date of birth and marital status.",
+      "Referees are commonly listed near the end, with their permission."
+    ],
+    "confidence": "medium",
+    "uncertain": ["pages_experienced"],
+    "sources": ["nz_knowyourcv", "nz_otago"]
+  },
+  "en-IN": {
+    "name": "India",
+    "paper": "a4",
+    "pages_student": 1,
+    "pages_experienced": 2,
+    "word": "resume",
+    "local_word": "resume (CV and biodata are also used)",
+    "photo": "optional",
+    "dob": "optional",
+    "personal_details": "optional",
+    "gpa": "cgpa_or_percentage",
+    "gpa_note": "CGPA on a 10-point scale or a percentage, for each degree (and often class 10 and 12 results for freshers). Campus recruiters frequently set a cutoff.",
+    "notes": [
+      "One page is common for freshers in private-sector and campus hiring; two pages with experience.",
+      "Practice is mixed: older formats include a photo, date of birth and other personal details, while many private-sector and multinational employers no longer expect them. Do not treat either choice as a red flag.",
+      "Government and public-sector applications may require a specific biodata format; follow the notification.",
+      "List CGPA or percentage with its scale."
+    ],
+    "confidence": "low",
+    "uncertain": ["photo", "dob", "personal_details"],
+    "sources": ["in_guides"]
+  },
+  "de-DE": {
+    "name": "Germany",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "Lebenslauf",
+    "photo": "customary",
+    "dob": "customary",
+    "personal_details": "optional",
+    "gpa": "local_grade_scale",
+    "gpa_note": "German scale from 1.0 (best) to 5.0, with 4.0 the usual pass mark. Give the final or current grade (Abschlussnote) in the German system if you include it.",
+    "notes": [
+      "A tabular, reverse-chronological Lebenslauf of one to two pages is usual; some experienced candidates use three.",
+      "A professional photo is still common but has not been required since the General Equal Treatment Act (AGG, 2006); leaving it out is fine and is never a red flag.",
+      "Date of birth and nationality often appear under personal details; they are optional.",
+      "Applications often include certificates and references (Zeugnisse) as attachments."
+    ],
+    "confidence": "medium",
+    "uncertain": ["photo", "pages_experienced"],
+    "sources": ["de_bremen", "de_magdeburg"]
+  },
+  "de-AT": {
+    "name": "Austria",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "Lebenslauf",
+    "photo": "customary",
+    "dob": "customary",
+    "personal_details": "optional",
+    "gpa": "local_grade_scale",
+    "gpa_note": "Austrian scale from 1 (Sehr gut, best) to 5 (Nicht genügend, fail).",
+    "notes": [
+      "A photo is common, but the Austrian government's guidance says photo, date of birth, place of birth and citizenship are all voluntary.",
+      "A tabular, reverse-chronological Lebenslauf of up to two pages is usual.",
+      "Some guidance suggests signing a printed CV; for digital applications this is optional."
+    ],
+    "confidence": "medium",
+    "uncertain": ["pages_student", "pages_experienced"],
+    "sources": ["at_oesterreich_gv"]
+  },
+  "de-CH": {
+    "name": "Switzerland",
+    "paper": "a4",
+    "pages_student": 2,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "Lebenslauf (German), CV (French and Italian)",
+    "photo": "customary",
+    "dob": "customary",
+    "personal_details": "customary",
+    "gpa": "local_grade_scale",
+    "gpa_note": "Swiss scale from 1 to 6, where 6 is best and 4 is a pass. Universities may also report ECTS grades.",
+    "notes": [
+      "A professional photo, date of birth, nationality and sometimes marital status are usual on a Swiss CV, but none is mandatory.",
+      "Applications are often sent as a full dossier: CV, cover letter, diplomas and employment certificates (Arbeitszeugnisse).",
+      "Write in the language of the posting (German, French or Italian, or English for international employers)."
+    ],
+    "confidence": "low",
+    "uncertain": ["pages_student", "pages_experienced", "gpa_note"],
+    "sources": ["ch_zhaw", "ch_swissinfo"]
+  },
+  "fr-FR": {
+    "name": "France",
+    "paper": "a4",
+    "pages_student": 1,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "CV",
+    "photo": "optional",
+    "dob": "optional",
+    "personal_details": "optional",
+    "gpa": "local_grade_scale",
+    "gpa_note": "Grades out of 20, often with an honours mention (assez bien, bien, très bien). Name the diploma (Licence, Master, BTS, DUT/BUT) and the school.",
+    "notes": [
+      "One page is widely advised for students and recent graduates; two pages with experience.",
+      "A photo is optional and not required unless requested; if included it should be professional.",
+      "Age or date of birth sometimes appears on French CVs; it is optional.",
+      "Recent graduates often put education (Formation) first."
+    ],
+    "confidence": "low",
+    "uncertain": ["pages_student", "dob"],
+    "sources": ["fr_apecita"]
+  },
+  "es-ES": {
+    "name": "Spain",
+    "paper": "a4",
+    "pages_student": 1,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "currículum vitae (CV)",
+    "photo": "optional",
+    "dob": "optional",
+    "personal_details": "optional",
+    "gpa": "local_grade_scale",
+    "gpa_note": "Spanish scale from 0 to 10, with 5 a pass; matrícula de honor is the top distinction. Give the average (nota media) with its scale if you include it.",
+    "notes": [
+      "One to two pages is usual.",
+      "Sources disagree: some describe a photo and date of birth as common on Spanish CVs, while a university careers office advises leaving them out unless the employer asks. Treat both as optional and never as a red flag.",
+      "Write in Spanish unless the posting is in English."
+    ],
+    "confidence": "low",
+    "uncertain": ["photo", "dob", "pages_student"],
+    "sources": ["es_ucm", "es_guides"]
+  },
+  "default": {
+    "name": "Other or unknown locale",
+    "paper": "a4",
+    "pages_student": 1,
+    "pages_experienced": 2,
+    "word": "CV",
+    "local_word": "CV",
+    "photo": "omit",
+    "dob": "omit",
+    "personal_details": "omit",
+    "gpa": "optional_if_strong",
+    "gpa_note": "Grading scales differ by country; include grades with their scale if strong or requested.",
+    "notes": [
+      "Customs differ by country, so follow the job posting's instructions first.",
+      "A photo or date of birth is never a reason to reject, because customs differ by country. When building a new resume for an unknown market leave them out, but do not tell the candidate an existing one is a mistake.",
+      "A4 is the international default paper size; the United States and Canada use Letter.",
+      "When the locale is unclear, confirm it with the candidate in one line before the review."
+    ],
+    "confidence": "low",
+    "uncertain": ["pages_student", "pages_experienced", "photo", "dob"],
+    "sources": []
+  },
+  "_sources": {
+    "nace_gpa_2022": {
+      "title": "NACE: Use of GPA as a candidate selection tool falls (Job Outlook 2022)",
+      "url": "https://naceweb.org/talent-acquisition/candidate-selection/use-of-gpa-as-candidate-selection-tool-falls",
+      "supports": "3.0 is the most common cutoff among employers that screen by GPA; the share of employers screening by GPA has fallen (46.3% in the fall 2022 survey).",
+      "seen_via": "search summary and the panel research report; the page itself was not fetched in this build"
+    },
+    "us_otterbein": {
+      "title": "Otterbein University career center: Resume Guidelines",
+      "url": "https://www.otterbein.edu/wp-content/uploads/2018/10/Resume-Guidelines.pdf",
+      "supports": "Undergraduates should aim for a one-page resume.",
+      "seen_via": "search summary"
+    },
+    "us_wcupa": {
+      "title": "West Chester University: Resumes and Cover Letters",
+      "url": "https://www.wcupa.edu/_services/careerDevelopment/undergraduate/resumesCoverLetters.aspx",
+      "supports": "One page of content recommended for most undergraduates.",
+      "seen_via": "search summary"
+    },
+    "us_psu_checklist": {
+      "title": "Penn State College of IST: Resume checklist",
+      "url": "https://ist.psu.edu/sites/default/files/careers/resume-checklist.pdf",
+      "supports": "No photos; city and state only for location.",
+      "seen_via": "search summary"
+    },
+    "ca_job_bank": {
+      "title": "Government of Canada Job Bank: How to write a good resume",
+      "url": "https://www.jobbank.gc.ca/findajob/resources/write-good-resume",
+      "supports": "Limit the resume to two pages; omit age, weight, height, marital status, religious preference and political views; do not include a picture; never include your Social Insurance Number.",
+      "seen_via": "fetched 2026-10-20"
+    },
+    "uk_prospects": {
+      "title": "Prospects (Jisc): How to write a CV",
+      "url": "https://www.prospects.ac.uk/careers-advice/cvs-and-cover-letters/how-to-write-a-cv",
+      "supports": "CVs no longer than two A4 pages (three possible for senior roles); no photo unless acting or modelling; date of birth is irrelevant; include qualification grades; altering a degree grade is degree fraud.",
+      "seen_via": "fetched 2026-10-20"
+    },
+    "ie_dcu": {
+      "title": "Dublin City University careers: How do I build a strong CV?",
+      "url": "https://www.dcu.ie/sites/default/files/inline-files/how-do-i-build-a-strong-cv_0.pdf",
+      "supports": "CV should be two pages; a photograph is not the convention for Ireland, the UK and the USA.",
+      "seen_via": "search summary"
+    },
+    "au_uq": {
+      "title": "University of Queensland Employability: Resume fact sheet",
+      "url": "https://employability.uq.edu.au/files/176803/Resume%20Fact%20Sheet%20%26%20Example.pdf",
+      "supports": "Professional resumes in Australia are generally two to four pages.",
+      "seen_via": "search summary (the PDF could not be read in this build)"
+    },
+    "au_veterans": {
+      "title": "Australian Government Veterans' Employment: Writing a resume",
+      "url": "https://www.veteransemployment.gov.au/partners-finding-and-getting-job/writing-resume",
+      "supports": "Describes a resume as a short (one to two page) document.",
+      "seen_via": "search summary"
+    },
+    "au_asic": {
+      "title": "ASIC careers: Resume tips",
+      "url": "https://careers.asic.gov.au/pdf/Resume_tips.pdf",
+      "supports": "A resume should be no more than four pages, depending on experience.",
+      "seen_via": "search summary"
+    },
+    "nz_knowyourcv": {
+      "title": "Careers New Zealand (careers.govt.nz): Tips for creating a NZ-style CV",
+      "url": "https://knowyourcv.careers.govt.nz/job-hunting/new-to-new-zealand/tips-for-creating-a-nz-style-cv",
+      "supports": "New Zealand CVs are typically about two to three pages.",
+      "seen_via": "search summary (the page failed to load directly)"
+    },
+    "nz_otago": {
+      "title": "University of Otago careers: CV guide",
+      "url": "https://www.otago.ac.nz/careers/jobs/cv/otago281401.pdf",
+      "supports": "Two pages is enough for most New Zealand graduate CVs.",
+      "seen_via": "search summary"
+    },
+    "in_guides": {
+      "title": "Indian resume guides (commercial; no official source found)",
+      "url": "https://goodspace.ai/guides/cv-format-for-freshers",
+      "supports": "Guides conflict: some keep date of birth, marital status and a declaration in a personal-details block, others advise private-sector freshers to leave out photo, date of birth and personal details; CGPA or percentage is listed per degree.",
+      "seen_via": "search summary; treat as low confidence"
+    },
+    "de_bremen": {
+      "title": "University of Bremen Career Center: Application documents (applying in Germany)",
+      "url": "https://www.uni-bremen.de/en/career-center/counselling/how-to-apply-in-germany/application-documents",
+      "supports": "German CVs are one to two pages; a photo is no longer required under the General Equal Treatment Act (AGG); birthdate is listed under personal details; GPA is optional and should use the German grading system.",
+      "seen_via": "fetched 2026-10-20"
+    },
+    "de_magdeburg": {
+      "title": "Otto von Guericke University Magdeburg: English CV (Lebenslauf) template",
+      "url": "https://ga.ovgu.de/grs_media/Dokumente/Postdocs/EN_Lebenslauf.pdf",
+      "supports": "Maximum two pages for young professionals and three for experienced professionals; photo not compulsory but appreciated.",
+      "seen_via": "search summary"
+    },
+    "at_oesterreich_gv": {
+      "title": "oesterreich.gv.at (Austrian government portal): Bewerbungstipps",
+      "url": "https://www.oesterreich.gv.at/themen/arbeit_beruf_und_pension/jobsuche/bewerbungstipps/Seite.171020.html",
+      "supports": "Citizenship, date of birth and place of birth may be given voluntarily; a photo is likewise voluntary; a printed CV is usually signed.",
+      "seen_via": "search summary"
+    },
+    "ch_zhaw": {
+      "title": "ZHAW School of Management and Law career services: CV / Lebenslauf",
+      "url": "https://career.sml.zhaw.ch/en/for-students/tips-and-tools/cv-and-letter-of-motivation/cvresume/",
+      "supports": "A photo is not mandatory in Switzerland, but it is common practice.",
+      "seen_via": "search summary"
+    },
+    "ch_swissinfo": {
+      "title": "swissinfo.ch: From CV to interview, how to apply for a job",
+      "url": "https://www.swissinfo.ch/eng/guide-to-moving-abroad/from-cv-to-interviewhow-to-appy-for-a-job-abroad/88384930",
+      "supports": "Personal information such as a photo, date of birth and marital status is quite usual on a Swiss CV.",
+      "seen_via": "search summary"
+    },
+    "fr_apecita": {
+      "title": "Apecita (APEC network for agri-food careers): CV advice card",
+      "url": "https://www.apecita.com/uploads/advice_card/5c69b486d5b1b421072142.pdf",
+      "supports": "A photo on a French CV is optional; if used, it should be recent and professional.",
+      "seen_via": "search summary"
+    },
+    "es_ucm": {
+      "title": "Universidad Complutense de Madrid careers office: El currículum vitae (2012)",
+      "url": "https://www.ucm.es/data/cont/docs/3-2012-11-23-4.%20EL%20CURRICULUM%20VITAE.pdf",
+      "supports": "Advises leaving out photo and birth date unless the employer asks (document dates from 2012).",
+      "seen_via": "search summary"
+    },
+    "es_guides": {
+      "title": "Commercial Spanish CV guides",
+      "url": "https://resumegeni.com/es/blog/how-to-write-resume-spain",
+      "supports": "Describes a photo as customary but declining (especially in tech), date of birth as a common personal field, and one to two pages as usual.",
+      "seen_via": "search summary; treat as low confidence"
+    },
+    "_unverified": [
+      "Grade scales (Swiss 1-6, Austrian 1-5, German 1.0-5.0, French marks out of 20, Spanish 0-10, Indian 10-point CGPA, Australian 7-point GPA and WAM, Irish and UK classifications) are stated from general knowledge and were not each checked against an official source in this build.",
+      "No official source was found for India, France or Spain on photos and dates of birth; their values are deliberately 'optional' with low confidence.",
+      "Several sources were read only through search-result summaries, as marked in seen_via; re-check them before quoting exact wording."
+    ]
+  }
+}

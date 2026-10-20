@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "tool": {
+    "name": "hiring-panel-screen",
+    "version": "1.0.0",
+    "lexicon_version": "fixture"
+  },
+  "mode": "script",
+  "generated_at": null,
+  "as_of": "2026-10-20",
+  "level": "student",
+  "inputs": {
+    "resume": {
+      "format": "docx",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bytes": 18000,
+      "pages": 1,
+      "producer": null,
+      "creator": null
+    },
+    "job_description": {
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "chars": 523,
+      "title_guess": "Data Analyst Intern",
+      "url": null,
+      "platform_guess": "unknown",
+      "blocks": [
+        {
+          "kind": "unspecified",
+          "heading": null,
+          "lines": [
+            "Data Analyst Intern - Northwind Health"
+          ]
+        },
+        {
+          "kind": "boilerplate",
+          "heading": "About us:",
+          "lines": [
+            "About us:",
+            "Northwind Health helps rural clinics reduce patient wait times."
+          ]
+        },
+        {
+          "kind": "responsibility",
+          "heading": "Responsibilities:",
+          "lines": [
+            "Responsibilities:",
+            "- Build dashboards that track clinic performance",
+            "- Clean and analyze operational data",
+            "- Present data visualization to clinic managers"
+          ]
+        },
+        {
+          "kind": "required",
+          "heading": "Requirements:",
+          "lines": [
+            "Requirements:",
+            "- Proficiency in SQL",
+            "- Experience with Python or R",
+            "- Experience with Tableau or Power BI"
+          ]
+        },
+        {
+          "kind": "preferred",
+          "heading": "Preferred:",
+          "lines": [
+            "Preferred:",
+            "- Experience with healthcare data"
+          ]
+        },
+        {
+          "kind": "boilerplate",
+          "heading": null,
+          "lines": [
+            "Location: Austin, TX (hybrid, 3 days a week in the office)",
+            "Northwind Health is an equal opportunity employer."
+          ]
+        }
+      ]
+    }
+  },
+  "extraction": {
+    "method": "docx-xml",
+    "text_chars": 768,
+    "ats_view_file": "work/inputs/ats_view.txt",
+    "warnings": []
+  },
+  "scores": {
+    "overall": {
+      "value": 55,
+      "band": "Needs work",
+      "explanation": "fixture",
+      "drivers": [
+        "KW-001",
+        "PARSE-006"
+      ]
+    },
+    "parse_safety": {
+      "value": 85,
+      "band": "Minor risks",
+      "explanation": "fixture"
+    },
+    "keyword_match": {
+      "value": 50,
+      "band": "Partial match",
+      "explanation": "fixture"
+    },
+    "content_signals": {
+      "value": 70,
+      "band": "Solid",
+      "explanation": "fixture"
+    },
+    "precision_note": "Scores move in steps of 5 on purpose. A 70 and a 75 are not meaningfully different. The counts and the issue list matter more than the number."
+  },
+  "issues": [
+    {
+      "id": "KW-001",
+      "rank": 1,
+      "category": "keywords",
+      "severity": "high",
+      "title": "Required terms missing: SQL",
+      "evidence": [
+        "Not found: \"SQL\""
+      ],
+      "why_it_matters": "The posting lists SQL as a requirement and your resume never shows it.",
+      "fix": "If you have used SQL, show where. If not, treat it as a gap.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {},
+      "source_refs": []
+    },
+    {
+      "id": "PARSE-006",
+      "rank": 2,
+      "category": "parse",
+      "severity": "high",
+      "title": "Email and phone only in the page header",
+      "evidence": [
+        "[header] Jordan Rivera | jordan.rivera@example.com | (512) 555-0198"
+      ],
+      "why_it_matters": "Some parsing software skips page headers, so your email and phone may not reach your profile.",
+      "fix": "Put your email and phone in the body, right under your name.",
+      "honesty_note": null,
+      "confidence": "high",
+      "detected_by": "file_structure",
+      "score_impact": {},
+      "source_refs": []
+    },
+    {
+      "id": "KW-002",
+      "rank": 3,
+      "category": "keywords",
+      "severity": "medium",
+      "title": "Tableau appears only in your skills list",
+      "evidence": [
+        "\"Tableau\" appears only in your skills or other lists."
+      ],
+      "why_it_matters": "A skill that is only listed is weaker than one shown in a bullet.",
+      "fix": "Show Tableau inside a bullet about real work, if you used it there.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {},
+      "source_refs": []
+    },
+    {
+      "id": "CONTENT-002",
+      "rank": 4,
+      "category": "content",
+      "severity": "low",
+      "title": "Weak openers: Responsible for, Helped, Worked on",
+      "evidence": [
+        "Responsible for social media posts and various tasks"
+      ],
+      "why_it_matters": "Weak openers hide what you did.",
+      "fix": "Start bullets with what you did.",
+      "honesty_note": null,
+      "confidence": "high",
+      "detected_by": "file_structure",
+      "score_impact": {},
+      "source_refs": []
+    },
+    {
+      "id": "KW-004",
+      "rank": 5,
+      "category": "keywords",
+      "severity": "low",
+      "title": "The job title Data Analyst Intern is not on your resume",
+      "evidence": [
+        "Posting title: \"Data Analyst Intern\""
+      ],
+      "why_it_matters": "Recruiters often search by title.",
+      "fix": "Consider a truthful headline.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {},
+      "source_refs": []
+    },
+    {
+      "id": "CONTENT-008",
+      "rank": 6,
+      "category": "content",
+      "severity": "info",
+      "title": "Buzzwords with no evidence: teamwork, communication",
+      "evidence": [
+        "teamwork",
+        "communication"
+      ],
+      "why_it_matters": "Listed soft skills carry little weight.",
+      "fix": "Show them in bullets.",
+      "honesty_note": null,
+      "confidence": "high",
+      "detected_by": "file_structure",
+      "score_impact": {},
+      "source_refs": []
+    },
+    {
+      "id": "KW-005",
+      "rank": 7,
+      "category": "keywords",
+      "severity": "info",
+      "title": "Preferred terms missing: healthcare data",
+      "evidence": [
+        "Not found: \"healthcare data\""
+      ],
+      "why_it_matters": "Preferred terms help but are not required.",
+      "fix": "Only add what you can back up.",
+      "honesty_note": "Only add a term you can back up in an interview.",
+      "confidence": "high",
+      "detected_by": "jd_comparison",
+      "score_impact": {},
+      "source_refs": []
+    }
+  ],
+  "keywords": {
+    "required": [
+      {
+        "term": "SQL",
+        "canonical": "SQL",
+        "kind": "tool",
+        "importance": "required",
+        "weight": 3.0,
+        "jd_frequency": 1,
+        "jd_quote": "Proficiency in SQL",
+        "source": "lexicon",
+        "found": false,
+        "match_type": "none",
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": []
+      },
+      {
+        "term": "Python",
+        "canonical": "Python",
+        "kind": "tool",
+        "importance": "required",
+        "weight": 3.0,
+        "jd_frequency": 1,
+        "jd_quote": "Experience with Python or R",
+        "source": "lexicon",
+        "found": true,
+        "match_type": "exact",
+        "resume_wording": "Python",
+        "evidence_level": "demonstrated",
+        "resume_locations": [],
+        "snippets": []
+      },
+      {
+        "term": "Tableau",
+        "canonical": "Tableau",
+        "kind": "tool",
+        "importance": "required",
+        "weight": 3.0,
+        "jd_frequency": 1,
+        "jd_quote": "Experience with Tableau or Power BI",
+        "source": "lexicon",
+        "found": true,
+        "match_type": "exact",
+        "resume_wording": "Tableau",
+        "evidence_level": "listed",
+        "resume_locations": [],
+        "snippets": []
+      }
+    ],
+    "preferred": [
+      {
+        "term": "healthcare data",
+        "canonical": "healthcare data",
+        "kind": "tool",
+        "importance": "preferred",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "Experience with healthcare data",
+        "source": "lexicon",
+        "found": false,
+        "match_type": "none",
+        "resume_wording": null,
+        "evidence_level": "none",
+        "resume_locations": [],
+        "snippets": []
+      }
+    ],
+    "other": [
+      {
+        "term": "dashboards",
+        "canonical": "dashboards",
+        "kind": "tool",
+        "importance": "responsibility",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "Build dashboards that track clinic performance",
+        "source": "lexicon",
+        "found": true,
+        "match_type": "inflection",
+        "resume_wording": "dashboard",
+        "evidence_level": "demonstrated",
+        "resume_locations": [],
+        "snippets": []
+      },
+      {
+        "term": "data visualization",
+        "canonical": "data visualization",
+        "kind": "tool",
+        "importance": "responsibility",
+        "weight": 1.0,
+        "jd_frequency": 1,
+        "jd_quote": "Present data visualization to clinic managers",
+        "source": "lexicon",
+        "found": true,
+        "match_type": "implied",
+        "resume_wording": "Tableau",
+        "evidence_level": "listed",
+        "resume_locations": [],
+        "snippets": []
+      }
+    ],
+    "job_title": {
+      "jd_title": "Data Analyst Intern",
+      "resume_titles": [
+        "Marketing Intern",
+        "Barista"
+      ],
+      "match": "none"
+    },
+    "coverage": {
+      "required_found": 2,
+      "required_total": 3,
+      "preferred_found": 0,
+      "preferred_total": 1,
+      "required_weighted": 0.67,
+      "preferred_weighted": 0.0,
+      "evidence_share": 0.6,
+      "listed_only": [
+        "Tableau"
+      ]
+    }
+  },
+  "knockout_signals": [
+    {
+      "type": "onsite_hybrid",
+      "importance": "unspecified",
+      "jd_quote": "Location: Austin, TX (hybrid, 3 days a week in the office)",
+      "resume_evidence": "Austin, TX",
+      "status": "not_on_resume_by_design",
+      "advice": "This is usually an application question. Answer truthfully; the resume can't and shouldn't address it."
+    }
+  ],
+  "sections": {},
+  "contact": {},
+  "experience": {},
+  "bullets": {},
+  "limitations": [
+    "fixture 1",
+    "fixture 2",
+    "fixture 3"
+  ],
+  "disclaimer": "This is a simulation, not a real applicant tracking system. Every employer sets up its own software, and none of the big vendors publish exactly how they parse or rank resumes."
+}

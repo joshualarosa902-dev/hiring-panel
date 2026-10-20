@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "mode": "interactive",
+  "answers": [
+    {
+      "id": "Q1",
+      "kind": "keywords",
+      "question": "The posting asks for these and your resume does not show them yet. For each one, reply yes, some or no: SQL, Tableau, Google Analytics, A/B testing.",
+      "answer": "SQL some, the rest no",
+      "status": "answered",
+      "items": [
+        {"term": "SQL", "answer": "some", "detail": "Intro to SQL class, wrote basic SELECT queries for homework"},
+        {"term": "Tableau", "answer": "no", "detail": ""},
+        {"term": "Google Analytics", "answer": "no", "detail": ""},
+        {"term": "A/B testing", "answer": "no", "detail": ""}
+      ]
+    },
+    {
+      "id": "Q2",
+      "kind": "number",
+      "question": "Roughly how many followers did the Bluebonnet Instagram gain during your 10 weeks? A range or 'not sure' is fine.",
+      "answer": "about 600",
+      "status": "answered",
+      "items": null
+    },
+    {
+      "id": "Q3",
+      "kind": "number",
+      "question": "About how many students answered your pricing survey? A range or 'not sure' is fine.",
+      "answer": "not sure",
+      "status": "declined",
+      "items": null
+    },
+    {
+      "id": "Q4",
+      "kind": "reviewer",
+      "question": "How many hours a week do you usually work at Pecan Street Market during the semester?",
+      "answer": "about 20 hours a week during school",
+      "status": "answered",
+      "items": null
+    },
+    {
+      "id": "Q5",
+      "kind": "reviewer",
+      "question": "How many people were on the pricing survey team?",
+      "answer": "4 of us",
+      "status": "answered",
+      "items": null
+    }
+  ]
+}

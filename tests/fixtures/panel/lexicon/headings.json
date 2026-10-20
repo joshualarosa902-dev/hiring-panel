@@ -1,0 +1,2 @@
+{"resume": {"education": ["education"], "experience": ["experience", "work experience"], "projects": ["projects"], "skills": ["skills"], "summary": ["summary"]},
+ "jd": {"required": ["requirements", "qualifications"], "preferred": ["preferred", "nice to have"], "responsibility": ["responsibilities", "what you'll do"], "boilerplate": ["about us", "benefits"]}}

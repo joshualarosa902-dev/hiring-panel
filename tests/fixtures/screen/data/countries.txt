@@ -1,0 +1,27 @@
+# country names (test)
+United States
+USA
+Canada
+Mexico
+United Kingdom
+UK
+Ireland
+Germany
+Austria
+Switzerland
+France
+Spain
+Italy
+Portugal
+Netherlands
+India
+Australia
+New Zealand
+Brazil
+Japan
+China
+Singapore
+Nigeria
+Kenya
+South Africa
+Philippines

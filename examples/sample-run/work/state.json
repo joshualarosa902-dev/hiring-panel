@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "hp_version": "1.0.0",
+  "created": "2026-10-20T17:14:13",
+  "as_of": "2026-10-20",
+  "candidate_stage": "student",
+  "role_level": "intern",
+  "locale": "en-US",
+  "language": "en",
+  "role": "Marketing Analytics Intern",
+  "company": "Northwind Foods",
+  "jd_source": "pasted",
+  "general_review": false,
+  "mode": "parallel",
+  "flags": {
+    "thin": false,
+    "long": false,
+    "non_english": false,
+    "needs_transcription": false
+  },
+  "ledger_overrides": [],
+  "steps": {
+    "init": "2026-10-20T17:14:13",
+    "screen": "2026-10-20T17:14:13",
+    "synthesize": "2026-10-20T17:14:13",
+    "report_panel": "2026-10-20T17:14:16",
+    "answers": "2026-10-20T17:14:16",
+    "truth": "2026-10-20T17:14:16",
+    "provenance": "2026-10-20T17:14:16",
+    "render": "2026-10-20T17:14:17",
+    "gate": "2026-10-20T17:14:17",
+    "report_final": "2026-10-20T17:14:20"
+  },
+  "resume_input": {
+    "file": "inputs/original.docx",
+    "text": null
+  }
+}

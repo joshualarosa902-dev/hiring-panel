@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "reviewer_id": "screening",
+  "decision_question": "Would this file parse cleanly, and would it come up when a recruiter searches or filters the applicant pool for this job?",
+  "verdict": "lean_yes",
+  "verdict_rationale": "No posting was provided, so only readability counts here: the script reads the file cleanly (Clean), with contact details in the body (R2) and standard headings.",
+  "advance": "yes",
+  "one_line_take": "No posting to match, but the file reads cleanly for parsing software.",
+  "confidence": "high",
+  "dimension_scores": [
+    {
+      "dimension_id": "S1_parse_safety",
+      "score": 4,
+      "evidence_anchors": [
+        "R2"
+      ],
+      "note": "Clean parse: contact details in the body, standard headings, one column."
+    },
+    {
+      "dimension_id": "S2_required_coverage",
+      "score": 3,
+      "evidence_anchors": [
+        "R31"
+      ],
+      "note": "No posting provided, so no required terms."
+    },
+    {
+      "dimension_id": "S3_title_alignment",
+      "score": 3,
+      "evidence_anchors": [
+        "R10"
+      ],
+      "note": "Marketing Intern is close to Marketing Analytics Intern."
+    },
+    {
+      "dimension_id": "S4_knockout_exposure",
+      "score": 4,
+      "evidence_anchors": [],
+      "note": "No posting provided."
+    },
+    {
+      "dimension_id": "S5_keyword_context",
+      "score": 2,
+      "evidence_anchors": [
+        "R30",
+        "R31"
+      ],
+      "note": "SQL, VLOOKUP and Mailchimp appear only in the skills list."
+    }
+  ],
+  "findings": [
+    {
+      "id": "screening-1",
+      "category": "TITLE_MISMATCH",
+      "severity": "minor",
+      "confidence": "high",
+      "title": "Your title says marketing, the target role says analytics",
+      "detail": "No posting was provided. A recruiter searching for the role title finds Marketing Intern, not analytics work.",
+      "evidence": [
+        {
+          "anchor": "R10",
+          "quote": "Marketing Intern"
+        }
+      ],
+      "fix": {
+        "fix_type": "rewrite",
+        "suggestion": "Keep the real title. Lead the bullets with the data work you did, like the weekly sales numbers.",
+        "candidate_question": null
+      },
+      "out_of_lens": false
+    }
+  ],
+  "strengths": [
+    {
+      "id": "screening-s1",
+      "title": "Contact details and headings parse cleanly",
+      "evidence": [
+        {
+          "anchor": "R2",
+          "quote": "Columbus, OH | (555) 010-0147"
+        },
+        {
+          "anchor": "R3",
+          "quote": "EDUCATION"
+        }
+      ],
+      "underused": false
+    }
+  ],
+  "questions_for_candidate": [],
+  "lens_data": {
+    "script_bands": {
+      "overall": "Ready to send",
+      "parse_safety": "Clean",
+      "keyword_match": "No job description provided",
+      "content_signals": "Polished"
+    },
+    "keyword_table": [],
+    "parse_risks": [],
+    "knockouts": []
+  }
+}

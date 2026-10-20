@@ -1,0 +1,24 @@
+{
+  "_note": "Terms a posting in each field commonly asks for. Every term must resolve to a skills.json entry (any form, case-insensitive), so a field can't silently lose coverage. 'kind' pins the expected kind where it matters.",
+  "fields": {
+    "software_data": ["Python", "Java", "JavaScript", "SQL", "React", "AWS", "Git", "Docker", "Tableau", "Machine Learning", "pandas", "REST API", "Agile", "Power BI", "C++"],
+    "business_finance_accounting": ["Financial Modeling", "QuickBooks", "GAAP", "Accounts Payable", "Budgeting", "Valuation", "Bloomberg Terminal", "CPA", "Account Reconciliation", "Microsoft Excel", "FP&A", "Mergers and Acquisitions"],
+    "marketing_comms_social": ["SEO", "Google Analytics", "Content Creation", "Copywriting", "Public Relations", "Hootsuite", "Social Media Marketing", "Mailchimp", "Email Marketing", "Market Research", "Press Releases", "Canva"],
+    "sales": ["B2B Sales", "Cold Calling", "Salesforce", "Lead Generation", "Account Management", "Upselling", "CRM", "Prospecting", "Customer Retention"],
+    "operations_supply_chain": ["Supply Chain Management", "Inventory Management", "Lean Six Sigma", "Logistics", "Procurement", "SAP", "Vendor Management", "Root Cause Analysis", "Project Management", "Order Fulfillment"],
+    "hr": ["Recruiting", "Onboarding", "HRIS", "Workday", "Employee Relations", "SHRM-CP", "Benefits Administration", "Applicant Tracking Systems", "Payroll"],
+    "healthcare_nursing_public_health": ["Patient Care", "Phlebotomy", "Epic", "BLS", "HIPAA", "Epidemiology", "Medical Terminology", "CNA", "Vital Signs", "Electronic Health Records", "Public Health", "Medical Coding", "CPR"],
+    "education": ["Lesson Planning", "Classroom Management", "IEP", "Canvas LMS", "Curriculum Development", "Teaching License", "Special Education", "Differentiated Instruction", "Google Classroom"],
+    "engineering": ["SolidWorks", "AutoCAD", "MATLAB", "Finite Element Analysis", "PLC", "Circuit Design", "Thermodynamics", "GD&T", "CAD", "ANSYS", "Revit", "Embedded Systems"],
+    "science_lab": ["PCR", "Cell Culture", "Western Blotting", "HPLC", "Microscopy", "Titration", "Pipetting", "Laboratory Safety", "Literature Review", "GraphPad Prism", "Mass Spectrometry"],
+    "design_ux_creative": ["Figma", "Adobe Photoshop", "User Research", "Wireframing", "Video Editing", "Typography", "Adobe Illustrator", "Adobe InDesign", "UX Design", "Prototyping", "Photography", "Graphic Design"],
+    "legal_policy": ["Legal Research", "Westlaw", "Contract Review", "Policy Analysis", "Regulatory Compliance", "E-Discovery", "LexisNexis", "Legal Writing", "Due Diligence"],
+    "hospitality_retail": ["Customer Service", "Cash Handling", "Point of Sale", "ServSafe", "Food Safety", "Visual Merchandising", "Bartending", "Guest Services", "Inventory Management", "Loss Prevention"],
+    "nonprofit_government": ["Fundraising", "Grant Writing", "Volunteer Management", "Community Outreach", "Raiser's Edge", "Program Evaluation", "Public Administration", "Donor Relations", "Advocacy"]
+  },
+  "kinds": {
+    "soft": ["Communication", "Teamwork", "Leadership", "Problem Solving", "Time Management", "Attention to Detail", "Critical Thinking", "Adaptability"],
+    "title": ["Software Engineer", "Data Analyst", "Marketing Coordinator", "Registered Nurse", "Teaching Assistant", "Mechanical Engineer", "Research Assistant", "Paralegal", "Barista", "Retail Sales Associate", "Financial Analyst", "UX Designer", "Recruiter", "Program Coordinator", "Cashier", "Resident Assistant"],
+    "cert": ["CPA", "PMP", "CompTIA A+", "ServSafe", "BLS", "Series 7", "SHRM-CP", "OSHA 10", "CDL", "Teaching License"]
+  }
+}
